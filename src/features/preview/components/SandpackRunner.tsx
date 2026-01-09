@@ -1,6 +1,6 @@
-// src/features/preview/components/SandpackRunner.tsx
 import { Sandpack } from "@codesandbox/sandpack-react";
-import { ensureReactEntry } from "../entry";
+import { atomDark } from "@codesandbox/sandpack-themes";
+import { ensureReactEntry, ensureVanillaEntry } from "../entry";
 import { loadFiles } from "../loader";
 import { inferTemplate } from "../template";
 
@@ -17,6 +17,7 @@ const SandpackRunner = ({
   const files = loadFiles(domain, slug, exampleId);
 
   if (template === "react") ensureReactEntry(files);
+  if (template === "vanilla") ensureVanillaEntry(files);
 
   console.log("template:", template);
   console.log("Loaded files:", Object.keys(files));
@@ -33,6 +34,7 @@ const SandpackRunner = ({
         visibleFiles,
         activeFile: visibleFiles[0],
       }}
+      theme={atomDark}
     />
   );
 };

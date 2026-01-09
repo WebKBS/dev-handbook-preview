@@ -27,3 +27,17 @@ export function ensureReactEntry(files: Record<string, SandpackFile>) {
 
   if (entry) setActive(files, entry);
 }
+
+export function ensureVanillaEntry(files: Record<string, SandpackFile>) {
+  // 우선순위: /main.js -> /index.js
+  const hasMain = files["/main.js"];
+  const hasIndex = files["/index.js"];
+
+  if (!files["/src/index.js"]) {
+    if (hasMain) {
+      files["/src/index.js"] = { hidden: true, code: `import "../main.js";` };
+    } else if (hasIndex) {
+      files["/src/index.js"] = { hidden: true, code: `import "../index.js";` };
+    }
+  }
+}
