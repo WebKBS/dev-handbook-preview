@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codesandbox/sandpack-react": "^2.20.0",
     "@tailwindcss/vite": "^4.1.18",
     "@tanstack/react-router": "^1.146.2",
     "react": "^19.2.0",

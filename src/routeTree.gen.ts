@@ -9,27 +9,119 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as IndexRouteImport } from './routes/index'
+import { Route as PreviewsDomainindexRouteImport } from './routes/previews/$domain/ index'
+import { Route as PreviewsDomainSlugIndexRouteImport } from './routes/previews/$domain/$slug/index'
+import { Route as PreviewsDomainSlugExampleIdRouteImport } from './routes/previews/$domain/$slug/$exampleId'
 
-export interface FileRoutesByFullPath {}
-export interface FileRoutesByTo {}
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PreviewsDomainindexRoute = PreviewsDomainindexRouteImport.update({
+  id: '/previews/$domain/ index',
+  path: '/previews/$domain/ index',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PreviewsDomainSlugIndexRoute = PreviewsDomainSlugIndexRouteImport.update({
+  id: '/previews/$domain/$slug/',
+  path: '/previews/$domain/$slug/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PreviewsDomainSlugExampleIdRoute =
+  PreviewsDomainSlugExampleIdRouteImport.update({
+    id: '/previews/$domain/$slug/$exampleId',
+    path: '/previews/$domain/$slug/$exampleId',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+
+export interface FileRoutesByFullPath {
+  '/': typeof IndexRoute
+  '/previews/$domain/ index': typeof PreviewsDomainindexRoute
+  '/previews/$domain/$slug/$exampleId': typeof PreviewsDomainSlugExampleIdRoute
+  '/previews/$domain/$slug': typeof PreviewsDomainSlugIndexRoute
+}
+export interface FileRoutesByTo {
+  '/': typeof IndexRoute
+  '/previews/$domain/ index': typeof PreviewsDomainindexRoute
+  '/previews/$domain/$slug/$exampleId': typeof PreviewsDomainSlugExampleIdRoute
+  '/previews/$domain/$slug': typeof PreviewsDomainSlugIndexRoute
+}
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
+  '/': typeof IndexRoute
+  '/previews/$domain/ index': typeof PreviewsDomainindexRoute
+  '/previews/$domain/$slug/$exampleId': typeof PreviewsDomainSlugExampleIdRoute
+  '/previews/$domain/$slug/': typeof PreviewsDomainSlugIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: never
+  fullPaths:
+    | '/'
+    | '/previews/$domain/ index'
+    | '/previews/$domain/$slug/$exampleId'
+    | '/previews/$domain/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: never
-  id: '__root__'
+  to:
+    | '/'
+    | '/previews/$domain/ index'
+    | '/previews/$domain/$slug/$exampleId'
+    | '/previews/$domain/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/previews/$domain/ index'
+    | '/previews/$domain/$slug/$exampleId'
+    | '/previews/$domain/$slug/'
   fileRoutesById: FileRoutesById
 }
-export interface RootRouteChildren {}
-
-declare module '@tanstack/react-router' {
-  interface FileRoutesByPath {}
+export interface RootRouteChildren {
+  IndexRoute: typeof IndexRoute
+  PreviewsDomainindexRoute: typeof PreviewsDomainindexRoute
+  PreviewsDomainSlugExampleIdRoute: typeof PreviewsDomainSlugExampleIdRoute
+  PreviewsDomainSlugIndexRoute: typeof PreviewsDomainSlugIndexRoute
 }
 
-const rootRouteChildren: RootRouteChildren = {}
+declare module '@tanstack/react-router' {
+  interface FileRoutesByPath {
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/previews/$domain/ index': {
+      id: '/previews/$domain/ index'
+      path: '/previews/$domain/ index'
+      fullPath: '/previews/$domain/ index'
+      preLoaderRoute: typeof PreviewsDomainindexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/previews/$domain/$slug/': {
+      id: '/previews/$domain/$slug/'
+      path: '/previews/$domain/$slug'
+      fullPath: '/previews/$domain/$slug'
+      preLoaderRoute: typeof PreviewsDomainSlugIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/previews/$domain/$slug/$exampleId': {
+      id: '/previews/$domain/$slug/$exampleId'
+      path: '/previews/$domain/$slug/$exampleId'
+      fullPath: '/previews/$domain/$slug/$exampleId'
+      preLoaderRoute: typeof PreviewsDomainSlugExampleIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+  }
+}
+
+const rootRouteChildren: RootRouteChildren = {
+  IndexRoute: IndexRoute,
+  PreviewsDomainindexRoute: PreviewsDomainindexRoute,
+  PreviewsDomainSlugExampleIdRoute: PreviewsDomainSlugExampleIdRoute,
+  PreviewsDomainSlugIndexRoute: PreviewsDomainSlugIndexRoute,
+}
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
