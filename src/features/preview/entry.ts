@@ -30,14 +30,21 @@ export function ensureReactEntry(files: Record<string, SandpackFile>) {
 
 export function ensureVanillaEntry(files: Record<string, SandpackFile>) {
   // 우선순위: /main.js -> /index.js
-  const hasMain = files["/main.js"];
-  const hasIndex = files["/index.js"];
+  const hasMain = !!files["/main.js"];
+  const hasIndex = !!files["/index.js"];
+  const hasSrcIndex = !!files["/src/index.js"];
 
-  if (!files["/src/index.js"]) {
+  if (!hasSrcIndex) {
     if (hasMain) {
       files["/src/index.js"] = { hidden: true, code: `import "../main.js";` };
     } else if (hasIndex) {
       files["/src/index.js"] = { hidden: true, code: `import "../index.js";` };
     }
+  }
+
+  // Sandpack vanilla 템플릿 기본 index.js가 DOM을 건드려 HTML-only 예제가 깨지는 문제 방지
+  const hasAnyEntry = hasMain || hasIndex || hasSrcIndex;
+  if (!hasAnyEntry) {
+    files["/index.js"] = { hidden: true, code: "" };
   }
 }
