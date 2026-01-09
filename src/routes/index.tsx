@@ -15,7 +15,7 @@ function RouteComponent() {
           exampleId: "ex-important",
         }}
       >
-        Go to /previews/$domain/$slug/$exampleId 고고고고
+        Go to /previews/$domain/$slug/$exampleId
       </Link>
     </div>
   );

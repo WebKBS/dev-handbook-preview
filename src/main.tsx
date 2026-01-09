@@ -7,7 +7,12 @@ import "./index.css";
 import { routeTree } from "./routeTree.gen";
 
 // 새 라우터 인스턴스 만들기
-const router = createRouter({ routeTree });
+const basepath =
+  import.meta.env.BASE_URL === "/"
+    ? "/"
+    : import.meta.env.BASE_URL.replace(/\/$/, "");
+
+const router = createRouter({ routeTree, basepath });
 
 // 유형 안전성을 위해 라우터 인스턴스 등록
 declare module "@tanstack/react-router" {
