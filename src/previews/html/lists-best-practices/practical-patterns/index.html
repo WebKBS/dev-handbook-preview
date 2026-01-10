@@ -1,0 +1,21 @@
+<nav aria-label="Breadcrumb">
+  <ol class="breadcrumb">
+    <li><a href="/">홈</a></li>
+    <li><a href="/products">상품</a></li>
+    <li><a href="/products/laptops">노트북</a></li>
+    <li aria-current="page">맥북 프로</li>
+  </ol>
+</nav>
+
+<style>
+  .breadcrumb {
+    list-style: none;
+    display: flex;
+    gap: 8px;
+  }
+
+  .breadcrumb li:not(:last-child)::after {
+    content: "›";
+    margin-left: 8px;
+  }
+</style>
