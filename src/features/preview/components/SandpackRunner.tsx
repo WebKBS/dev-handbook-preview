@@ -31,8 +31,8 @@ const SandpackRunner = ({
 
   return (
     <Sandpack
-      template={template as any}
-      files={files as any}
+      template={template}
+      files={files}
       options={{
         showTabs: true,
         showLineNumbers: true,

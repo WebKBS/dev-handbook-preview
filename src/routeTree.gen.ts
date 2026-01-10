@@ -10,29 +10,11 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as PreviewsIndexRouteImport } from './routes/previews/index'
-import { Route as PreviewsDomainIndexRouteImport } from './routes/previews/$domain/index'
-import { Route as PreviewsDomainSlugIndexRouteImport } from './routes/previews/$domain/$slug/index'
 import { Route as PreviewsDomainSlugExampleIdRouteImport } from './routes/previews/$domain/$slug/$exampleId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewsIndexRoute = PreviewsIndexRouteImport.update({
-  id: '/previews/',
-  path: '/previews/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewsDomainIndexRoute = PreviewsDomainIndexRouteImport.update({
-  id: '/previews/$domain/',
-  path: '/previews/$domain/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PreviewsDomainSlugIndexRoute = PreviewsDomainSlugIndexRouteImport.update({
-  id: '/previews/$domain/$slug/',
-  path: '/previews/$domain/$slug/',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PreviewsDomainSlugExampleIdRoute =
@@ -44,56 +26,28 @@ const PreviewsDomainSlugExampleIdRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/previews': typeof PreviewsIndexRoute
-  '/previews/$domain': typeof PreviewsDomainIndexRoute
   '/previews/$domain/$slug/$exampleId': typeof PreviewsDomainSlugExampleIdRoute
-  '/previews/$domain/$slug': typeof PreviewsDomainSlugIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/previews': typeof PreviewsIndexRoute
-  '/previews/$domain': typeof PreviewsDomainIndexRoute
   '/previews/$domain/$slug/$exampleId': typeof PreviewsDomainSlugExampleIdRoute
-  '/previews/$domain/$slug': typeof PreviewsDomainSlugIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/previews/': typeof PreviewsIndexRoute
-  '/previews/$domain/': typeof PreviewsDomainIndexRoute
   '/previews/$domain/$slug/$exampleId': typeof PreviewsDomainSlugExampleIdRoute
-  '/previews/$domain/$slug/': typeof PreviewsDomainSlugIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths:
-    | '/'
-    | '/previews'
-    | '/previews/$domain'
-    | '/previews/$domain/$slug/$exampleId'
-    | '/previews/$domain/$slug'
+  fullPaths: '/' | '/previews/$domain/$slug/$exampleId'
   fileRoutesByTo: FileRoutesByTo
-  to:
-    | '/'
-    | '/previews'
-    | '/previews/$domain'
-    | '/previews/$domain/$slug/$exampleId'
-    | '/previews/$domain/$slug'
-  id:
-    | '__root__'
-    | '/'
-    | '/previews/'
-    | '/previews/$domain/'
-    | '/previews/$domain/$slug/$exampleId'
-    | '/previews/$domain/$slug/'
+  to: '/' | '/previews/$domain/$slug/$exampleId'
+  id: '__root__' | '/' | '/previews/$domain/$slug/$exampleId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  PreviewsIndexRoute: typeof PreviewsIndexRoute
-  PreviewsDomainIndexRoute: typeof PreviewsDomainIndexRoute
   PreviewsDomainSlugExampleIdRoute: typeof PreviewsDomainSlugExampleIdRoute
-  PreviewsDomainSlugIndexRoute: typeof PreviewsDomainSlugIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -103,27 +57,6 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/previews/': {
-      id: '/previews/'
-      path: '/previews'
-      fullPath: '/previews'
-      preLoaderRoute: typeof PreviewsIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/previews/$domain/': {
-      id: '/previews/$domain/'
-      path: '/previews/$domain'
-      fullPath: '/previews/$domain'
-      preLoaderRoute: typeof PreviewsDomainIndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/previews/$domain/$slug/': {
-      id: '/previews/$domain/$slug/'
-      path: '/previews/$domain/$slug'
-      fullPath: '/previews/$domain/$slug'
-      preLoaderRoute: typeof PreviewsDomainSlugIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/previews/$domain/$slug/$exampleId': {
@@ -138,10 +71,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  PreviewsIndexRoute: PreviewsIndexRoute,
-  PreviewsDomainIndexRoute: PreviewsDomainIndexRoute,
   PreviewsDomainSlugExampleIdRoute: PreviewsDomainSlugExampleIdRoute,
-  PreviewsDomainSlugIndexRoute: PreviewsDomainSlugIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
