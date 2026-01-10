@@ -1,0 +1,167 @@
+<div class="dashboard-layout">
+  <!-- 시맨틱: 페이지 헤더 -->
+  <header class="dashboard-header">
+    <h1>대시보드</h1>
+    <nav>
+      <ul>
+        <li><a href="/dashboard">홈</a></li>
+        <li><a href="/reports">리포트</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 레이아웃: 메인 컨테이너 -->
+  <div class="dashboard-container">
+    <!-- 시맨틱: 사이드바 -->
+    <aside class="sidebar">
+      <nav aria-label="주요 메뉴">
+        <ul>
+          <li><a href="/overview">개요</a></li>
+          <li><a href="/analytics">분석</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- 시맨틱: 메인 콘텐츠 -->
+    <main class="main-content">
+      <!-- 레이아웃: 그리드 컨테이너 -->
+      <div class="widget-grid">
+        <!-- 레이아웃: 그리드 아이템 -->
+        <div class="widget-item">
+          <!-- 시맨틱: 실제 콘텐츠 -->
+          <section>
+            <h2>방문자 통계</h2>
+            <p>오늘: 1,234명</p>
+          </section>
+        </div>
+
+        <div class="widget-item">
+          <section>
+            <h2>매출 현황</h2>
+            <p>이번 달: ₩5,000,000</p>
+          </section>
+        </div>
+
+        <div class="widget-item">
+          <section>
+            <h2>최근 주문</h2>
+            <ul>
+              <li>주문 #1234</li>
+              <li>주문 #1235</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+
+<style>
+  .dashboard-layout {
+    background: #0b1020;
+    color: #fff;
+    min-height: 100vh;
+  }
+  .dashboard-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .dashboard-header h1 {
+    margin: 0;
+    font-size: 18px;
+  }
+  .dashboard-header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 12px;
+  }
+  .dashboard-header a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 10px;
+  }
+  .dashboard-header a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .dashboard-container {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 16px;
+    padding: 16px 20px;
+  }
+  .sidebar {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 14px;
+  }
+  .sidebar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .sidebar a {
+    display: block;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 12px;
+  }
+  .sidebar a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .main-content {
+    min-width: 0;
+  }
+  .widget-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .widget-item {
+    grid-column: span 4;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 14px 14px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+  .widget-item h2 {
+    margin: 0 0 8px;
+    font-size: 16px;
+  }
+  .widget-item p,
+  .widget-item li {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .widget-item ul {
+    margin: 8px 0 0;
+    padding-left: 18px;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 900px) {
+    .dashboard-container {
+      grid-template-columns: 1fr;
+    }
+    .widget-item {
+      grid-column: span 12;
+    }
+  }
+</style>
