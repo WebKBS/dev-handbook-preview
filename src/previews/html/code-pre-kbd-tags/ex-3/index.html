@@ -1,0 +1,34 @@
+<pre><code class="language-javascript">// React 컴포넌트 예시
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        증가
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+export default Counter;</code></pre>
+
+<style>
+  pre {
+    background-color: #282c34;
+    color: #abb2bf;
+    padding: 16px;
+    border-radius: 8px;
+    overflow-x: auto; /* 가로 스크롤 */
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  pre code {
+    background: none; /* 이중 배경 방지 */
+    padding: 0;
+  }
+</style>
