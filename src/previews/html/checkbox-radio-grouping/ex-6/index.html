@@ -1,0 +1,28 @@
+<fieldset>
+  <legend>
+    배송 방법
+    <span aria-hidden="true">*</span>
+  </legend>
+
+  <label>
+    <input
+      aria-required="true"
+      checked
+      name="shipping"
+      required
+      type="radio"
+      value="standard"
+    />
+    일반 배송 (무료, 3-5일)
+  </label>
+
+  <label>
+    <input name="shipping" required type="radio" value="express" />
+    특급 배송 (+3,000원, 1-2일)
+  </label>
+
+  <label>
+    <input name="shipping" required type="radio" value="overnight" />
+    익일 배송 (+5,000원)
+  </label>
+</fieldset>

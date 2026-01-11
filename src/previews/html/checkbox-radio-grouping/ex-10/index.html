@@ -1,0 +1,36 @@
+<fieldset aria-describedby="shipping-error" aria-invalid="true">
+  <legend>배송 방법 <span aria-hidden="true">*</span></legend>
+
+  <label>
+    <input name="shipping" required type="radio" value="standard" />
+    일반 배송
+  </label>
+
+  <label>
+    <input name="shipping" required type="radio" value="express" />
+    특급 배송
+  </label>
+
+  <span class="error" id="shipping-error" role="alert">
+    배송 방법을 선택해주세요.
+  </span>
+</fieldset>
+
+<style>
+  fieldset {
+    border: 2px solid #f00;
+    padding: 1em;
+    max-width: 300px;
+  }
+
+  fieldset[aria-invalid="true"] {
+    border-color: #e74c3c;
+  }
+
+  .error {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    display: block;
+    margin-top: 8px;
+  }
+</style>

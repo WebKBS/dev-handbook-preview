@@ -1,0 +1,82 @@
+.radio-group {
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .radio-group legend {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  .radio-card {
+    display: block;
+    position: relative;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .radio-card:hover {
+    border-color: #007bff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.1);
+  }
+
+  .radio-card:has(input:checked) {
+    border-color: #007bff;
+    background: #f0f8ff;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  }
+
+  .radio-card input[type="radio"] {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .radio-card-content {
+    padding-right: 40px;
+  }
+
+  .plan-name {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  .plan-price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 12px;
+  }
+
+  .plan-price span {
+    font-size: 1rem;
+    color: #666;
+  }
+
+  .plan-badge {
+    display: inline-block;
+    background: #28a745;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    margin-bottom: 12px;
+  }
+
+  .plan-features {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .plan-features div {
+    margin-bottom: 4px;
+  }

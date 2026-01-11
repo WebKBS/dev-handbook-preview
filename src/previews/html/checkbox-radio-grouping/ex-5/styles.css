@@ -1,0 +1,22 @@
+  fieldset {
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    max-width: 300px;
+  }
+
+  legend {
+    font-weight: bold;
+    padding: 0 8px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  input[type="radio"] {
+    margin-right: 8px;
+  }
