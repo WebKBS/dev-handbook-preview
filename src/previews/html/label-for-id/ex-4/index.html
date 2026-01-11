@@ -1,0 +1,13 @@
+<!-- 방법 1: 시각적 표시 + aria-required -->
+<label for="email">
+  이메일 <span aria-hidden="true" class="required">*</span>
+</label>
+<input aria-required="true" id="email" name="email" required type="email" />
+
+<!-- 방법 2: 스크린 리더용 텍스트 -->
+<label for="password">
+  비밀번호
+  <span aria-hidden="true" class="required">*</span>
+  <span class="sr-only">(필수)</span>
+</label>
+<input id="password" name="password" required type="password" />

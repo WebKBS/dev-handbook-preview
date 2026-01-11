@@ -1,0 +1,10 @@
+  .form-group input[aria-invalid="true"] {
+    border-color: #e74c3c;
+  }
+
+  .error-message {
+    color: #e74c3c;
+    font-size: 0.875rem;
+    margin-top: 4px;
+    display: block;
+  }
