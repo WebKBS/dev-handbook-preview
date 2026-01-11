@@ -1,0 +1,52 @@
+<table>
+  <thead>
+    <tr>
+      <th scope="col">과목</th>
+      <th scope="col">점수</th>
+      <th scope="col">등급</th>
+    </tr>
+  </thead>
+
+  <!-- 인문계열 그룹 -->
+  <tbody>
+    <tr>
+      <th colspan="3" scope="colgroup">인문계열</th>
+    </tr>
+    <tr>
+      <th scope="row">국어</th>
+      <td>88</td>
+      <td>B+</td>
+    </tr>
+    <tr>
+      <th scope="row">영어</th>
+      <td>92</td>
+      <td>A</td>
+    </tr>
+  </tbody>
+
+  <!-- 자연계열 그룹 -->
+  <tbody>
+    <tr>
+      <th colspan="3" scope="colgroup">자연계열</th>
+    </tr>
+    <tr>
+      <th scope="row">수학</th>
+      <td>85</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <th scope="row">과학</th>
+      <td>90</td>
+      <td>A-</td>
+    </tr>
+  </tbody>
+</table>
+
+<style>
+  tbody:nth-of-type(1) {
+    background-color: #f0f8ff;
+  }
+  tbody:nth-of-type(2) {
+    background-color: #fff0f5;
+  }
+</style>
