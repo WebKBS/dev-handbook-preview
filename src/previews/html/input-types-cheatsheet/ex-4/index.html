@@ -1,0 +1,42 @@
+<form action="/reserve" method="post">
+  <label for="name">이름</label>
+  <input autocomplete="name" id="name" name="name" required type="text" />
+
+  <label for="phone">연락처</label>
+  <input
+    autocomplete="tel"
+    id="phone"
+    name="phone"
+    pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+    placeholder="010-1234-5678"
+    required
+    type="tel"
+  />
+
+  <label for="date">예약 날짜</label>
+  <input id="date" min="2026-01-06" name="date" required type="date" />
+
+  <label for="time">예약 시간</label>
+  <input
+    id="time"
+    max="18:00"
+    min="09:00"
+    name="time"
+    required
+    step="1800"
+    type="time"
+  />
+
+  <label for="guests">인원</label>
+  <input
+    id="guests"
+    max="10"
+    min="1"
+    name="guests"
+    required
+    type="number"
+    value="2"
+  />
+
+  <button type="submit">예약하기</button>
+</form>
