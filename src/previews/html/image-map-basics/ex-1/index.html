@@ -1,105 +1,9 @@
-<style>
-  body {
-    font-family:
-      system-ui,
-      -apple-system,
-      Segoe UI,
-      Roboto,
-      "Noto Sans KR",
-      sans-serif;
-    margin: 24px;
-  }
-
-  .wrap {
-    display: grid;
-    gap: 12px;
-    max-width: 760px;
-  }
-
-  .stage {
-    position: relative;
-    width: 300px;
-    height: 220px;
-    border: 1px solid #ddd;
-    border-radius: 12px;
-    background: linear-gradient(135deg, #fafafa, #fff);
-    overflow: hidden;
-  }
-
-  .grid {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(#00000010 1px, transparent 1px),
-      linear-gradient(90deg, #00000010 1px, transparent 1px);
-    background-size: 20px 20px;
-    pointer-events: none;
-  }
-
-  /* 클릭 영역(사각형) 오버레이 */
-  .hotspot {
-    position: absolute;
-    border: 2px solid #2563eb;
-    background: #2563eb22;
-    border-radius: 10px;
-    cursor: pointer;
-    display: grid;
-    place-items: center;
-    font-weight: 700;
-    user-select: none;
-  }
-  .hotspot:focus-visible {
-    outline: 3px solid #111;
-    outline-offset: 3px;
-  }
-
-  /* 좌표 표시 점 */
-  .dot {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 999px;
-    background: #ef4444;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 0 3px #ef444433;
-    pointer-events: none;
-  }
-
-  .label {
-    position: absolute;
-    transform: translate(8px, -18px);
-    font-size: 12px;
-    background: #111;
-    color: #fff;
-    padding: 2px 6px;
-    border-radius: 8px;
-    pointer-events: none;
-    white-space: nowrap;
-  }
-
-  .code {
-    background: #0b1020;
-    color: #e5e7eb;
-    padding: 12px;
-    border-radius: 12px;
-    overflow: auto;
-    line-height: 1.6;
-    font-family:
-      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-      "Courier New", monospace;
-    font-size: 12px;
-  }
-
-  .hint {
-    color: #555;
-    font-size: 13px;
-  }
-</style>
 <div class="wrap">
   <h2>rect coords를 HTML로 “보이게” 만든 예제</h2>
   <p class="hint">
     아래 파란 박스가 <code>coords="50,50,150,150"</code> 영역입니다.
   </p>
+  <div id="a"></div>
 
   <div aria-label="좌표 시각화 스테이지" class="stage" id="stage">
     <div aria-hidden="true" class="grid"></div>
@@ -122,20 +26,3 @@
     </a>
   </div>
 </div>
-
-<script>
-  // 원래 이미지맵에서 쓰는 coords: x1,y1,x2,y2
-  const coords = [50, 50, 150, 150];
-
-  // 클릭 시 동작 예시
-  document.querySelector(".hotspot").addEventListener("click", (e) => {
-    e.preventDefault();
-    alert(
-      `사각형 영역 클릭!\ncoords = ${coords.join(
-        ",",
-      )}\n(x1,y1)=(${coords[0]},${coords[1]}) / (x2,y2)=(${coords[2]},${
-        coords[3]
-      })`,
-    );
-  });
-</script>
