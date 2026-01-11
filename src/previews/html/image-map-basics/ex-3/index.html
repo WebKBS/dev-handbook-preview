@@ -1,0 +1,206 @@
+<style>
+  body {
+    font-family:
+      system-ui,
+      -apple-system,
+      Segoe UI,
+      Roboto,
+      "Noto Sans KR",
+      sans-serif;
+    margin: 24px;
+  }
+  .wrap {
+    display: grid;
+    gap: 14px;
+    max-width: 900px;
+  }
+  .row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .stage {
+    position: relative;
+    width: 360px;
+    height: 220px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #fafafa, #fff);
+    overflow: hidden;
+  }
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(#00000010 1px, transparent 1px),
+      linear-gradient(90deg, #00000010 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+  }
+
+  svg {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* 폴리곤 영역 스타일 */
+  .poly {
+    fill: #8b5cf622;
+    stroke: #8b5cf6;
+    stroke-width: 2;
+    cursor: pointer;
+  }
+  .poly:hover {
+    fill: #8b5cf633;
+  }
+
+  /* 꼭짓점 표시 */
+  .pt {
+    fill: #ef4444;
+    stroke: #ffffff;
+    stroke-width: 2;
+  }
+  .label {
+    font-size: 12px;
+    fill: #111;
+  }
+  .label-bg {
+    fill: #ffffffcc;
+    stroke: #ddd;
+  }
+
+  .hint {
+    color: #555;
+    font-size: 13px;
+    margin: 0;
+  }
+</style>
+<div class="wrap">
+  <h2>poly coords를 HTML로 “보이게” 만든 예제</h2>
+  <p class="hint">
+    보라색 다각형이 <code>coords</code>로 만들어진 클릭 영역입니다. (점들은
+    꼭짓점)
+  </p>
+
+  <div class="row">
+    <!-- 삼각형 -->
+    <div aria-label="삼각형 poly 시각화" class="stage">
+      <div aria-hidden="true" class="grid"></div>
+
+      <svg aria-label="삼각형 다각형" role="img" viewBox="0 0 360 220">
+        <!-- coords="100,50,50,150,150,150" -->
+        <polygon class="poly" points="100,50 50,150 150,150"></polygon>
+
+        <!-- 꼭짓점 점 + 라벨 -->
+        <circle class="pt" cx="100" cy="50" r="5"></circle>
+        <rect
+          class="label-bg"
+          height="18"
+          rx="6"
+          width="70"
+          x="108"
+          y="34"
+        ></rect>
+        <text class="label" x="114" y="47">(100,50)</text>
+
+        <circle class="pt" cx="50" cy="150" r="5"></circle>
+        <rect
+          class="label-bg"
+          height="18"
+          rx="6"
+          width="68"
+          x="58"
+          y="134"
+        ></rect>
+        <text class="label" x="64" y="147">(50,150)</text>
+
+        <circle class="pt" cx="150" cy="150" r="5"></circle>
+        <rect
+          class="label-bg"
+          height="18"
+          rx="6"
+          width="76"
+          x="158"
+          y="134"
+        ></rect>
+        <text class="label" x="164" y="147">(150,150)</text>
+      </svg>
+    </div>
+
+    <!-- 오각형 -->
+    <div aria-label="오각형 poly 시각화" class="stage">
+      <div aria-hidden="true" class="grid"></div>
+
+      <svg aria-label="오각형 다각형" role="img" viewBox="0 0 360 220">
+        <!-- coords="200,50,250,100,230,170,170,170,150,100" -->
+        <polygon
+          class="poly"
+          points="200,50 250,100 230,170 170,170 150,100"
+          style="fill: #2563eb22; stroke: #2563eb"
+        ></polygon>
+
+        <!-- 꼭짓점 점 + 라벨 -->
+        <circle class="pt" cx="200" cy="50" r="5"></circle>
+        <rect
+          class="label-bg"
+          height="18"
+          rx="6"
+          width="70"
+          x="208"
+          y="34"
+        ></rect>
+        <text class="label" x="214" y="47">(200,50)</text>
+
+        <circle class="pt" cx="250" cy="100" r="5"></circle>
+        <rect
+          class="label-bg"
+          height="18"
+          rx="6"
+          width="72"
+          x="258"
+          y="84"
+        ></rect>
+        <text class="label" x="264" y="97">(250,100)</text>
+
+        <circle class="pt" cx="230" cy="170" r="5"></circle>
+        <rect
+          class="label-bg"
+          height="18"
+          rx="6"
+          width="74"
+          x="238"
+          y="154"
+        ></rect>
+        <text class="label" x="244" y="167">(230,170)</text>
+
+        <circle class="pt" cx="170" cy="170" r="5"></circle>
+        <rect
+          class="label-bg"
+          height="18"
+          rx="6"
+          width="74"
+          x="178"
+          y="154"
+        ></rect>
+        <text class="label" x="184" y="167">(170,170)</text>
+
+        <circle class="pt" cx="150" cy="100" r="5"></circle>
+        <rect
+          class="label-bg"
+          height="18"
+          rx="6"
+          width="72"
+          x="158"
+          y="84"
+        ></rect>
+        <text class="label" x="164" y="97">(150,100)</text>
+      </svg>
+    </div>
+  </div>
+
+  <p class="hint">
+    핵심: <strong>마지막 점과 첫 점은 자동으로 연결</strong>되어 닫힌 도형이
+    됩니다. (그래서 coords에 “첫 점을 다시” 넣을 필요가 없어요)
+  </p>
+</div>
