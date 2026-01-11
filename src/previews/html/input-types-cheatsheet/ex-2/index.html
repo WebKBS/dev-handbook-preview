@@ -1,0 +1,66 @@
+<form action="/register" method="post">
+  <label for="username">사용자명</label>
+  <input
+    autocomplete="username"
+    id="username"
+    maxlength="20"
+    minlength="4"
+    name="username"
+    pattern="[a-zA-Z0-9_]+"
+    required
+    type="text"
+  />
+
+  <label for="email">이메일</label>
+  <input autocomplete="email" id="email" name="email" required type="email" />
+
+  <label for="password">비밀번호</label>
+  <input
+    autocomplete="new-password"
+    id="password"
+    minlength="8"
+    name="password"
+    required
+    type="password"
+  />
+
+  <label for="birthday">생년월일</label>
+  <input id="birthday" max="2008-01-01" name="birthday" required type="date" />
+
+  <label>
+    <input name="agree" required type="checkbox" />
+    이용약관에 동의합니다
+  </label>
+
+  <button type="submit">가입하기</button>
+</form>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 300px;
+  }
+  label {
+    font-weight: bold;
+  }
+  input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+</style>
