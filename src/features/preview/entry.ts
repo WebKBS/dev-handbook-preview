@@ -43,8 +43,18 @@ export function ensureVanillaEntry(files: Record<string, SandpackFile>) {
   }
 
   // Sandpack vanilla 템플릿 기본 index.js가 DOM을 건드려 HTML-only 예제가 깨지는 문제 방지
-  const hasAnyEntry = hasMain || hasIndex || hasSrcIndex;
+  const hasAnyEntry = !!(
+    hasMain || hasIndex || hasSrcIndex || files["/src/index.js"]
+  );
   if (!hasAnyEntry) {
-    files["/index.js"] = { hidden: true, code: "" };
+    const cssImports = Object.keys(files)
+      .filter((path) => path.endsWith(".css"))
+      .map((path) => {
+        const normalized = path.startsWith("/") ? `.${path}` : path;
+        return `import "${normalized}";`;
+      })
+      .join("\n");
+
+    files["/index.js"] = { hidden: true, code: cssImports };
   }
 }
