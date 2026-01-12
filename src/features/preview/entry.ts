@@ -25,6 +25,22 @@ function prependToFile(
   files[path] = typeof file === "string" ? next : { ...file, code: next };
 }
 
+function appendToFile(
+  files: Record<string, SandpackFile>,
+  path: string,
+  suffix: string,
+) {
+  if (!suffix) return;
+
+  const file = files[path];
+  if (!file) return;
+
+  const code = typeof file === "string" ? file : file.code ?? "";
+  const next = `${code}\n${suffix}`;
+
+  files[path] = typeof file === "string" ? next : { ...file, code: next };
+}
+
 function buildCssImports(
   files: Record<string, SandpackFile>,
   target: "root" | "src",
@@ -38,6 +54,23 @@ function buildCssImports(
       return `import "${normalized}";`;
     })
     .join("\n");
+}
+
+function extractInlineScripts(files: Record<string, SandpackFile>) {
+  const html = files["/index.html"];
+  if (!html) return "";
+
+  const code = typeof html === "string" ? html : html.code ?? "";
+  const matches = [
+    ...code.matchAll(
+      /<script(?![^>]*\bsrc\b)[^>]*>([\s\S]*?)<\/script>/gi,
+    ),
+  ];
+
+  return matches
+    .map((m) => m[1].trim())
+    .filter(Boolean)
+    .join("\n\n");
 }
 
 export function ensureReactEntry(files: Record<string, SandpackFile>) {
@@ -65,10 +98,12 @@ export function ensureVanillaEntry(files: Record<string, SandpackFile>) {
   const hasIndex = !!files["/index.js"];
   const hasSrcIndex = !!files["/src/index.js"];
   const cssImportsRoot = buildCssImports(files, "root");
+  const inlineScripts = extractInlineScripts(files);
 
   // /index.js가 있으면 거기에 CSS import를 붙이고 그대로 엔트리로 사용
   if (hasIndex) {
     prependToFile(files, "/index.js", cssImportsRoot);
+    appendToFile(files, "/index.js", inlineScripts);
     setActive(files, "/index.js");
     return;
   }
@@ -77,9 +112,9 @@ export function ensureVanillaEntry(files: Record<string, SandpackFile>) {
   if (hasMain) {
     files["/index.js"] = {
       hidden: true,
-      code: [cssImportsRoot, `import "./main.js";`]
+      code: [cssImportsRoot, `import "./main.js";`, inlineScripts]
         .filter(Boolean)
-        .join("\n"),
+        .join("\n\n"),
     };
     setActive(files, "/main.js");
     return;
@@ -89,9 +124,9 @@ export function ensureVanillaEntry(files: Record<string, SandpackFile>) {
   if (hasSrcIndex) {
     files["/index.js"] = {
       hidden: true,
-      code: [cssImportsRoot, `import "./src/index.js";`]
+      code: [cssImportsRoot, `import "./src/index.js";`, inlineScripts]
         .filter(Boolean)
-        .join("\n"),
+        .join("\n\n"),
     };
     setActive(files, "/src/index.js");
     return;
@@ -102,6 +137,9 @@ export function ensureVanillaEntry(files: Record<string, SandpackFile>) {
     hasMain || hasIndex || hasSrcIndex || files["/src/index.js"]
   );
   if (!hasAnyEntry) {
-    files["/index.js"] = { hidden: true, code: cssImportsRoot };
+    files["/index.js"] = {
+      hidden: true,
+      code: [cssImportsRoot, inlineScripts].filter(Boolean).join("\n\n"),
+    };
   }
 }
