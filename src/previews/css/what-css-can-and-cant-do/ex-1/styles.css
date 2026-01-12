@@ -1,0 +1,23 @@
+/* 수평/수직 중앙 정렬 */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 반응형 네비게이션 */
+.nav {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* 카드 레이아웃 */
+.card-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1 1 300px; /* 최소 300px, 같은 크기로 늘어남 */
+}
