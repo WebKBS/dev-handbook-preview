@@ -1,0 +1,42 @@
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+
+  fieldset {
+    border: 1px solid #ccc;
+    padding: 1em;
+    margin-bottom: 1em;
+  }
+
+  legend {
+    font-weight: bold;
+    margin-bottom: 0.5em;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.25em;
+    box-sizing: border-box;
+  }
+
+  button {
+    padding: 0.5em 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #0056b3;
+  }

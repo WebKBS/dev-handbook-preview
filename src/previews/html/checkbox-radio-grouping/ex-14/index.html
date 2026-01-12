@@ -1,0 +1,33 @@
+<fieldset disabled>
+  <legend>알림 설정 (비활성화됨)</legend>
+
+  <label>
+    <input name="notifications" type="checkbox" value="email" />
+    이메일 알림
+  </label>
+
+  <label>
+    <input name="notifications" type="checkbox" value="sms" />
+    SMS 알림
+  </label>
+</fieldset>
+
+<!-- 특정 옵션만 비활성화 -->
+<fieldset>
+  <legend>배송 방법</legend>
+
+  <label>
+    <input name="shipping" type="radio" value="standard" />
+    일반 배송
+  </label>
+
+  <label>
+    <input disabled name="shipping" type="radio" value="express" />
+    특급 배송 (재고 부족)
+  </label>
+
+  <label>
+    <input disabled name="shipping" type="radio" value="overnight" />
+    익일 배송 (일시 중단)
+  </label>
+</fieldset>

@@ -1,0 +1,67 @@
+<details class="accordion">
+  <summary>고급 스타일 아코디언</summary>
+  <p>세련된 디자인의 콘텐츠입니다.</p>
+</details>
+
+<style>
+  .accordion {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .accordion:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .accordion summary {
+    padding: 16px 20px;
+    background-color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    transition: background-color 0.2s;
+  }
+
+  .accordion summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .accordion summary::after {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #666;
+    transition: transform 0.3s;
+  }
+
+  .accordion summary:hover {
+    background-color: #f8f9fa;
+  }
+
+  .accordion[open] summary {
+    background-color: #007bff;
+    color: white;
+  }
+
+  .accordion[open] summary::after {
+    content: "−";
+    color: white;
+  }
+
+  /* 콘텐츠 영역 */
+  .accordion[open] {
+    border-color: #007bff;
+  }
+
+  .accordion > *:not(summary) {
+    padding: 16px 20px;
+    background-color: #f8f9fa;
+  }
+</style>

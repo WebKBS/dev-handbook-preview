@@ -1,0 +1,76 @@
+body {
+    font-family:
+      system-ui,
+      -apple-system,
+      Segoe UI,
+      Roboto,
+      "Noto Sans KR",
+      sans-serif;
+    margin: 24px;
+  }
+  .wrap {
+    display: grid;
+    gap: 14px;
+    max-width: 900px;
+  }
+  .row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .stage {
+    position: relative;
+    width: 360px;
+    height: 220px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #fafafa, #fff);
+    overflow: hidden;
+  }
+  .grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(#00000010 1px, transparent 1px),
+      linear-gradient(90deg, #00000010 1px, transparent 1px);
+    background-size: 20px 20px;
+    pointer-events: none;
+  }
+
+  svg {
+    position: absolute;
+    inset: 0;
+  }
+
+  /* 폴리곤 영역 스타일 */
+  .poly {
+    fill: #8b5cf622;
+    stroke: #8b5cf6;
+    stroke-width: 2;
+    cursor: pointer;
+  }
+  .poly:hover {
+    fill: #8b5cf633;
+  }
+
+  /* 꼭짓점 표시 */
+  .pt {
+    fill: #ef4444;
+    stroke: #ffffff;
+    stroke-width: 2;
+  }
+  .label {
+    font-size: 12px;
+    fill: #111;
+  }
+  .label-bg {
+    fill: #ffffffcc;
+    stroke: #ddd;
+  }
+
+  .hint {
+    color: #555;
+    font-size: 13px;
+    margin: 0;
+  }

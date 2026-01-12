@@ -1,0 +1,93 @@
+/* 카드 컨테이너 */
+.profile-card {
+  max-width: 400px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* 헤더 */
+.profile-card__header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  text-align: center;
+}
+
+.profile-card__avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid white;
+  object-fit: cover;
+}
+
+/* 바디 */
+.profile-card__body {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.profile-card__name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 0.25rem;
+}
+
+.profile-card__role {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.profile-card__bio {
+  color: #555;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+/* 푸터 */
+.profile-card__footer {
+  padding: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  background-color: #f8f9fa;
+}
+
+/* 버튼 공통 */
+.button {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 버튼 변형 */
+.button--primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.button--primary:hover {
+  background-color: #2980b9;
+}
+
+.button--secondary {
+  background-color: white;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.button--secondary:hover {
+  background-color: #3498db;
+  color: white;
+}

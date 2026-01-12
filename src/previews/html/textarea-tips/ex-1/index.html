@@ -1,0 +1,30 @@
+<form>
+  <label for="comment">댓글 작성</label>
+  <textarea
+    id="comment"
+    name="comment"
+    rows="3"
+    maxlength="500"
+    placeholder="댓글을 남겨보세요"
+    required
+  ></textarea>
+
+  <button type="submit">댓글 작성</button>
+</form>
+
+<style>
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+</style>

@@ -1,0 +1,16 @@
+details {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  summary {
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  details details {
+    margin-left: 20px;
+    border-color: #aaa;
+  }

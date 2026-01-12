@@ -1,0 +1,33 @@
+ .custom-fieldset {
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+
+  .custom-fieldset legend {
+    padding: 0 8px;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .checkbox-label {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 8px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.2s;
+  }
+
+  .checkbox-label:hover {
+    background: #f5f5f5;
+  }
+
+  .checkbox-label input {
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+  }

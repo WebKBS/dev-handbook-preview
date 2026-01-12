@@ -1,0 +1,45 @@
+<form action="/products" method="get">
+  <label for="keyword">검색어</label>
+  <input id="keyword" name="q" placeholder="상품명 검색" type="search" />
+
+  <label for="min-price">최소 가격</label>
+  <input
+    id="min-price"
+    min="0"
+    name="min_price"
+    placeholder="0"
+    step="1000"
+    type="number"
+  />
+
+  <label for="max-price">최대 가격</label>
+  <input
+    id="max-price"
+    min="0"
+    name="max_price"
+    placeholder="1000000"
+    step="1000"
+    type="number"
+  />
+
+  <fieldset>
+    <legend>카테고리</legend>
+
+    <label>
+      <input name="category" type="checkbox" value="electronics" />
+      전자제품
+    </label>
+
+    <label>
+      <input name="category" type="checkbox" value="fashion" />
+      패션
+    </label>
+
+    <label>
+      <input name="category" type="checkbox" value="books" />
+      도서
+    </label>
+  </fieldset>
+
+  <button type="submit">검색</button>
+</form>

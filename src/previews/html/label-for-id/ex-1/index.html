@@ -1,0 +1,31 @@
+<form>
+  <div class="form-group">
+    <label for="username">사용자명</label>
+    <input
+      aria-describedby="username-help"
+      id="username"
+      name="username"
+      required
+      type="text"
+    />
+    <small id="username-help">4-20자의 영문, 숫자</small>
+  </div>
+
+  <div class="form-group">
+    <label for="email">이메일</label>
+    <input id="email" name="email" required type="email" />
+  </div>
+
+  <div class="form-group">
+    <label for="password">비밀번호</label>
+    <input
+      id="password"
+      minlength="8"
+      name="password"
+      required
+      type="password"
+    />
+  </div>
+
+  <button type="submit">가입하기</button>
+</form>

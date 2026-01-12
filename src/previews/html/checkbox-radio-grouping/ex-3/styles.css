@@ -1,0 +1,22 @@
+  fieldset {
+    border: 2px solid #ccc;
+    padding: 1em;
+    max-width: 300px;
+  }
+
+  legend {
+    font-weight: bold;
+    padding: 0 0.5em;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+    cursor: pointer;
+  }
+
+  hr {
+    margin: 1em 0;
+    border: none;
+    border-top: 1px solid #eee;
+  }

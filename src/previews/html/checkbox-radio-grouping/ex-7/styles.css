@@ -1,0 +1,35 @@
+.radio-card {
+    display: block;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .radio-card:hover {
+    border-color: #007bff;
+    background: #f8f9fa;
+  }
+
+  .radio-card:has(input:checked) {
+    border-color: #007bff;
+    background: #e7f3ff;
+  }
+
+  .radio-card input[type="radio"] {
+    margin-right: 12px;
+  }
+
+  .radio-content {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .radio-content span {
+    display: block;
+    margin: 4px 0 0 0;
+    color: #666;
+    font-size: 0.9em;
+  }

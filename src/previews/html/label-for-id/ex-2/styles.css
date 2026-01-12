@@ -1,0 +1,25 @@
+.floating-label {
+    position: relative;
+  }
+
+  .floating-label input {
+    padding: 20px 12px 4px;
+    border: 1px solid #ccc;
+  }
+
+  .floating-label label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s;
+    pointer-events: none;
+  }
+
+  /* 입력 중이거나 값이 있을 때 */
+  .floating-label input:focus + label,
+  .floating-label input:not(:placeholder-shown) + label {
+    top: 8px;
+    font-size: 0.75rem;
+    transform: translateY(0);
+  }

@@ -1,0 +1,54 @@
+<div class="filter">
+  <fieldset class="file-types">
+    <legend>파일 유형</legend>
+
+    <!-- 문서 그룹 -->
+    <label class="group" for="documents">
+      <span class="left">
+        <input id="documents" type="checkbox" />
+        <strong>문서</strong>
+      </span>
+      <span class="badge" id="documentsBadge">0 선택</span>
+    </label>
+
+    <div class="nested" id="documentsNested">
+      <label class="item">
+        <input class="document-item" name="files" type="checkbox" value="pdf" />
+        PDF
+      </label>
+
+      <label class="item">
+        <input
+          class="document-item"
+          name="files"
+          type="checkbox"
+          value="word"
+        />
+        Word
+      </label>
+    </div>
+
+    <!-- 이미지 그룹 -->
+    <label class="group" for="images">
+      <span class="left">
+        <input id="images" type="checkbox" />
+        <strong>이미지</strong>
+      </span>
+      <span class="badge" id="imagesBadge">0 선택</span>
+    </label>
+
+    <div class="nested" id="imagesNested">
+      <label class="item">
+        <input class="image-item" name="files" type="checkbox" value="jpg" />
+        JPG
+      </label>
+
+      <label class="item">
+        <input class="image-item" name="files" type="checkbox" value="png" />
+        PNG
+      </label>
+    </div>
+
+    <div class="hint" id="resultHint">선택: 없음</div>
+  </fieldset>
+</div>

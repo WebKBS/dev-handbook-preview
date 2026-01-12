@@ -1,0 +1,40 @@
+<button id="openStyledDialogBtn">스타일된 다이얼로그 열기</button>
+<dialog id="styledDialog">
+  <h2>백드롭 스타일</h2>
+  <button onclick="this.closest('dialog').close()">닫기</button>
+</dialog>
+
+<style>
+  /* 백드롭 커스터마이징 */
+  #styledDialog::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+  }
+
+  /* 애니메이션 추가 */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #styledDialog[open] {
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  #styledDialog[open]::backdrop {
+    animation: fadeIn 0.2s ease-out;
+  }
+</style>
+
+<script>
+  const openStyledDialogBtn = document.getElementById("openStyledDialogBtn");
+  const styledDialog = document.getElementById("styledDialog");
+
+  openStyledDialogBtn.addEventListener("click", () => {
+    styledDialog.showModal();
+  });
+</script>

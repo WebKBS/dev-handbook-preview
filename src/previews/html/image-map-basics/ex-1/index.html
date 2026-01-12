@@ -1,0 +1,27 @@
+<div class="wrap">
+  <h2>rect coords를 HTML로 “보이게” 만든 예제</h2>
+  <p class="hint">
+    아래 파란 박스가 <code>coords="50,50,150,150"</code> 영역입니다.
+  </p>
+
+  <div aria-label="좌표 시각화 스테이지" class="stage" id="stage">
+    <div aria-hidden="true" class="grid"></div>
+
+    <!-- (50,50) / (150,150) 점 표시 -->
+    <div class="dot" style="left: 50px; top: 50px"></div>
+    <div class="label" style="left: 50px; top: 50px">(50,50)</div>
+
+    <div class="dot" style="left: 150px; top: 150px"></div>
+    <div class="label" style="left: 150px; top: 150px">(150,150)</div>
+
+    <!-- “사각형 클릭 영역” -->
+    <a
+      aria-label="사각형 영역 링크"
+      class="hotspot"
+      href="#page"
+      style="left: 50px; top: 50px; width: 100px; height: 100px"
+    >
+      클릭 영역
+    </a>
+  </div>
+</div>

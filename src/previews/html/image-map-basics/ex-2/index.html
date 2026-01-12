@@ -1,0 +1,40 @@
+<div class="wrap">
+  <h2>circle coords를 HTML로 “보이게” 만든 예제</h2>
+  <p class="hint">초록색 원이 <code>coords="200,200,50"</code> 영역입니다.</p>
+
+  <div aria-label="circle 좌표 시각화 스테이지" class="stage" id="stage">
+    <div aria-hidden="true" class="grid"></div>
+
+    <!-- 원형 클릭 영역: left/top은 (x - r, y - r), size는 (2r) -->
+    <a
+      aria-label="원형 영역 링크"
+      class="circle"
+      href="#page"
+      style="
+        left: 150px; /* 200 - 50 */
+        top: 150px; /* 200 - 50 */
+        width: 100px; /* 2 * 50 */
+        height: 100px;
+      "
+    >
+      원 클릭
+    </a>
+
+    <!-- 중심점 (200,200) -->
+    <div class="center-dot" style="left: 200px; top: 200px"></div>
+    <div class="label" style="left: 200px; top: 200px">중심 (200,200)</div>
+
+    <!-- 상/하/좌/우 포인트: (x, y-r), (x, y+r), (x-r, y), (x+r, y) -->
+    <div class="point" style="left: 200px; top: 150px"></div>
+    <div class="label" style="left: 200px; top: 150px">(200,150)</div>
+
+    <div class="point" style="left: 250px; top: 200px"></div>
+    <div class="label" style="left: 250px; top: 200px">(250,200)</div>
+
+    <div class="point" style="left: 200px; top: 250px"></div>
+    <div class="label" style="left: 200px; top: 250px">(200,250)</div>
+
+    <div class="point" style="left: 150px; top: 200px"></div>
+    <div class="label" style="left: 150px; top: 200px">(150,200)</div>
+  </div>
+</div>

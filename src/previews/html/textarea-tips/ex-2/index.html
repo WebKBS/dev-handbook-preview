@@ -1,0 +1,40 @@
+<form>
+  <label for="review">상품 리뷰</label>
+  <textarea
+    aria-describedby="review-help"
+    id="review"
+    maxlength="500"
+    minlength="10"
+    name="review"
+    placeholder="상품에 대한 솔직한 리뷰를 남겨주세요 (최소 10자)"
+    required
+    rows="5"
+  ></textarea>
+  <small id="review-help"> 최대 500자까지 작성할 수 있습니다. </small>
+
+  <button type="submit">리뷰 등록</button>
+</form>
+
+<style>
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    resize: vertical;
+  }
+
+  textarea:focus {
+    outline: none;
+    border-color: #007bff;
+  }
+
+  small {
+    display: block;
+    margin-top: 4px;
+    color: #666;
+    font-size: 12px;
+  }
+</style>

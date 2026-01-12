@@ -1,0 +1,48 @@
+<form>
+  <fieldset>
+    <legend>개인 정보</legend>
+
+    <label for="name">이름</label>
+    <input id="name" name="name" required type="text" />
+
+    <fieldset>
+      <legend>성별</legend>
+
+      <label>
+        <input name="gender" type="radio" value="male" />
+        남성
+      </label>
+
+      <label>
+        <input name="gender" type="radio" value="female" />
+        여성
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>관심사</legend>
+
+      <label>
+        <input name="interests" type="checkbox" value="sports" />
+        스포츠
+      </label>
+
+      <label>
+        <input name="interests" type="checkbox" value="music" />
+        음악
+      </label>
+    </fieldset>
+  </fieldset>
+
+  <fieldset>
+    <legend>연락처</legend>
+
+    <label for="email">이메일</label>
+    <input id="email" name="email" required type="email" />
+
+    <label for="phone">전화번호</label>
+    <input id="phone" name="phone" type="tel" />
+  </fieldset>
+
+  <button type="submit">제출</button>
+</form>

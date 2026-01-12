@@ -1,0 +1,24 @@
+<button id="openClickableDialogBtn">백드롭 클릭 가능 다이얼로그 열기</button>
+<dialog id="clickableDialog">
+  <h2>백드롭 클릭 가능</h2>
+  <p>배경을 클릭하면 닫힙니다.</p>
+  <button onclick="this.closest('dialog').close()">닫기</button>
+</dialog>
+
+<script>
+  const openClickableDialogBtn = document.getElementById(
+    "openClickableDialogBtn",
+  );
+  const dialog = document.getElementById("clickableDialog");
+
+  openClickableDialogBtn.addEventListener("click", () => {
+    dialog.showModal();
+  });
+
+  dialog.addEventListener("click", (e) => {
+    // 다이얼로그 자체(백드롭)를 클릭했을 때
+    if (e.target === dialog) {
+      dialog.close();
+    }
+  });
+</script>

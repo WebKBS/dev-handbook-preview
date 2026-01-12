@@ -1,0 +1,33 @@
+<style>
+  /* CSS로 마커 변경 */
+  ul.circle {
+    list-style-type: circle;
+  }
+  ul.square {
+    list-style-type: square;
+  }
+  ul.none {
+    list-style-type: none;
+  }
+
+  /* 커스텀 마커 */
+  ul.custom li::before {
+    content: "✓ ";
+    color: green;
+  }
+  ul.custom {
+    list-style: none;
+  }
+</style>
+
+<ul class="circle">
+  <li>빈 원</li>
+</ul>
+
+<ul class="square">
+  <li>네모</li>
+</ul>
+
+<ul class="custom">
+  <li>커스텀 체크</li>
+</ul>
