@@ -1,0 +1,34 @@
+<details class="custom-details">
+  <summary>커스텀 스타일 아코디언</summary>
+  <p>내용입니다.</p>
+</details>
+
+<style>
+  .custom-details {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 8px;
+  }
+
+  .custom-details summary {
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none; /* 텍스트 선택 방지 */
+  }
+
+  .custom-details summary:hover {
+    color: #007bff;
+  }
+
+  /* 펼쳐진 상태 */
+  .custom-details[open] {
+    background-color: #f8f9fa;
+  }
+
+  .custom-details[open] summary {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dee2e6;
+  }
+</style>

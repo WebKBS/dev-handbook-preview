@@ -1,0 +1,19 @@
+ details {
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.5em;
+    background-color: #f9f9f9;
+  }
+
+  summary {
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+  }
+
+  p,
+  ul {
+    margin-top: 0.5em;
+    margin-left: 1em;
+  }

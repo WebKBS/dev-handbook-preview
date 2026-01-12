@@ -1,0 +1,28 @@
+<details class="custom-arrow">
+  <summary>커스텀 화살표</summary>
+  <p>내용입니다.</p>
+</details>
+
+<style>
+  /* 기본 삼각형 제거 */
+  .custom-arrow summary {
+    list-style: none; /* Firefox */
+  }
+
+  .custom-arrow summary::-webkit-details-marker {
+    display: none; /* Chrome, Safari */
+  }
+
+  /* 커스텀 아이콘 추가 */
+  .custom-arrow summary::before {
+    content: "➡️";
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.2s;
+  }
+
+  /* 펼쳐졌을 때 회전 */
+  .custom-arrow[open] summary::before {
+    transform: rotate(90deg);
+  }
+</style>

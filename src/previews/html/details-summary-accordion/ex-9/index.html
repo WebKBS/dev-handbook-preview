@@ -1,0 +1,44 @@
+<details class="animated">
+  <summary>애니메이션 아코디언</summary>
+  <div class="content">
+    <p>부드럽게 펼쳐지는 콘텐츠입니다.</p>
+  </div>
+</details>
+
+<style>
+  .animated {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 8px;
+  }
+
+  .animated summary {
+    padding: 12px;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .animated summary::-webkit-details-marker {
+    display: none;
+  }
+
+  /* 애니메이션 */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animated[open] .content {
+    animation: slideDown 0.3s ease-out;
+  }
+
+  .content {
+    padding: 0 12px 12px;
+  }
+</style>
