@@ -1,0 +1,28 @@
+<style>
+  /* 유효한 입력 */
+  input:valid {
+    border-color: #28a745;
+  }
+
+  /* 유효하지 않은 입력 */
+  input:invalid {
+    border-color: #dc3545;
+  }
+
+  /* 포커스 전에는 스타일 적용 안 함 */
+  input:not(:placeholder-shown):invalid {
+    border-color: #dc3545;
+  }
+
+  /* 필수 항목 표시 */
+  input:required {
+    border-left: 3px solid #007bff;
+  }
+
+  /* 선택 항목 */
+  input:optional {
+    border-left: 3px solid #6c757d;
+  }
+</style>
+
+<input type="email" placeholder="이메일 입력" required />

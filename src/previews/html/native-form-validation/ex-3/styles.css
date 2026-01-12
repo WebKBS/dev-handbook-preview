@@ -1,0 +1,48 @@
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+
+  fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+  }
+
+  legend {
+    font-weight: bold;
+    padding: 0 8px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    padding: 10px 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  button:hover {
+    background-color: #218838;
+  }
