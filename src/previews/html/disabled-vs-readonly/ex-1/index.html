@@ -1,0 +1,48 @@
+<!-- input -->
+<input disabled name="field1" type="text" />
+
+<!-- textarea -->
+<textarea disabled name="field2"></textarea>
+
+<!-- select -->
+<select disabled name="field3">
+  <option>옵션 1</option>
+</select>
+
+<!-- button -->
+<button disabled type="submit">제출</button>
+
+<!-- fieldset: 내부 모든 요소 비활성화 -->
+<fieldset disabled>
+  <legend>비활성화된 그룹</legend>
+  <input name="field4" type="text" />
+  <input name="field5" type="text" />
+</fieldset>
+
+<style>
+  input,
+  textarea,
+  select,
+  button {
+    display: block;
+    margin-bottom: 12px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  input:disabled,
+  textarea:disabled,
+  select:disabled,
+  button:disabled {
+    background-color: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+  }
+</style>

@@ -1,0 +1,51 @@
+/* 공통 폼 컨트롤(디자인 시스템 베이스) */
+  .form-control {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    padding: 10px 12px;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #212529;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.15);
+  }
+
+  /* 일관된 disabled */
+  .form-control:disabled {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+    color: #6c757d;
+    cursor: not-allowed;
+  }
+
+  /* 일관된 readonly (disabled와 비슷하지만 포커스/복사 가능) */
+  .form-control:read-only {
+    background-color: #e9ecef;
+    border-color: #ced4da;
+  }
+
+  /* readonly만 포커스 시 강조 */
+  .form-control:read-only:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+
+  /* 데모용 */
+  .row {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  label {
+    font-size: 13px;
+    color: #495057;
+  }

@@ -1,0 +1,81 @@
+<style>
+  /* disabled 기본 스타일 */
+  input:disabled,
+  textarea:disabled,
+  select:disabled {
+    background-color: #e9ecef;
+    color: #6c757d;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  /* readonly 기본 스타일 (브라우저마다 다름) */
+  input:readonly,
+  textarea:readonly {
+    background-color: #f8f9fa;
+    /* 일부 브라우저는 일반 input과 동일 */
+  }
+</style>
+
+<form>
+  <h3>Disabled</h3>
+
+  <label>
+    disabled input
+    <input type="text" value="수정 불가" disabled />
+  </label>
+  <br /><br />
+
+  <label>
+    disabled textarea
+    <textarea disabled>수정 불가</textarea>
+  </label>
+  <br /><br />
+
+  <label>
+    disabled select
+    <select disabled>
+      <option>선택 불가</option>
+      <option>옵션 2</option>
+    </select>
+  </label>
+
+  <hr />
+
+  <h3>Readonly</h3>
+
+  <label>
+    readonly input
+    <input type="text" value="읽기 전용 (포커스 가능)" readonly />
+  </label>
+  <br /><br />
+
+  <label>
+    readonly textarea
+    <textarea readonly>읽기 전용 (포커스 가능)</textarea>
+  </label>
+
+  <hr />
+
+  <h3>정상 상태(비교용)</h3>
+
+  <label>
+    normal input
+    <input type="text" placeholder="입력 가능" />
+  </label>
+  <br /><br />
+
+  <label>
+    normal textarea
+    <textarea placeholder="입력 가능"></textarea>
+  </label>
+  <br /><br />
+
+  <label>
+    normal select
+    <select>
+      <option>선택 가능</option>
+      <option>옵션 2</option>
+    </select>
+  </label>
+</form>
