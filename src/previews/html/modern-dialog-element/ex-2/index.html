@@ -1,0 +1,8 @@
+<dialog id="nonModal">
+  <p>비모달 다이얼로그</p>
+  <button onclick="this.closest('dialog').close()">닫기</button>
+</dialog>
+
+<button onclick="document.getElementById('nonModal').show()">
+  비모달 열기
+</button>
