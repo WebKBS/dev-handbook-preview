@@ -1,0 +1,16 @@
+.field {
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* placeholder가 보이는 상태 = 아직 비어있음 */
+.field:placeholder-shown {
+  border-color: #ddd;
+}
+
+/* 값이 입력된 상태 */
+.field:not(:placeholder-shown) {
+  border-color: #3498db;
+}

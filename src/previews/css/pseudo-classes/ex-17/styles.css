@@ -1,0 +1,57 @@
+/* 데모 영역 구분(색상만) */
+.demo {
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+/* intro/highlight는 '제외'된 느낌(연하게) */
+.demo .intro,
+.demo .highlight {
+  color: #9ca3af;
+  background: #f9fafb;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+/* ✅ intro/highlight가 아닌 p만 강조(색상) */
+.demo p:not(.intro):not(.highlight) {
+  color: #111827;
+  background: #fff7ed;
+  padding: 6px 8px;
+  border-radius: 8px;
+  border-left: 4px solid #f97316;
+}
+
+/* ✅ 마지막 li만 빼고 색으로 구분 */
+.list li {
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.list li:not(:last-child) {
+  background: #ecfdf5;
+  border-left: 4px solid #10b981;
+  margin-bottom: 10px;
+}
+
+/* ✅ disabled 제외 버튼만 색상 반응 */
+.btns button {
+  padding: 8px 10px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+}
+
+.btns button:not(:disabled) {
+  background: #eff6ff;
+  border-color: #93c5fd;
+  color: #1d4ed8;
+}
+
+.btns button:disabled {
+  background: #f3f4f6;
+  color: #9ca3af;
+  border-color: #e5e7eb;
+}

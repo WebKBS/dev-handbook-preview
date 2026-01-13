@@ -1,0 +1,5 @@
+/* 부모의 "유일한 자식"일 때만 */
+li:only-child {
+  font-weight: 700;
+  color: tomato;
+}

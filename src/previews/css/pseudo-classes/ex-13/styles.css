@@ -1,0 +1,28 @@
+.form {
+  display: grid;
+  gap: 12px;
+  max-width: 320px;
+}
+
+.form label {
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+}
+
+.form input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* 필수 필드 */
+.form input:required {
+  border-left: 4px solid #3498db;
+}
+
+/* 선택 필드 */
+.form input:optional {
+  border-left: 4px solid #95a5a6;
+}

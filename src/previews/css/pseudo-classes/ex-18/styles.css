@@ -1,0 +1,11 @@
+/* 빈 요소 숨김 */
+p:empty {
+  display: none;
+}
+
+/* 빈 div에 안내 표시 */
+.message:empty::before {
+  content: "메시지가 없습니다";
+  color: #999;
+  font-style: italic;
+}

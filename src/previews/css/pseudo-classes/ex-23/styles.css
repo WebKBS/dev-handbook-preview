@@ -1,0 +1,27 @@
+.accordion {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+summary {
+  padding: 15px;
+  cursor: pointer;
+  user-select: none;
+  background-color: #f8f9fa;
+  transition: background-color 0.2s;
+}
+
+summary:hover {
+  background-color: #e9ecef;
+}
+
+/* 열린 상태 */
+.accordion[open] summary {
+  background-color: #3498db;
+  color: white;
+}
+
+.content {
+  padding: 15px;
+}

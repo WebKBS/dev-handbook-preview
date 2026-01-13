@@ -1,0 +1,16 @@
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* 체크된 상태 */
+input[type="checkbox"]:checked {
+  accent-color: #3498db;
+}
+
+/* 체크된 체크박스 다음 레이블 */
+input[type="checkbox"]:checked + span {
+  color: #3498db;
+  font-weight: 600;
+}
