@@ -1,0 +1,5 @@
+.icon::before {
+  content: url("https://webkbs.github.io/dev-handbook-preview/example/icon.svg");
+  margin-right: 8px;
+  vertical-align: middle;
+}
