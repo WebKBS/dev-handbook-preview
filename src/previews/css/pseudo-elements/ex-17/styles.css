@@ -1,0 +1,55 @@
+.custom-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-checkbox span {
+  position: relative;
+  padding-left: 35px;
+}
+
+/* 체크박스 박스 */
+.custom-checkbox span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  background-color: white;
+  transition: all 0.2s;
+}
+
+/* 체크 표시 */
+.custom-checkbox span::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 6px;
+  height: 12px;
+  border-right: 2px solid white;
+  border-bottom: 2px solid white;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* 체크된 상태 */
+.custom-checkbox input:checked + span::before {
+  background-color: #3498db;
+  border-color: #3498db;
+}
+
+.custom-checkbox input:checked + span::after {
+  opacity: 1;
+}

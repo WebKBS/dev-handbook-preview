@@ -1,0 +1,6 @@
+label:has(input:required)::after,
+input:required + label::after {
+  content: " *";
+  color: #e74c3c;
+  font-weight: bold;
+}

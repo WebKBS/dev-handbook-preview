@@ -1,0 +1,45 @@
+.custom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-list li {
+  padding-left: 30px;
+  position: relative;
+}
+
+.custom-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* 또는 숫자 카운터 */
+.numbered-list {
+  list-style: none;
+  counter-reset: item;
+}
+
+.numbered-list li {
+  counter-increment: item;
+  padding-left: 32px;
+  position: relative;
+}
+
+.numbered-list li::before {
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background-color: #3498db;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

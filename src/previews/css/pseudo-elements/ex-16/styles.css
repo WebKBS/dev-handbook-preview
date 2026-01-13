@@ -1,0 +1,33 @@
+/* 양쪽 구분선 */
+.divider-title {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 40px 0;
+}
+
+.divider-title::before,
+.divider-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.divider-title::before {
+  margin-right: 20px;
+}
+
+.divider-title::after {
+  margin-left: 20px;
+}
+
+/* 또는 단순한 하단 구분선 */
+.section-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #3498db;
+  margin-top: 10px;
+}
