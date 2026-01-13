@@ -1,0 +1,34 @@
+a[href$=".pdf"]::after {
+  content: " 📄";
+}
+
+a[href$=".pdf"] {
+  color: #e74c3c;
+}
+
+/* 이미지 파일 링크 */
+a[href$=".jpg"]::after,
+a[href$=".png"]::after,
+a[href$=".gif"]::after {
+  content: " 🖼️";
+}
+
+/* 압축 파일 링크 */
+a[href$=".zip"]::after,
+a[href$=".rar"]::after {
+  content: " 📦";
+}
+
+/* 문서 파일 */
+a[href$=".doc"]::after,
+a[href$=".docx"]::after {
+  content: " 📝";
+  color: #2b579a;
+}
+
+/* 스프레드시트 */
+a[href$=".xls"]::after,
+a[href$=".xlsx"]::after {
+  content: " 📊";
+  color: #1d6f42;
+}

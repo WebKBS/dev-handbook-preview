@@ -1,0 +1,10 @@
+/* type이 email이면서 required인 input */
+input[type="email"][required] {
+  border: 2px solid #e74c3c;
+  background-color: #fff5f5;
+}
+
+/* type이 email이면서 required가 아닌 input */
+input[type="email"]:not([required]) {
+  border: 1px solid #ddd;
+}

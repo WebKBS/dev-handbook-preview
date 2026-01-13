@@ -1,0 +1,10 @@
+/* data-version이 "2" 또는 "2-"로 시작 */
+[data-version|="2"] {
+  background-color: #e3f2fd;
+  border-left: 4px solid #2196f3;
+}
+
+[data-version|="3"] {
+  background-color: #f3e5f5;
+  border-left: 4px solid #9c27b0;
+}

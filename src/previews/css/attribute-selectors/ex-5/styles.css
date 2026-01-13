@@ -1,0 +1,31 @@
+/* https로 시작하는 링크 */
+a[href^="https"] {
+  color: #27ae60;
+}
+
+a[href^="https"]::after {
+  content: " 🔒";
+}
+
+/* mailto로 시작하는 링크 */
+a[href^="mailto"] {
+  color: #3498db;
+}
+
+a[href^="mailto"]::before {
+  content: "✉ ";
+}
+
+/* tel로 시작하는 링크 */
+a[href^="tel"] {
+  color: #e74c3c;
+}
+
+a[href^="tel"]::before {
+  content: "📞 ";
+}
+
+/* /로 시작하는 내부 링크 */
+a[href^="/"] {
+  color: #9b59b6;
+}

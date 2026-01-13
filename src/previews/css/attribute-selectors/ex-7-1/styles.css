@@ -1,0 +1,20 @@
+/* 클래스에 "success"가 포함 */
+[class*="success"] {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  color: #155724;
+}
+
+/* 클래스에 "error"가 포함 */
+[class*="error"] {
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  color: #721c24;
+}
+
+/* 클래스에 "warning"이 포함 */
+[class*="warning"] {
+  background-color: #fff3cd;
+  border-color: #ffeaa7;
+  color: #856404;
+}

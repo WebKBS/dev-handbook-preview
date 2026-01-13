@@ -1,0 +1,25 @@
+/* 다운로드 가능한 파일 타입 */
+a[href$=".pdf"],
+a[href$=".zip"],
+a[href$=".doc"],
+a[href$=".docx"] {
+  padding: 5px 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  transition:
+    background-color 0.2s,
+    color 0.2s,
+    border-color 0.2s;
+}
+
+a[href$=".pdf"]:hover,
+a[href$=".zip"]:hover,
+a[href$=".doc"]:hover,
+a[href$=".docx"]:hover {
+  background-color: #3498db;
+  color: white;
+  border-color: #3498db;
+}
