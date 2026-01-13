@@ -1,0 +1,14 @@
+.menu > li {
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 10px;
+  border-bottom: 2px solid #3498db;
+}
+
+/* sub-menu의 li는 다르게 스타일링 */
+.sub-menu > li {
+  font-weight: normal;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ddd;
+}

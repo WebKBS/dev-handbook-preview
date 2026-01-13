@@ -1,0 +1,13 @@
+.quote::before {
+  content: '"'; /* 여는 큰따옴표 */
+  font-size: 2rem;
+  color: #3498db;
+  margin-right: 5px;
+}
+
+.quote::after {
+  content: '"'; /* 닫는 큰따옴표 */
+  font-size: 2rem;
+  color: #3498db;
+  margin-left: 5px;
+}

@@ -1,0 +1,11 @@
+/* class 속성에 "featured"가 단어로 포함 */
+[class~="featured"] {
+  border: 2px solid gold;
+  box-shadow: 0 4px 8px rgba(255, 215, 0, 0.3);
+}
+
+/* class 속성에 "premium"이 단어로 포함 */
+[class~="premium"] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}

@@ -1,0 +1,16 @@
+/* src에 "product"가 포함된 이미지 */
+img[src*="product"] {
+  border: 2px solid #3498db;
+  border-radius: 8px;
+}
+
+/* src에 "banner"가 포함된 이미지 */
+img[src*="banner"] {
+  width: 100%;
+  height: auto;
+}
+
+/* alt에 "사용자"가 포함된 이미지 */
+img[alt*="사용자"] {
+  border-radius: 50%;
+}

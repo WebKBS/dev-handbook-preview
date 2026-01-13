@@ -1,0 +1,13 @@
+a::after {
+  content: " (" attr(href) ")";
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+
+/* 결과: 링크 (https://example.com) */
+
+a::before {
+  content: "[" attr(data-info) "] ";
+  font-weight: bold;
+  color: #e74c3c;
+}

@@ -1,0 +1,5 @@
+.external::after {
+  content: " ↗️"; /* 외부 링크 아이콘 */
+  font-size: 0.8em;
+  color: #95a5a6;
+}

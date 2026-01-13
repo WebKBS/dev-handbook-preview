@@ -1,0 +1,15 @@
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: #d2d2d2;
+}
+
+.card {
+  background: #d0eaff;
+
+}
+
+/* 첫 번째 카드 제외하고 왼쪽 여백 */
+.card + .card {
+  margin-left: 1rem;
+}

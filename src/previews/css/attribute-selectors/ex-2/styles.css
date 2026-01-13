@@ -1,0 +1,22 @@
+input[type="email"] {
+  border-color: #3498db;
+  background-color: #f3f9ff;
+}
+
+/* type이 "password"인 input */
+input[type="password"] {
+  font-family: "password-dots", monospace;
+  letter-spacing: 2px;
+}
+
+/* type이 "submit"인 button */
+button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+}
+
+/* type이 "button"인 button */
+button[type="button"] {
+  background-color: #95a5a6;
+  color: white;
+}

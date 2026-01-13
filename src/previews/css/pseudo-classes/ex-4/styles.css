@@ -1,0 +1,13 @@
+.search-form {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.3s;
+}
+
+/* 폼 내부 요소가 포커스 받으면 폼 전체 스타일 변경 */
+.search-form:focus-within {
+  border-color: #3498db;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+  background-color: #f8f9fa;
+}

@@ -1,0 +1,41 @@
+/* 텍스트 계열 input 기본 스타일 */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="url"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* 숫자 input */
+input[type="number"] {
+  text-align: right;
+}
+
+/* 날짜 input */
+input[type="date"] {
+  padding-right: 10px;
+}
+
+/* 파일 input */
+input[type="file"] {
+  padding: 5px;
+  background-color: #f8f9fa;
+}
+
+/* 체크박스와 라디오 */
+input[type="checkbox"],
+input[type="radio"] {
+  width: 18px;
+  height: 18px;
+}
+
+/* 검색 input */
+input[type="search"] {
+  padding-right: 10px;
+  border-color: #cfd8dc;
+}

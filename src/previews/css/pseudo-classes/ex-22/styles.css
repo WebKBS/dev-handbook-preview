@@ -1,0 +1,32 @@
+.form-field {
+  margin-bottom: 20px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+/* 포커스 */
+.form-input:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* 유효성 검사 */
+.form-input:valid:not(:placeholder-shown) {
+  border-color: #27ae60;
+}
+
+.form-input:invalid:not(:placeholder-shown) {
+  border-color: #e74c3c;
+}
+
+/* 필수 필드 표시 */
+.form-input:required {
+  border-left: 4px solid #3498db;
+}

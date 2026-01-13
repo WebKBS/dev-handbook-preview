@@ -1,0 +1,17 @@
+.num {
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  width: 120px;
+}
+
+/* 범위 안 */
+.num:in-range {
+  border-color: #27ae60;
+}
+
+/* 범위 밖 */
+.num:out-of-range {
+  border-color: #e74c3c;
+}

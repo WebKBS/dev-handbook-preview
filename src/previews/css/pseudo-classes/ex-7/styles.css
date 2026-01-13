@@ -1,0 +1,14 @@
+/* 뒤에서 첫 번째 (마지막) */
+li:nth-last-child(1) {
+  border-bottom: none;
+}
+
+/* 뒤에서 2번째 */
+li:nth-last-child(2) {
+  font-style: italic;
+}
+
+/* 마지막 3개 */
+li:nth-last-child(-n + 3) {
+  color: #95a5a6;
+}

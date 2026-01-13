@@ -1,0 +1,20 @@
+section {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+/* URL이 #section1일 때 */
+section:target {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  animation: highlight 0.5s;
+}
+
+@keyframes highlight {
+  from {
+    background-color: #ffc107;
+  }
+  to {
+    background-color: #fff3cd;
+  }
+}

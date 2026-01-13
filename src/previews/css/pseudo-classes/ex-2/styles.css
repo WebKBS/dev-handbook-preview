@@ -1,0 +1,14 @@
+.button {
+  background-color: #3498db;
+}
+
+.button:hover {
+  background-color: #2980b9;
+}
+
+.button:active {
+  background-color: #1f5f8b;
+  transform: translateY(0) scale(3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+}

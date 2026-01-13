@@ -1,0 +1,12 @@
+/* 체크박스 바로 다음의 레이블 */
+input[type="checkbox"] + label {
+  margin-left: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 체크된 상태의 레이블 */
+input[type="checkbox"]:checked + label {
+  color: #3498db;
+  font-weight: 600;
+}

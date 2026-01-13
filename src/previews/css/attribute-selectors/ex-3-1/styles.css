@@ -1,0 +1,15 @@
+/* javascript 태그를 가진 글 */
+article[data-tags~="javascript"] {
+  border-left: 4px solid #f7df1e;
+}
+
+/* beginner 태그를 가진 글 */
+article[data-tags~="beginner"] {
+  background-color: #e8f5e9;
+}
+
+/* advanced 태그를 가진 글 */
+article[data-tags~="advanced"] {
+  background-color: #fff3e0;
+  font-weight: 600;
+}

@@ -1,0 +1,14 @@
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* 짝수 행에 배경색 */
+tr:nth-child(even) {
+  background-color: #e8e8e8;
+}
+
+/* 마우스 오버 */
+tr:hover {
+  background-color: #9bd2ff;
+}

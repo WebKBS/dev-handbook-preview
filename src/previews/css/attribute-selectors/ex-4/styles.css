@@ -1,0 +1,9 @@
+/* lang이 "en"이거나 "en-"으로 시작 */
+[lang|="en"] {
+  font-family: "Times New Roman", serif;
+}
+
+/* lang이 "ko"이거나 "ko-"으로 시작 */
+[lang|="ko"] {
+  font-family: "Noto Sans KR", sans-serif;
+}

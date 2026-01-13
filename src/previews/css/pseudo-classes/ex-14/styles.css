@@ -1,0 +1,16 @@
+input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  outline: none;
+}
+
+/* 유효한 입력 */
+input:not(:placeholder-shown):valid {
+  border-color: #27ae60;
+}
+
+/* 유효하지 않은 입력 */
+input:not(:placeholder-shown):invalid {
+  border-color: #e74c3c;
+}
