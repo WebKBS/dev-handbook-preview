@@ -1,0 +1,23 @@
+/* main-nav 안의 모든 링크 */
+.main-nav a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.main-nav a:hover {
+  color: #3498db;
+}
+
+/* main-nav 안의 모든 ul */
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  background: #b9b9b9;
+}
+
+/* main-nav 안의 모든 li */
+.main-nav li {
+  margin-bottom: 0.5rem;
+  background: #d7e6ff;
+}

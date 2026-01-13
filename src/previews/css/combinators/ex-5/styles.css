@@ -1,0 +1,15 @@
+/* menu의 직접 자식 ul의 모든 하위 a */
+.menu > ul a {
+  color: #333;
+}
+
+/* menu의 직접 자식 ul의 직접 자식 li */
+.menu > ul > li {
+  display: inline-block;
+}
+
+/* submenu의 직접 자식 li의 직접 자식 a */
+.submenu > li > a {
+  font-size: 0.9rem;
+  padding: 5px 10px;
+}

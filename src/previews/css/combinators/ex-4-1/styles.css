@@ -1,0 +1,17 @@
+/* 에러 메시지 기본 숨김 */
+.error {
+  display: none;
+  color: #e74c3c;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* input이 invalid일 때 이후 에러 메시지 표시 */
+input:invalid ~ .error {
+  display: block;
+}
+
+/* input이 포커스 되면 이후 형제들 스타일 변경 */
+input:focus ~ label {
+  color: #3498db;
+}
