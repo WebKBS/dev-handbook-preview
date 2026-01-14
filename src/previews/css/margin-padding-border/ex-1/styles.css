@@ -1,0 +1,15 @@
+.box {
+  /* 내용 영역 */
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+
+  /* Padding: 내용과 테두리 사이 (배경색 적용) */
+  padding: 20px;
+
+  /* Border: 경계선 */
+  border: 5px solid darkblue;
+
+  /* Margin: 다른 요소와의 간격 (투명) */
+  margin: 30px;
+}
