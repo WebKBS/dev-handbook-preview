@@ -1,0 +1,14 @@
+.parent {
+  color: magenta;
+}
+
+/* 기본적으로 button은 color를 상속받지만, */
+/* 브라우저 기본 스타일이 덮어씀 */
+button {
+  /* color: ButtonText; (브라우저 기본값) */
+}
+
+/* 강제로 부모 값 상속 */
+.child {
+  color: inherit; /* 부모의 blue 상속 */
+}

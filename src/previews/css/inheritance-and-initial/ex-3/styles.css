@@ -1,0 +1,7 @@
+.parent {
+  color: blue;
+}
+
+.child {
+  color: red; /* 직접 지정한 값이 상속된 값보다 우선 */
+}
