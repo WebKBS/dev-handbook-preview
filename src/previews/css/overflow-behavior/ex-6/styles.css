@@ -1,0 +1,40 @@
+ #toggle {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    font-family: system-ui, sans-serif;
+    margin-bottom: 10px;
+    user-select: none;
+  }
+
+  .slide-container {
+    width: 360px;
+    height: 90px;
+    overflow: hidden; /* 밖으로 나간 부분 숨김 */
+    border: 2px solid #ddd;
+    border-radius: 16px;
+    background: #f5f6f8;
+  }
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    background: #3498db;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 700 18px/1 system-ui, sans-serif;
+  }
+
+  #toggle:checked ~ .slide-container .slide {
+    transform: translateX(0);
+  }

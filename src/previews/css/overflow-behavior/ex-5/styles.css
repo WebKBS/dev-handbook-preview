@@ -1,0 +1,39 @@
+  .wrap {
+    width: 360px;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    gap: 12px;
+  }
+
+  .clearfix {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    background: #f5f6f8;
+  }
+
+  .float {
+    float: left;
+    width: 90px;
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background: #3498db;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  /* 1) overflow로 float 자식 포함 */
+  .clearfix.overflow {
+    overflow: hidden; /* 또는 auto */
+  }
+
+  /* 2) pseudo-element clearfix */
+  .clearfix.pseudo::after {
+    content: "";
+    display: table;
+    clear: both;
+  }

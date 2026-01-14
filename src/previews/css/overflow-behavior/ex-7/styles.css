@@ -1,0 +1,10 @@
+  .box {
+    width: 220px;
+    height: 90px;
+    overflow: scroll; /* 항상 스크롤 가능 */
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 12px;
+    font-family: system-ui, sans-serif;
+    background: #f5f6f8;
+  }
