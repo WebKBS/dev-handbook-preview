@@ -1,0 +1,9 @@
+.parent {
+  margin-top: 20px;
+  background: #eee;
+}
+
+.first-child {
+  margin-top: 30px; /* 부모와 상쇄될 수 있음 */
+  background: #ddd;
+}

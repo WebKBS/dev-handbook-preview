@@ -1,0 +1,11 @@
+.sibling1 {
+  margin-bottom: 20px;
+  background: #eee;
+}
+
+.sibling2 {
+  margin-top: 30px;
+  background: #ddd;
+}
+
+/* 두 마진이 만나면 큰 값(30px)만 남음 */

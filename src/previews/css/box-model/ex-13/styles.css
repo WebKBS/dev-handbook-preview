@@ -1,0 +1,16 @@
+  .container {
+    max-width: 360px;
+    margin: 0 auto; /* 수평 중앙 */
+    padding: 0 20px; /* 양쪽 여백 */
+  }
+
+  .card {
+    height: 80px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: system-ui, sans-serif;
+    background: #f5f6f8;
+  }
