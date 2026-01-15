@@ -1,0 +1,19 @@
+.grandparent {
+  position: static; /* 기본값 - 건너뜀 */
+}
+
+.parent {
+  position: relative; /* ✓ 기준점 */
+  max-width: 400px;
+  height: 300px;
+  border: 2px solid blue;
+}
+
+.child {
+  position: absolute;
+  top: 20px; /* parent 기준 */
+  right: 20px; /* parent 기준 */
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
