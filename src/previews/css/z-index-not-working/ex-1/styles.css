@@ -1,0 +1,59 @@
+  body {
+    margin: 0;
+    padding: 16px;
+    font-family: system-ui, sans-serif;
+    background: #f5f6f8;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1; /* ⚠️ 새로운 stacking context 생성 */
+    width: 360px;
+    height: 180px;
+    border-radius: 16px;
+    border: 2px solid #3498db;
+    background: rgba(52, 152, 219, 0.1);
+    padding: 12px;
+  }
+
+  .item1 {
+    position: relative;
+    z-index: 1;
+    height: 56px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+  }
+
+  .item2 {
+    position: relative;
+    z-index: 9999; /* container 안에 갇힘! */
+    margin-top: 10px;
+    height: 56px;
+    border-radius: 14px;
+    background: rgba(118, 75, 162, 1);
+    border: 2px solid #764ba2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
+
+  .overlay {
+    position: relative;
+    z-index: 10; /* container보다 앞에 */
+    width: 360px;
+    margin-top: -90px; /* 겹쳐서 보이게 */
+    height: 110px;
+    border-radius: 16px;
+    background: rgba(231, 76, 60, 0.5);
+    border: 2px solid rgba(231, 76, 60, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
