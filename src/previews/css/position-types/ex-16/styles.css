@@ -1,0 +1,50 @@
+ body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #f5f6f8;
+  }
+
+  .main-header {
+    position: sticky;
+    top: 0;
+    height: 56px;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
+
+  .sub-header {
+    position: sticky;
+    top: 56px; /* 메인 헤더 높이 */
+    height: 44px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    z-index: 90;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
+
+  .list {
+    padding: 12px;
+    display: grid;
+    gap: 10px;
+  }
+
+  .item {
+    height: 90px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+  }

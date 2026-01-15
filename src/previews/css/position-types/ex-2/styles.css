@@ -1,0 +1,17 @@
+.parent {
+  position: relative; /* 기준점 */
+  width: 300px;
+  height: 200px;
+  border: 2px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.child {
+  position: absolute;
+  top: 20px; /* parent 기준 */
+  right: 20px;
+  width: 100px;
+  height: 50px;
+  background-color: #4CAF50;
+  color: white;
+}

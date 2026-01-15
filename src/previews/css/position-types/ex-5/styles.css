@@ -1,0 +1,43 @@
+.dropdown {
+    width: 220px;
+    position: relative; /* 메뉴 기준점 */
+    font-family: system-ui, sans-serif;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #f5f6f8;
+    font-weight: 700;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;   /* 버튼 아래 */
+    left: 0;
+    width: 100%;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: white;
+    overflow: hidden;
+    display: none; /* 기본 숨김 */
+  }
+
+  .item {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: #2c3e50;
+    border-top: 1px solid #eee;
+  }
+
+  .item:first-child {
+    border-top: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
