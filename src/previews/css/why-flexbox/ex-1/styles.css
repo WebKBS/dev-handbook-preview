@@ -1,0 +1,80 @@
+.wrap {
+    width: 360px;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    gap: 14px;
+  }
+
+  .title {
+    font-weight: 900;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+  }
+
+  /* 공통 카드 스타일(시각화용) */
+  .card {
+    height: 72px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    background: #f5f6f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }
+
+  /* =========================
+     Before (전통적)
+     - 원본 코드 최대한 유지
+  ========================== */
+  .card-container.before {
+    /* clearfix 필요 */
+    border: 2px dashed #c9cdd3;
+    border-radius: 16px;
+    padding: 10px;
+    background: rgba(231, 76, 60, 0.06); /* Before 강조 */
+  }
+
+  .card-container.before::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .card-container.before .card {
+    float: left;
+    width: calc(33.333% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    background: rgba(231, 76, 60, 0.14);
+    border-color: rgba(231, 76, 60, 0.35);
+  }
+
+  .card-container.before .card:nth-child(3n) {
+    margin-right: 0; /* 3의 배수는 마진 제거 */
+  }
+
+  /* =========================
+     After (Flexbox)
+     - 원본 코드 최대한 유지
+  ========================== */
+  .card-container.after {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    border: 2px dashed #c9cdd3;
+    border-radius: 16px;
+    padding: 10px;
+    background: rgba(52, 152, 219, 0.06); /* After 강조 */
+  }
+
+  .card-container.after .card {
+    flex: 1 1 calc(33.333% - 20px);
+
+    background: rgba(52, 152, 219, 0.14);
+    border-color: rgba(52, 152, 219, 0.35);
+  }
