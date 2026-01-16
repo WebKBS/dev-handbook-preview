@@ -4,3 +4,11 @@
 [title="Open in CodeSandbox"] {
   display: none !important;
 }
+
+.sandpack-height-toggle .sp-layout > .sp-editor {
+  height: var(--sandpack-editor-height, 360px) !important;
+}
+
+.sandpack-height-toggle .sp-layout > .sp-preset-column {
+  height: var(--sandpack-preview-height, 360px) !important;
+}

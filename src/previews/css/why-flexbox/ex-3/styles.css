@@ -1,0 +1,91 @@
+.wrap {
+    width: 360px;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    gap: 14px;
+  }
+
+  .title {
+    font-weight: 900;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+
+  .form {
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    background: #fff;
+  }
+
+  .form-row {
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px dashed #c9cdd3;
+  }
+
+  label {
+    font-weight: 900;
+    padding: 10px 0;
+  }
+
+  input {
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font: inherit;
+  }
+
+  /* =========================
+     Before
+  ========================== */
+  .form.before {
+    background: rgba(231, 76, 60, 0.06);
+  }
+
+  .form.before .form-row {
+    /* clearfix 필요 */
+  }
+
+  .form.before label {
+    float: left;
+    width: 100px;
+  }
+
+  .form.before input {
+    float: left;
+    width: calc(100% - 120px);
+    margin-left: 20px;
+  }
+
+  .form.before .form-row::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* =========================
+     After
+  ========================== */
+  .form.after {
+    background: rgba(52, 152, 219, 0.06);
+  }
+
+  .form.after .form-row {
+    display: flex;
+    gap: 20px;
+    align-items: center; /* 수직 중앙 */
+  }
+
+  .form.after label {
+    flex-shrink: 0;
+    width: 100px;
+  }
+
+  .form.after input {
+    flex: 1; /* 남은 공간 */
+    margin-left: 0; /* float 버전의 여백 제거 */
+    width: auto;
+  }

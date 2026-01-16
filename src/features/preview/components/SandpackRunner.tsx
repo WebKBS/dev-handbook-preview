@@ -1,5 +1,6 @@
 import { Sandpack } from "@codesandbox/sandpack-react";
 import { githubLight } from "@codesandbox/sandpack-themes";
+import { useState } from "react";
 import { ensureReactEntry, ensureVanillaEntry } from "../entry";
 import { loadFiles } from "../loader";
 import { inferTemplate } from "../template";
@@ -13,6 +14,7 @@ const SandpackRunner = ({
   slug: string;
   exampleId: string;
 }) => {
+  const [isAuto, setIsAuto] = useState(false);
   const template = inferTemplate(domain);
   const files = loadFiles(domain, slug, exampleId);
 
@@ -30,17 +32,23 @@ const SandpackRunner = ({
   const activeFile = visibleFiles[0] ?? Object.keys(files)[0];
 
   return (
-    <Sandpack
-      template={template}
-      files={files}
-      options={{
-        showTabs: true,
-        showLineNumbers: true,
-        visibleFiles,
-        activeFile,
-      }}
-      theme={githubLight}
-    />
+    <>
+      <button type={"button"} onClick={() => setIsAuto(!isAuto)}>
+        {isAuto ? "자세히 보기" : "간략히 보기"}
+      </button>
+      <Sandpack
+        template={template}
+        files={files}
+        options={{
+          showTabs: true,
+          showLineNumbers: true,
+          visibleFiles,
+          activeFile,
+          editorHeight: isAuto ? "auto" : 300,
+        }}
+        theme={githubLight}
+      />
+    </>
   );
 };
 
