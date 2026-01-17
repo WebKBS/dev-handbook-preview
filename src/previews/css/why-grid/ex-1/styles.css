@@ -1,0 +1,56 @@
+.dashboard {
+  width: 360px;
+  height: 520px; /* 모바일 화면처럼 보이게 */
+  display: grid;
+  grid-template-columns: 120px 1fr 120px;
+  grid-template-rows: 56px 1fr;
+  gap: 12px;
+
+  font-family: system-ui, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  background: #fff;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.header {
+  grid-column: 1 / -1; /* 전체 너비 */
+  border-radius: 14px;
+  background: rgba(52, 152, 219, 0.14);
+  border: 1px solid rgba(52, 152, 219, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.sidebar {
+  border-radius: 14px;
+  background: rgba(231, 76, 60, 0.14);
+  border: 1px solid rgba(231, 76, 60, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.main {
+  border-radius: 14px;
+  background: rgba(245, 246, 248, 1);
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.widgets {
+  border-radius: 14px;
+  background: rgba(118, 75, 162, 0.14);
+  border: 1px solid rgba(118, 75, 162, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
