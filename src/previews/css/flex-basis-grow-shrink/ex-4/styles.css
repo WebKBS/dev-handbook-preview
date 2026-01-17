@@ -1,0 +1,27 @@
+ .container {
+    display: flex;
+    width: 500px; /* 공간 부족! */
+    overflow: hidden;
+  }
+
+  .item {
+    padding: 14px 10px;
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .item:last-child {
+    border-right: none;
+  }
+
+  .item-a {
+    flex-basis: 400px;
+    flex-shrink: 1;
+    background: rgba(52, 152, 219, 0.18);
+  }
+
+  .item-b {
+    flex-basis: 400px;
+    flex-shrink: 2;
+    background: rgba(231, 76, 60, 0.18);
+  }

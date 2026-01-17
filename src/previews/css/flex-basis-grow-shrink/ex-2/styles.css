@@ -1,0 +1,38 @@
+ .layout {
+    width: 400px;
+    display: flex;
+    gap: 12px;
+  }
+
+  .left {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    background: rgba(231, 76, 60, 0.14);
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .center {
+    flex-grow: 2;
+    flex-basis: 0;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    background: rgba(52, 152, 219, 0.14);
+    font-weight: 900;
+    text-align: center;
+  }
+
+  .right {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 14px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    background: rgba(118, 75, 162, 0.14);
+    font-weight: 900;
+    text-align: center;
+  }
