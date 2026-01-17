@@ -1,0 +1,50 @@
+.grid {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 16px;
+}
+
+/* ✅ 패턴 5: 가변 열 */
+.flexible {
+  grid-template-columns: auto 1fr auto;
+  align-items: stretch;
+}
+
+.cell {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #f5f6f8;
+  min-height: 72px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 14px;
+  text-align: center;
+}
+
+.cell small {
+  font-weight: 700;
+  color: #555;
+}
+
+/* auto / 1fr 시각 구분 */
+.auto {
+  background: rgba(118, 75, 162, 0.14);
+}
+
+.fluid {
+  background: rgba(52, 152, 219, 0.14);
+}
+
+.right {
+  background: rgba(241, 196, 15, 0.16);
+}

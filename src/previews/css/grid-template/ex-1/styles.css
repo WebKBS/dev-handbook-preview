@@ -1,0 +1,33 @@
+.grid {
+  display: grid;
+  grid-template-columns: 200px 300px 200px;
+
+  gap: 10px;
+  font-family: system-ui, sans-serif;
+}
+
+.cell {
+  height: 64px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #f5f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(4) {
+  background: rgba(231, 76, 60, 0.14);
+}
+
+.cell:nth-child(2),
+.cell:nth-child(5) {
+  background: rgba(52, 152, 219, 0.14);
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6) {
+  background: rgba(118, 75, 162, 0.14);
+}

@@ -1,0 +1,41 @@
+.sidebar-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  grid-template-rows: 60px 1fr;
+  gap: 20px;
+  min-height: 100vh;
+  font-family: system-ui, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fafafa;
+}
+
+.box {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #f5f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  min-height: 0;
+}
+
+/* 시각적으로 구분 (역할별로 은은한 톤) */
+.header {
+  background: rgba(52, 152, 219, 0.14);
+}
+
+.header-ghost {
+  background: rgba(52, 152, 219, 0.08);
+  color: #555;
+  font-weight: 800;
+}
+
+.sidebar {
+  background: rgba(118, 75, 162, 0.14);
+}
+
+.main {
+  background: rgba(231, 76, 60, 0.14);
+}

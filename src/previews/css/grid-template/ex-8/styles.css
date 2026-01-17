@@ -1,0 +1,61 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  gap: 16px;
+  font-family: system-ui, sans-serif;
+  padding: 16px;
+  box-sizing: border-box;
+  background: #fafafa;
+}
+
+.thumb {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #f5f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  min-width: 0;
+  min-height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 갤러리 느낌: 은은한 그라데이션 + 번호 배지 */
+.thumb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(52, 152, 219, 0.18),
+    rgba(118, 75, 162, 0.18)
+  );
+}
+
+.thumb {
+  color: #222;
+}
+
+.thumb::after {
+  content: "";
+}
+
+/* 텍스트가 그라데이션 위에 보이도록 */
+.thumb > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* (옵션) 행 단위로 톤을 살짝 다르게 */
+.thumb:nth-child(-n + 4) {
+  background: rgba(52, 152, 219, 0.1);
+}
+.thumb:nth-child(n + 5):nth-child(-n + 8) {
+  background: rgba(231, 76, 60, 0.1);
+}
+.thumb:nth-child(n + 9) {
+  background: rgba(46, 204, 113, 0.1);
+}
