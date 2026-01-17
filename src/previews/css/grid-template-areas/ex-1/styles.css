@@ -1,0 +1,29 @@
+.container {
+  width: 600px;
+  display: grid;
+  grid-template-columns: 200px 1fr 1fr;
+  grid-template-rows: 80px 1fr 60px;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+  gap: 16px;
+  min-height: 100vh;
+}
+
+.header {
+  grid-area: header;
+  background: lightblue;
+}
+.sidebar {
+  grid-area: sidebar;
+  background: lightgreen;
+}
+.main {
+  grid-area: main;
+  background: lightcoral;
+}
+.footer {
+  grid-area: footer;
+  background: lightgray;
+}
