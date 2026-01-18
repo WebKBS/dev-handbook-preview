@@ -1,0 +1,102 @@
+.wrap {
+  font-family: system-ui, sans-serif;
+  padding: 16px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 16px;
+}
+
+/* ✅ 예제 4: 대시보드 레이아웃 */
+.dashboard {
+  display: grid;
+  grid-template-columns:
+    minmax(250px, 280px)
+    minmax(600px, 1fr)
+    minmax(280px, 320px);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.panel {
+  border-radius: 16px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 18px;
+  min-width: 0;
+}
+
+.title {
+  font-weight: 900;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.meta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #e6e6e6;
+  background: #f5f6f8;
+  font-size: 12px;
+  font-weight: 900;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.desc {
+  margin: 0 0 14px;
+  color: #555;
+  line-height: 1.5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* 영역별 톤 구분 */
+.left {
+  background: rgba(118, 75, 162, 0.12);
+}
+
+.main {
+  background: rgba(52, 152, 219, 0.1);
+}
+
+.right {
+  background: rgba(241, 196, 15, 0.12);
+}
+
+/* 메인 내부: 위젯/카드 느낌 */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  min-height: 72px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 오른쪽 위젯 리스트 */
+.widget-list {
+  display: grid;
+  gap: 12px;
+}
+
+.widget {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  min-height: 64px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

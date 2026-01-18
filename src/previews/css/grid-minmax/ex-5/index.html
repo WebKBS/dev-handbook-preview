@@ -1,0 +1,26 @@
+<section class="wrap">
+  <h3>갤러리 (최소 크기 + 가변 높이)</h3>
+
+  <div class="gallery">
+    <!-- ✅ 이미지 대신 “가짜 썸네일”로도 동작 확인 가능 -->
+    <div class="thumb">1</div>
+    <div class="thumb">2</div>
+    <div class="thumb tall">
+      3<br /><small>콘텐츠가 많아져서 auto로 늘어나는 케이스</small>
+      <p class="more">
+        텍스트가 여러 줄이면 <b>grid-auto-rows: minmax(200px, auto)</b> 때문에
+        높이가 200px 이상으로 확장될 수 있어요.
+      </p>
+    </div>
+    <div class="thumb">4</div>
+    <div class="thumb">5</div>
+    <div class="thumb">6</div>
+    <div class="thumb">7</div>
+    <div class="thumb">8</div>
+  </div>
+
+  <p class="hint">
+    각 셀은 <b>최소 200×200</b>을 보장하고, 어떤 아이템이 콘텐츠 때문에 더
+    커지면 해당 아이템은 <b>auto</b>로 높이가 늘어납니다.
+  </p>
+</section>

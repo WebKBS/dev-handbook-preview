@@ -1,0 +1,34 @@
+<section class="wrap">
+  <h3>대시보드 레이아웃 (3컬럼 minmax)</h3>
+
+  <div class="dashboard">
+    <aside class="panel left">
+      <div class="title">Left Sidebar</div>
+      <div class="meta">minmax(250px, 280px)</div>
+      <p class="desc">250px ~ 280px 범위에서만 커졌다/줄어듭니다.</p>
+    </aside>
+
+    <main class="panel main">
+      <div class="title">Main</div>
+      <div class="meta">minmax(600px, 1fr)</div>
+
+      <div class="main-grid">
+        <div class="card">Chart</div>
+        <div class="card">KPIs</div>
+        <div class="card">Table</div>
+        <div class="card">Activity</div>
+      </div>
+    </main>
+
+    <aside class="panel right">
+      <div class="title">Right Widgets</div>
+      <div class="meta">minmax(280px, 320px)</div>
+
+      <div class="widget-list">
+        <div class="widget">Widget A</div>
+        <div class="widget">Widget B</div>
+        <div class="widget">Widget C</div>
+      </div>
+    </aside>
+  </div>
+</section>
