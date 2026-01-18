@@ -1,0 +1,222 @@
+.nav-wrap {
+  font-family: system-ui, sans-serif;
+  padding: 16px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 16px;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  font-weight: 900;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: rgba(52, 152, 219, 0.12);
+  white-space: nowrap;
+}
+
+/* =========================
+     ✅ 모바일: 햄버거 메뉴
+  ========================= */
+
+.nav-toggle {
+  display: block;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 50;
+  gap: 12px;
+}
+
+.nav-menu.active {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-item {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  padding: 14px 12px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 900;
+  background: #f5f6f8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nav-item:hover {
+  background: rgba(52, 152, 219, 0.1);
+}
+
+.nav-close {
+  margin-top: auto;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  padding: 14px 12px;
+  font-weight: 900;
+  background: rgba(231, 76, 60, 0.12);
+  cursor: pointer;
+}
+
+/* 드롭다운 기본은 숨김 */
+.dropdown {
+  display: none;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 10px;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.dropdown-item {
+  display: block;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  padding: 10px 10px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 800;
+}
+
+.dropdown-item:hover {
+  background: rgba(118, 75, 162, 0.1);
+}
+
+/* 모바일에서 dropdown을 “항상 보이게” 하고 싶으면 아래 주석 해제
+  .nav-menu.active .has-dropdown .dropdown { display: grid; }
+  */
+
+/* =========================
+     ✅ 태블릿: 간소화된 메뉴
+     (768 ~ 1023)
+  ========================= */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    position: static;
+    height: auto;
+    flex-direction: row;
+    gap: 16px;
+    padding: 0;
+    background: transparent;
+    inset: auto;
+    width: auto;
+  }
+
+  .nav-item {
+    font-size: 14px;
+    padding: 10px 12px;
+    background: #fff;
+  }
+
+  .nav-close {
+    display: none;
+  }
+
+  /* 태블릿에서는 드롭다운은 클릭 없이 숨김 유지(간소화) */
+  .dropdown {
+    display: none;
+  }
+}
+
+/* =========================
+     ✅ 데스크톱: 전체 메뉴 (≥1024)
+  ========================= */
+@media (min-width: 1024px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    position: static;
+    height: auto;
+    flex-direction: row;
+    gap: 24px;
+    padding: 0;
+    background: transparent;
+    inset: auto;
+    width: auto;
+    align-items: center;
+  }
+
+  .nav-item {
+    font-size: 16px;
+    padding: 10px 12px;
+    background: #fff;
+  }
+
+  .nav-close {
+    display: none;
+  }
+
+  /* 데스크톱 드롭다운 배치 */
+  .has-dropdown {
+    position: relative;
+    cursor: default;
+    user-select: none;
+  }
+
+  .nav-label {
+    font-weight: 900;
+  }
+
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    min-width: 220px;
+    padding: 10px;
+    display: none; /* hover 조건에서만 block */
+  }
+
+  /* ✅ 마우스 환경에서만 호버로 드롭다운 */
+  @media (hover: hover) {
+    .has-dropdown:hover .dropdown {
+      display: grid;
+    }
+  }
+}
+
+/* 접근성: 스크린리더 전용 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
