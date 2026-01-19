@@ -1,0 +1,49 @@
+.wb-demo {
+  font-family: system-ui, sans-serif;
+}
+
+.wb-title {
+  margin: 0 0 10px;
+  font-weight: 900;
+}
+
+.wb-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .wb-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wb-card {
+  border-radius: 14px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  padding: 12px;
+  min-width: 0;
+}
+
+.wb-label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.wb-box {
+  margin: 0;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: rgba(231, 76, 60, 0.1);
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 650;
+
+  /* 넘침이 실제로 보이게 */
+  overflow: visible;
+}
