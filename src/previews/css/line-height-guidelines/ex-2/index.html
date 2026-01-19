@@ -1,0 +1,81 @@
+<article class="article">
+  <header class="article-header">
+    <p class="badge">블로그 · 아티클</p>
+    <h1 class="title">긴 글을 “편하게” 읽히게 만드는 줄 간격</h1>
+    <p class="subtitle">
+      본문은 여유 있게, 제목은 조금 타이트하게. 이 조합만 지켜도 가독성이 확
+      올라갑니다.
+    </p>
+  </header>
+
+  <div class="meta">
+    <span>읽는 시간 4분</span>
+    <span class="dot">•</span>
+    <span>업데이트: 2026-01-19</span>
+    <span class="dot">•</span>
+    <span class="tag">Typography</span>
+    <span class="tag">CSS</span>
+  </div>
+
+  <hr class="rule" />
+
+  <p class="lead">
+    아티클은 “내용”이 주인공이라서, 화면에서 가장 중요한 건 정보 밀도가 아니라
+    <b>읽기 흐름</b>입니다. 줄 간격은 그 흐름을 만드는 핵심 도구예요.
+  </p>
+
+  <p>
+    줄 간격이 너무 좁으면 줄과 줄이 붙어서 눈이 쉽게 피로해지고, 너무 넓으면 한
+    문단이 흩어져 보여서 집중이 깨질 수 있습니다. 그래서 본문은 보통
+    <b>1.6~1.8</b> 범위를 추천합니다.
+  </p>
+
+  <h2>본문: 18px + line-height 1.7</h2>
+  <p>
+    본문 폰트가 18px 전후라면, line-height 1.7이 안정적으로 읽힙니다. 스크롤
+    환경에서도 줄이 겹쳐 보이지 않고, 문장이 길어져도 시선이 자연스럽게 다음
+    줄로 이동합니다.
+  </p>
+
+  <blockquote class="quote">
+    “아티클은 빠르게 훑는 콘텐츠가 아니라, 오래 읽는 콘텐츠다.”
+    <cite>— 편집자의 기본 원칙</cite>
+  </blockquote>
+
+  <p>
+    실제로 긴 문장(쉼표가 많거나 괄호가 섞인 문장)이 많은 글은 줄 간격이
+    좁을수록 ‘뭉개진 느낌’을 줍니다. 반대로 적당히 넓은 줄 간격은 문장 구조를
+    또렷하게 보여줘요.
+  </p>
+
+  <h2>제목: 크면 크기만큼 줄 간격은 줄이기</h2>
+  <p>
+    제목은 글자가 크기 때문에 본문과 같은 줄 간격을 주면 과하게 벌어져 보일 수
+    있어요. 그래서 제목은 보통 <b>1.2~1.35</b>가 자연스럽습니다.
+  </p>
+
+  <div class="note">
+    <strong>팁</strong>
+    <p>
+      본문은 unitless로 <code>line-height: 1.7</code> 처럼 두는 게 좋아요.
+      부모/자식에서 폰트 크기가 달라져도 비율이 유지되어 예측 가능해집니다.
+    </p>
+  </div>
+
+  <h2>최적화 포인트: 폭(Measure)도 함께 잡기</h2>
+  <p>
+    줄 간격만 바꿔도 좋아지지만, 진짜 체감은 <b>한 줄 길이</b>에서 많이 옵니다.
+    그래서 아티클은 <code>max-width: 65ch</code> 정도로 “적당한 폭”을 잡는
+    경우가 많습니다. 한 줄이 너무 길면 다음 줄로 넘어갈 때 시선이 길을 잃기
+    쉽거든요.
+  </p>
+
+  <footer class="article-footer">
+    <p class="footer-title">요약</p>
+    <ul class="summary">
+      <li>본문: <b>18px / line-height 1.7</b> (읽기 흐름 최우선)</li>
+      <li>제목: <b>32px / line-height 1.3</b> (커질수록 타이트하게)</li>
+      <li>폭: <b>max-width 65ch</b> (한 줄 길이 제어)</li>
+    </ul>
+  </footer>
+</article>

@@ -1,0 +1,71 @@
+.demo {
+  max-width: 720px;
+  margin: 24px auto;
+  font-family:
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    Noto Sans KR,
+    sans-serif;
+  color: #111;
+}
+
+.case {
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px 16px 14px;
+  margin-bottom: 16px;
+  background: #fff;
+}
+
+.title {
+  margin: 0 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #374151;
+}
+
+/* 비교 대상 공통: 부모/자식 */
+.parent {
+  font-size: 20px;
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  /* 줄 높이 차이를 눈에 보이게 */
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(59, 130, 246, 0.08) 0px,
+    rgba(59, 130, 246, 0.08) 1px,
+    transparent 1px,
+    transparent 30px
+  );
+  outline: 1px dashed rgba(59, 130, 246, 0.35);
+}
+
+.child {
+  display: inline-block; /* 줄 박스를 더 잘 느끼게 */
+  font-size: 12px;
+  margin-left: 8px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  background: rgba(16, 185, 129, 0.12);
+  outline: 1px dashed rgba(16, 185, 129, 0.35);
+}
+
+/* 1) 숫자: 배수 상속 */
+.case--number .parent {
+  line-height: 1.5;
+}
+
+/* 2) 퍼센트: 계산값(px) 상속될 수 있음 */
+.case--percent .parent {
+  line-height: 150%;
+}
+
+/* 3) px: 고정값 상속 */
+.case--px .parent {
+  line-height: 30px;
+}
