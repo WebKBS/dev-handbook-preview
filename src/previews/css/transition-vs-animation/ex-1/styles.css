@@ -1,0 +1,246 @@
+/* 1. 호버 효과 */
+.button {
+  background: #667eea;
+  color: white;
+  transform: scale(1);
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.button:hover {
+  background: #5568d3;
+  transform: scale(1.05);
+}
+
+/* 2. 메뉴 슬라이드 */
+.menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.menu.open {
+  max-height: 500px;
+}
+
+/* 3. 이미지 줌 */
+.image-container {
+  overflow: hidden;
+}
+
+.image-container img {
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+/* 4. 탭 전환 */
+.tab-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
+}
+
+.tab-content.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---- 보조 스타일 (최소) ---- */
+.demo {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    sans-serif;
+  color: #0f172a;
+  line-height: 1.5;
+  display: grid;
+  gap: 16px;
+}
+
+.panel {
+  border: 1px solid #0f172a;
+  border-radius: 14px;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.button {
+  border: 0;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.button:focus-visible {
+  outline: 3px solid #0f172a;
+  outline-offset: 3px;
+}
+
+.ghost {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #0f172a;
+  transform: translateY(0);
+  transition: transform 0.15s;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ghost:hover {
+  transform: translateY(-1px);
+}
+
+.ghost:active {
+  transform: translateY(0);
+}
+
+.ghost:focus-visible {
+  outline: 3px solid #0f172a;
+  outline-offset: 3px;
+}
+
+.menu-toggle {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #0f172a;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.menu-toggle:focus-visible {
+  outline: 3px solid #0f172a;
+  outline-offset: 3px;
+}
+
+.menu {
+  border: 1px solid #0f172a;
+  border-radius: 12px;
+}
+
+.menu > ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.menu a {
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+}
+
+.menu a:hover {
+  border-color: #0f172a;
+}
+
+.menu a:focus-visible {
+  outline: 3px solid #0f172a;
+  outline-offset: 2px;
+}
+
+.image-container {
+  border: 1px solid #0f172a;
+  border-radius: 14px;
+}
+
+.image-container img {
+  display: block;
+  border-radius: 14px;
+  height: 160px;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.tabs {
+  display: grid;
+  gap: 10px;
+}
+
+.tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tab-btn {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #0f172a;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.tab-btn[aria-selected="true"] {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.tab-btn:focus-visible {
+  outline: 3px solid #0f172a;
+  outline-offset: 3px;
+}
+
+/* ✅ display:none 제거 + 겹쳐놓고 opacity/transform만 전환 (fade/slide 동작 보장) */
+.tab-panels {
+  border: 1px solid #0f172a;
+  border-radius: 14px;
+  padding: 12px;
+  min-height: 72px;
+  position: relative;
+}
+
+.tab-content {
+  position: absolute;
+  inset: 12px;
+  pointer-events: none;
+}
+
+.tab-content.active {
+  pointer-events: auto;
+}
+
+.tab-content p {
+  margin: 0;
+  font-size: 14px;
+  color: #0f172a;
+}
