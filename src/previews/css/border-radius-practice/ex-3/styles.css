@@ -1,0 +1,57 @@
+.custom-corners {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 40px;
+}
+
+.demo {
+  padding: 16px;
+  border-radius: 14px;
+  background: #f3f4f6;
+  display: grid;
+  gap: 10px;
+  justify-items: start;
+}
+
+.box {
+  width: 220px;
+  height: 130px;
+  background: #111827;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-shadow: 0 10px 22px rgba(17, 24, 39, 0.14);
+  position: relative;
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 25% 20%,
+      rgba(255, 255, 255, 0.14),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(99, 102, 241, 0.35),
+      transparent 60%
+    ),
+    linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(99, 102, 241, 0.22));
+}
+
+.label {
+  font:
+    800 12px ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  color: rgba(17, 24, 39, 0.85);
+}
