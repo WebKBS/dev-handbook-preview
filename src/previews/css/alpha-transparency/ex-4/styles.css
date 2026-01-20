@@ -1,0 +1,66 @@
+.hero {
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.hero {
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #e0f2fe 0%, #ede9fe 55%, #ffe4e6 100%);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-text {
+  padding: 14px;
+}
+
+.hero-text h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: -0.2px;
+}
+
+.hero-text p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.hero-text .tag {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  white-space: nowrap;
+}

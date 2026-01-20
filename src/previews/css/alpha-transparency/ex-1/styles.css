@@ -1,0 +1,82 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* 어두운 반투명 */
+  z-index: 100;
+}
+
+.overlay-light {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.demo {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.box {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+  background: linear-gradient(135deg, #e0f2fe 0%, #ede9fe 55%, #ffe4e6 100%);
+  height: 160px;
+}
+
+.label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  background: rgba(255, 255, 255, 0.9);
+  color: #111827;
+}
+
+.modal {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  background: rgba(255, 255, 255, 0.95);
+  color: #111827;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.modal b {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+/* fixed overlay를 데모 박스 안에서만 보이게 */
+.box .overlay,
+.box .overlay-light {
+  position: absolute;
+  inset: 0;
+}

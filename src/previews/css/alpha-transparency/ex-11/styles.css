@@ -1,0 +1,73 @@
+.blend {
+  background: rgba(255, 0, 0, 0.5);
+  mix-blend-mode: multiply;
+}
+
+.stage {
+  height: 180px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  background: linear-gradient(135deg, #e0f2fe 0%, #ede9fe 55%, #ffe4e6 100%);
+  max-width: 320px;
+}
+
+.shape {
+  position: absolute;
+  inset: 0;
+}
+
+.shape::before,
+.shape::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 999px;
+  filter: blur(0.2px);
+}
+
+.shape::before {
+  left: 28px;
+  top: 26px;
+  background: rgba(59, 130, 246, 0.55);
+}
+
+.shape::after {
+  right: 26px;
+  bottom: 24px;
+  background: rgba(34, 197, 94, 0.55);
+}
+
+.blend {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 140px;
+  height: 140px;
+  transform: translate(-50%, -50%);
+  border-radius: 16px;
+  border: 1px solid rgba(229, 231, 235, 0.8);
+}
+
+.label {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(229, 231, 235, 0.9);
+  font:
+    800 12px ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  color: #111827;
+}
