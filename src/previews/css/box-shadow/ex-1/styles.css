@@ -1,0 +1,11 @@
+.basic-shadow {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.box {
+  width: 220px;
+  height: 140px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}

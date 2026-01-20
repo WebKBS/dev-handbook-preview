@@ -1,0 +1,75 @@
+.profile-card {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.profile-avatar {
+  border-radius: 50%;
+  box-shadow:
+    0 0 0 4px white,
+    0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.profile-card {
+  width: 320px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  color: #111827;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.profile-avatar {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-name {
+  font-size: 16px;
+  font-weight: 900;
+  margin: 0;
+}
+
+.profile-role {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: rgba(17, 24, 39, 0.7);
+  font-weight: 700;
+}
+
+.profile-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(17, 24, 39, 0.78);
+}
