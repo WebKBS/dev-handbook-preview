@@ -1,0 +1,45 @@
+.el-demo {
+  font-family: system-ui, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .el-demo {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  border-radius: 14px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  padding: 14px;
+  min-width: 0;
+}
+
+.card-body {
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: rgba(52, 152, 219, 0.1);
+  padding: 12px;
+}
+
+.card-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.meta {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 800;
+  color: #555;
+}

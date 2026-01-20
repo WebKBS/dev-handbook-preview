@@ -1,0 +1,88 @@
+<section aria-label="블로그 목록 예시" class="blog-list">
+  <div class="blog-top">
+    <h2>최신 글</h2>
+    <span class="hint">제목은 한 줄 ellipsis · 본문은 4줄 clamp</span>
+  </div>
+
+  <article class="blog-list-item">
+    <div class="blog-meta">
+      <span class="pill">Next.js</span>
+      <span aria-hidden="true" class="dot"></span>
+      <span>2026.01.20</span>
+      <span aria-hidden="true" class="dot"></span>
+      <span>조회 12,430</span>
+    </div>
+
+    <h3 class="blog-title">
+      Next.js App Router에서 Metadata/OG/Sitemap까지 한 번에 정리하는 실전 세팅
+      가이드 (실제 운영 사례 포함)
+    </h3>
+
+    <p class="blog-excerpt">
+      App Router로 넘어오면서 문서 구조는 좋아졌지만,
+      메타데이터/OG/robots/sitemap 같은 “기본 세팅”이 프로젝트마다 미묘하게
+      달라지기 쉬워요. 이 글에서는 운영 환경에서 자주 틀리는 포인트를 짚고,
+      레이아웃/페이지 레벨 메타데이터를 어떻게 분리할지, 동적 라우팅에서 OG
+      이미지를 안전하게 생성하는 방법, 그리고 사이트맵/robots를 배포
+      파이프라인과 어떻게 연결하면 좋은지까지 실전 기준으로 정리합니다.
+    </p>
+
+    <div class="blog-actions">
+      <span class="readtime">읽는 시간 6분 · 댓글 32</span>
+      <a
+        aria-label="글 읽기: Next.js App Router 메타데이터 가이드"
+        href="#read-1"
+      >
+        읽기
+        <svg aria-hidden="true" fill="none" viewBox="0 0 24 24">
+          <path
+            d="M9 18l6-6-6-6"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </a>
+    </div>
+  </article>
+
+  <article class="blog-list-item">
+    <div class="blog-meta">
+      <span class="pill">CSS</span>
+      <span aria-hidden="true" class="dot"></span>
+      <span>2026.01.18</span>
+      <span aria-hidden="true" class="dot"></span>
+      <span>조회 8,210</span>
+    </div>
+
+    <h3 class="blog-title">
+      line-height가 달라질 때 줄 간격이 어색해지는 이유와 코드/텍스트를 같이 둘
+      때 추천하는 기준값
+    </h3>
+
+    <p class="blog-excerpt">
+      본문 텍스트는 1.7이 편한데 code는 1.5가 더 촘촘해서 보기 좋을 때가
+      있습니다. 그런데 같은 문단에 코드가 섞이면 베이스라인과 줄 박스 계산이
+      달라져서 줄 간격이 들쑥날쑥해 보일 수 있어요. 이 글은 line-height 계산
+      방식, inline 요소의 line box가 합쳐지는 방식, 그리고 실제 문서(아티클)에서
+      균형을 잡는 방법을 예제로 설명합니다.
+    </p>
+
+    <div class="blog-actions">
+      <span class="readtime">읽는 시간 4분 · 댓글 11</span>
+      <a aria-label="글 읽기: line-height 실전 가이드" href="#read-2">
+        읽기
+        <svg aria-hidden="true" fill="none" viewBox="0 0 24 24">
+          <path
+            d="M9 18l6-6-6-6"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+          />
+        </svg>
+      </a>
+    </div>
+  </article>
+</section>

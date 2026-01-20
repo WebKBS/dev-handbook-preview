@@ -1,0 +1,46 @@
+.tb-demo {
+  font-family: system-ui, sans-serif;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #eee;
+  background: #fafafa;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border-bottom: 1px solid #eee;
+  padding: 12px;
+  text-align: left;
+  font-size: 13px;
+}
+
+th {
+  font-weight: 900;
+  background: #f5f6f8;
+}
+
+/*  패턴 3: 테이블 셀 (1줄 ellipsis) */
+.table-cell {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px; /* 셀 최대 너비 */
+
+  border-radius: 10px;
+  background: rgba(52, 152, 219, 0.1);
+}
+
+/*  호버 시 전체 보기 */
+.table-cell:hover {
+  white-space: normal;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

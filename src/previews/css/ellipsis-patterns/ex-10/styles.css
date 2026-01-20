@@ -1,0 +1,128 @@
+.notification {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.notification-message {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 14px;
+  color: #666;
+}
+
+/* design */
+.notification-panel {
+  margin: 0 auto;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.08);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+}
+
+.panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 4px 12px;
+}
+
+.panel-head h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.panel-head .muted {
+  font-size: 12px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.notification {
+  border-bottom: 1px solid #eef2f7;
+  border-radius: 12px;
+  transition:
+    background 0.12s ease,
+    transform 0.12s ease;
+}
+
+.notification:hover {
+  background: #f9fafb;
+  transform: translateY(-1px);
+}
+
+.notification:last-child {
+  border-bottom: none;
+}
+
+.notification-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.notification-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #e0f2fe 0%, #ede9fe 55%, #ffe4e6 100%);
+  flex: 0 0 auto;
+}
+
+.notification-body {
+  flex: 1;
+  min-width: 0; /* 제목 ellipsis 안정화 */
+}
+
+.notification-meta {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  font-weight: 700;
+  color: #374151;
+  white-space: nowrap;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 999px;
+  background: #d1d5db;
+}

@@ -1,0 +1,5 @@
+.ellipsis {
+  white-space: nowrap; /* 1. 줄바꿈 금지 */
+  overflow: hidden; /* 2. 넘치는 부분 숨김 */
+  text-overflow: ellipsis; /* 3. ...표시 */
+}

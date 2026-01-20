@@ -1,0 +1,20 @@
+<section aria-label="동적 line-clamp 예시" class="clamp-card">
+  <div class="clamp-head">
+    <h2>동적 줄 수</h2>
+    <span class="hint">버튼으로 2~4줄</span>
+  </div>
+
+  <p class="text">
+    App Router로 넘어오면서 문서 구조는 좋아졌지만, 메타데이터/OG/robots/sitemap
+    같은 기본 세팅이 프로젝트마다 미묘하게 달라지기 쉬워요. 이 예시는
+    JavaScript로 -webkit-line-clamp 값을 바꿔서 “보이는 줄 수”를 동적으로
+    조절합니다. 모바일에서도 자연스럽게 보이도록 max-width를 사용하고, 버튼을
+    눌렀을 때 바로 적용되는 형태로 구성했어요.
+  </p>
+
+  <div aria-label="줄 수 변경" class="controls" role="group">
+    <button class="btn" data-lines="2" type="button">2줄</button>
+    <button class="btn btn-primary" data-lines="3" type="button">3줄</button>
+    <button class="btn" data-lines="4" type="button">4줄</button>
+  </div>
+</section>
