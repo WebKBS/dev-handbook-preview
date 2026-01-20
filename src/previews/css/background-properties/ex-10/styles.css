@@ -1,0 +1,15 @@
+.stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    #f0f0f0,
+    #f0f0f0 10px,
+    #ffffff 10px,
+    #ffffff 20px
+  );
+}
+
+.stripe {
+  height: 220px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}

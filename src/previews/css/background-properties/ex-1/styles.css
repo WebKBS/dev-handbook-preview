@@ -1,0 +1,11 @@
+.hero {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://webkbs.github.io/dev-handbook-preview/example/ex-2.jpg")
+      center / cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}

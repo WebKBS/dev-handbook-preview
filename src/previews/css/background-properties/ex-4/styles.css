@@ -1,0 +1,10 @@
+.gradient-overlay {
+  background:
+    linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 100%),
+    url("https://webkbs.github.io/dev-handbook-preview/example/ex-1.jpg")
+      center / cover;
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
