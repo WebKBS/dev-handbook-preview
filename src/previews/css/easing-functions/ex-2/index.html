@@ -1,0 +1,116 @@
+<div class="wrap">
+  <h2 class="title">cubic-bezier 시각적으로 이해하기</h2>
+  <p class="sub">
+    아래는 같은 이동(<code>0 → 220px</code>)이라도
+    <code>cubic-bezier</code> 값에 따라 “감속/가속 느낌”이 어떻게 달라지는지
+    비교하는 예시입니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>Transitions</div>
+        <h3>같은 거리, 다른 곡선</h3>
+        <p>
+          각 트랙의 <code>Move</code>를 누르면 점이 이동합니다.
+          <code>Reset</code>으로 되돌릴 수 있어요.
+        </p>
+
+        <div class="stage">
+          <div class="tracks">
+            <div class="track normal-ease-out" data-track="normal-ease-out">
+              <div class="trackHeader">
+                <div class="name">normal ease-out</div>
+                <div class="bez">cubic-bezier(0, 0, 0.58, 1)</div>
+              </div>
+              <div class="rail">
+                <div class="dotMover"></div>
+              </div>
+              <div class="btnRow">
+                <button class="btn" data-move="normal-ease-out" type="button">
+                  Move
+                </button>
+                <button
+                  class="btn secondary"
+                  data-reset="normal-ease-out"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
+
+            <div class="track strong-ease-out" data-track="strong-ease-out">
+              <div class="trackHeader">
+                <div class="name">strong ease-out</div>
+                <div class="bez">cubic-bezier(0, 0, 0.2, 1)</div>
+              </div>
+              <div class="rail">
+                <div class="dotMover"></div>
+              </div>
+              <div class="btnRow">
+                <button class="btn" data-move="strong-ease-out" type="button">
+                  Move
+                </button>
+                <button
+                  class="btn secondary"
+                  data-reset="strong-ease-out"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
+
+            <div class="track gentle-ease-out" data-track="gentle-ease-out">
+              <div class="trackHeader">
+                <div class="name">gentle ease-out</div>
+                <div class="bez">cubic-bezier(0, 0, 0.8, 1)</div>
+              </div>
+              <div class="rail">
+                <div class="dotMover"></div>
+              </div>
+              <div class="btnRow">
+                <button class="btn" data-move="gentle-ease-out" type="button">
+                  Move
+                </button>
+                <button
+                  class="btn secondary"
+                  data-reset="gentle-ease-out"
+                  type="button"
+                >
+                  Reset
+                </button>
+              </div>
+            </div>
+
+            <div class="track custom" data-track="custom">
+              <div class="trackHeader">
+                <div class="name">custom (overshoot)</div>
+                <div class="bez">cubic-bezier(0.68, -0.55, 0.265, 1.55)</div>
+              </div>
+              <div class="rail">
+                <div class="dotMover"></div>
+              </div>
+              <div class="btnRow">
+                <button class="btn" data-move="custom" type="button">
+                  Move
+                </button>
+                <button class="btn secondary" data-reset="custom" type="button">
+                  Reset
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="btnRow">
+          <button class="btn" id="moveAll" type="button">Move All</button>
+          <button class="btn secondary" id="resetAll" type="button">
+            Reset All
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

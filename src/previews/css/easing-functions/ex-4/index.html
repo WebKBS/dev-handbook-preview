@@ -1,0 +1,74 @@
+<div class="wrap">
+  <h2 class="title">특수 효과 easing: Elastic(탄성)</h2>
+  <p class="sub">
+    <code>y</code>가 음수/1 초과로 더 크게 튀면 “고무줄처럼” 튕기는 느낌이
+    강해집니다. 아래에서 같은 이동을 <code>strong</code> vs
+    <code>subtle</code>로 비교해보세요.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>elastic</div>
+        <h3>강한 탄성</h3>
+        <p><code>1s cubic-bezier(0.68, -0.8, 0.265, 1.8)</code></p>
+
+        <div class="stage">
+          <div class="panel">
+            <div class="chip elastic" data-chip="elastic">STRONG</div>
+            <div class="hint">
+              <span>Click “Toggle”</span>
+              <span>translateY(-42px) + scale(1.06)</span>
+            </div>
+          </div>
+        </div>
+
+        <span class="badge">transition: transform 1s (elastic)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="elastic" type="button">
+            Toggle
+          </button>
+          <button class="btn secondary" data-reset="elastic" type="button">
+            Reset
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>subtle-elastic</div>
+        <h3>미묘한 탄성</h3>
+        <p><code>0.5s cubic-bezier(0.68, -0.2, 0.265, 1.2)</code></p>
+
+        <div class="stage">
+          <div class="panel">
+            <div class="chip subtle-elastic" data-chip="subtle-elastic">
+              SUBTLE
+            </div>
+            <div class="hint">
+              <span>Click “Toggle”</span>
+              <span>translateY(-42px) + scale(1.06)</span>
+            </div>
+          </div>
+        </div>
+
+        <span class="badge">transition: transform 0.5s (subtle)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="subtle-elastic" type="button">
+            Toggle
+          </button>
+          <button
+            class="btn secondary"
+            data-reset="subtle-elastic"
+            type="button"
+          >
+            Reset
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

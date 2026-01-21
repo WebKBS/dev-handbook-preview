@@ -1,0 +1,96 @@
+<div class="wrap">
+  <h2 class="title">특수 효과 easing: Back (당겼다가/나아갔다가)</h2>
+  <p class="sub">
+    “Back” 계열은 <code>y</code>가 0 미만 또는 1 초과로 살짝 튀면서, 시작/끝에
+    <strong>반대 방향</strong>으로 잠깐 당기는 느낌을 만듭니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>back-in</div>
+        <h3>뒤로 당겼다가 나아가기</h3>
+        <p><code>0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045)</code></p>
+
+        <div class="stage">
+          <div class="panel">
+            <div class="chip back-in" data-chip="back-in">BACK IN</div>
+            <div class="hint">
+              <span class="pill">0 → 220px</span>
+              <span class="pill">Toggle</span>
+            </div>
+          </div>
+        </div>
+
+        <span class="badge">transition: transform 0.5s</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="back-in" type="button">
+            Toggle
+          </button>
+          <button class="btn secondary" data-reset="back-in" type="button">
+            Reset
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>back-out</div>
+        <h3>나아갔다가 뒤로 살짝</h3>
+        <p><code>0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275)</code></p>
+
+        <div class="stage">
+          <div class="panel">
+            <div class="chip back-out" data-chip="back-out">BACK OUT</div>
+            <div class="hint">
+              <span class="pill">0 → 220px</span>
+              <span class="pill">Toggle</span>
+            </div>
+          </div>
+        </div>
+
+        <span class="badge">transition: transform 0.5s</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="back-out" type="button">
+            Toggle
+          </button>
+          <button class="btn secondary" data-reset="back-out" type="button">
+            Reset
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>back-in-out</div>
+        <h3>양쪽 다</h3>
+        <p><code>0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)</code></p>
+
+        <div class="stage">
+          <div class="panel">
+            <div class="chip back-in-out" data-chip="back-in-out">IN OUT</div>
+            <div class="hint">
+              <span class="pill">0 → 220px</span>
+              <span class="pill">Toggle</span>
+            </div>
+          </div>
+        </div>
+
+        <span class="badge">transition: transform 0.6s</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="back-in-out" type="button">
+            Toggle
+          </button>
+          <button class="btn secondary" data-reset="back-in-out" type="button">
+            Reset
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
