@@ -1,0 +1,58 @@
+<div class="wrap">
+  <h2 class="title">Continuous Keyframes: 플로트 / 호버</h2>
+  <p class="sub">
+    이전처럼 <code>Start/Stop</code> + <code>Restart</code>를 JS로 제어합니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>float</div>
+        <h3>플로팅</h3>
+        <p>위아래로 천천히 떠 있는 느낌입니다.</p>
+
+        <div class="stage">
+          <div aria-label="float" class="chip anim float" data-anim="float">
+            FLOAT
+          </div>
+        </div>
+
+        <span class="badge">animation: float (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="float" type="button">Stop</button>
+          <button class="btn secondary" data-restart="float" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>hover-x</div>
+        <h3>호버 (좌우)</h3>
+        <p>좌우로 부드럽게 흔들립니다.</p>
+
+        <div class="stage">
+          <div
+            aria-label="hover-x"
+            class="chip anim hover-x"
+            data-anim="hover-x"
+          >
+            HOVER X
+          </div>
+        </div>
+
+        <span class="badge">animation: hover-x (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="hover-x" type="button">Stop</button>
+          <button class="btn secondary" data-restart="hover-x" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

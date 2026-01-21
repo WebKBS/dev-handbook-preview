@@ -1,0 +1,69 @@
+<div class="wrap">
+  <h2 class="title">Exit Keyframes: 퇴장 애니메이션</h2>
+  <p class="sub">
+    퇴장 애니메이션은 기본적으로 “사라지는” 동작이라, <code>Retry</code>를
+    누르면 다시 원상태로 되돌린 뒤 애니메이션을 재실행합니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>fade-out-up</div>
+        <h3>페이드 아웃 업</h3>
+        <p>위로 이동하며 점점 투명해집니다.</p>
+        <div class="stage">
+          <div class="preview anim fade-out-up" data-anim="fade-out-up">
+            Preview
+          </div>
+        </div>
+        <span class="badge">animation: fade-out-up</span>
+        <button class="btn" data-retry="fade-out-up" type="button">
+          Retry
+        </button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>slide-out-down</div>
+        <h3>슬라이드 아웃 다운</h3>
+        <p>아래로 밀려나듯 내려갑니다.</p>
+        <div class="stage">
+          <div class="preview anim slide-out-down" data-anim="slide-out-down">
+            Preview
+          </div>
+        </div>
+        <span class="badge">animation: slide-out-down</span>
+        <button class="btn" data-retry="slide-out-down" type="button">
+          Retry
+        </button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>zoom-out</div>
+        <h3>줌 아웃</h3>
+        <p>축소되며 투명해집니다.</p>
+        <div class="stage">
+          <div class="preview anim zoom-out" data-anim="zoom-out">Preview</div>
+        </div>
+        <span class="badge">animation: zoom-out</span>
+        <button class="btn" data-retry="zoom-out" type="button">Retry</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>All</div>
+        <h3>전체 재생</h3>
+        <p>한 번에 모두 다시 실행합니다.</p>
+        <div class="stage">
+          <div class="preview">Run All</div>
+        </div>
+        <span class="badge">batch retry</span>
+        <button class="btn" id="retryAll" type="button">Retry All</button>
+      </div>
+    </section>
+  </div>
+</div>

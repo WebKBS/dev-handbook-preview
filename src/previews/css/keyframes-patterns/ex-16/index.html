@@ -1,0 +1,40 @@
+<div class="wrap">
+  <h2 class="title">고급 패턴: 멀티 스테이지(Complex Entrance)</h2>
+  <p class="sub">
+    0%→50%→75%→100%처럼 “중간 단계”를 여러 개 두어, 단순 입장보다 풍부한 모션을
+    만드는 패턴입니다. 아래 <code>Replay</code>로 다시 재생해보세요.
+  </p>
+
+  <section class="card">
+    <div class="inner">
+      <div class="kicker"><span class="dot"></span>complex-entrance</div>
+      <h3>회전 + 스케일 + 오버슈트</h3>
+      <p>
+        <code>scale(0) rotate(-180deg)</code> → <code>scale(1.2)</code> 오버슈트
+        → <code>scale(0.9)</code> 언더슈트 → 정상 복귀
+      </p>
+
+      <div class="stage">
+        <div aria-hidden="true" class="rings">
+          <span></span><span></span><span></span>
+        </div>
+
+        <div
+          aria-label="complex entrance"
+          class="tile complex"
+          data-anim="complex"
+        >
+          COMPLEX ENTRANCE
+          <small>0% → 50% → 75% → 100%</small>
+        </div>
+      </div>
+
+      <span class="badge">animation: complex-entrance 0.9s both</span>
+
+      <div class="row">
+        <button class="btn" id="replayBtn" type="button">Replay</button>
+        <button class="btn secondary" id="resetBtn" type="button">Reset</button>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,41 @@
+<div class="wrap">
+  <h2 class="title">Loading Indicators: 프로그레스</h2>
+  <p class="sub">
+    <code>indeterminate</code> 프로그레스(좌→우로 흐르는 바)와 펄스
+    라인(확장→수축)을 CSS만으로 구현한 예시입니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker">
+          <span class="dot"></span>progress-indeterminate
+        </div>
+        <h3>인디터미네이트 프로그레스</h3>
+        <p>진행률을 모를 때 “움직이는 바”로 로딩 중임을 표현합니다.</p>
+
+        <div class="stage">
+          <div aria-label="Loading" class="progress" role="progressbar"></div>
+        </div>
+
+        <span class="badge">animation: progress-indeterminate</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>pulse-line</div>
+        <h3>펄스 라인</h3>
+        <p>한 줄이 왼쪽에서 확장되었다가 다시 줄어듭니다.</p>
+
+        <div class="stage">
+          <div aria-label="Loading" class="pulseWrap" role="progressbar">
+            <div class="pulseLine"></div>
+          </div>
+        </div>
+
+        <span class="badge">animation: pulse-line</span>
+      </div>
+    </section>
+  </div>
+</div>

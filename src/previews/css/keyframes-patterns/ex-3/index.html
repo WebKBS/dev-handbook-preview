@@ -1,0 +1,65 @@
+<div class="wrap">
+  <h2 class="title">Entrance Keyframes: Zoom / Scale 패밀리</h2>
+  <p class="sub">
+    각 카드에서 <code>Retry</code> 버튼을 눌러 해당 줌/스케일 애니메이션을 다시
+    실행할 수 있습니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>zoom-in</div>
+        <h3>줌 인</h3>
+        <p>작게 시작해 원래 크기로 자연스럽게 확대됩니다.</p>
+        <div class="stage">
+          <div class="preview anim zoom-in" data-anim="zoom-in">Preview</div>
+        </div>
+        <span class="badge">animation: zoom-in</span>
+        <button class="btn" data-retry="zoom-in" type="button">Retry</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>zoom-in-bounce</div>
+        <h3>줌 인 (바운스)</h3>
+        <p>확대 후 살짝 튕기며 안정되는 느낌을 줍니다.</p>
+        <div class="stage">
+          <div class="preview anim zoom-in-bounce" data-anim="zoom-in-bounce">
+            Preview
+          </div>
+        </div>
+        <span class="badge">animation: zoom-in-bounce</span>
+        <button class="btn" data-retry="zoom-in-bounce" type="button">
+          Retry
+        </button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>pop-in</div>
+        <h3>팝 인</h3>
+        <p>0에서 시작해 빠르게 “툭” 튀어나오는 인상을 줍니다.</p>
+        <div class="stage">
+          <div class="preview anim pop-in" data-anim="pop-in">Preview</div>
+        </div>
+        <span class="badge">animation: pop-in</span>
+        <button class="btn" data-retry="pop-in" type="button">Retry</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>All</div>
+        <h3>전체 재생</h3>
+        <p>한 번에 모두 다시 실행합니다.</p>
+        <div class="stage">
+          <div class="preview">Run All</div>
+        </div>
+        <span class="badge">batch retry</span>
+        <button class="btn" id="retryAll" type="button">Retry All</button>
+      </div>
+    </section>
+  </div>
+</div>

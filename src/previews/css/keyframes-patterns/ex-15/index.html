@@ -1,0 +1,49 @@
+<div class="wrap">
+  <h2 class="title">고급 패턴: 순차적 애니메이션</h2>
+  <p class="sub">
+    같은 <code>@keyframes</code>를 공유하되, 각 아이템의 <code>delay</code>만
+    달리해서 “순차적으로” 나타나게 만드는 패턴입니다.
+  </p>
+
+  <section class="card">
+    <div class="inner">
+      <div class="kicker"><span class="dot"></span>sequence-appear</div>
+      <h3>리스트가 하나씩 등장</h3>
+      <p>아래 <code>Replay</code>를 누르면 1→4 순서로 다시 재생됩니다.</p>
+
+      <div class="stage">
+        <div class="list" id="seqList">
+          <div class="item item-1">
+            <div class="pill">1</div>
+            <div class="meta">
+              <strong>첫 번째 항목</strong><span>0.1s delay</span>
+            </div>
+          </div>
+          <div class="item item-2">
+            <div class="pill">2</div>
+            <div class="meta">
+              <strong>두 번째 항목</strong><span>0.2s delay</span>
+            </div>
+          </div>
+          <div class="item item-3">
+            <div class="pill">3</div>
+            <div class="meta">
+              <strong>세 번째 항목</strong><span>0.3s delay</span>
+            </div>
+          </div>
+          <div class="item item-4">
+            <div class="pill">4</div>
+            <div class="meta">
+              <strong>네 번째 항목</strong><span>0.4s delay</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <button class="btn" id="replayBtn" type="button">Replay</button>
+        <button class="btn secondary" id="resetBtn" type="button">Reset</button>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,0 +1,60 @@
+<div class="wrap">
+  <h2 class="title">Continuous Keyframes: 펄스 / 하트비트</h2>
+  <p class="sub">
+    이전처럼 <code>Start/Stop</code> + <code>Restart</code>를 JS로 제어합니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>pulse</div>
+        <h3>펄스</h3>
+        <p>균일하게 살짝 커졌다가 돌아옵니다.</p>
+
+        <div class="stage">
+          <div aria-label="pulse" class="shape anim pulse" data-anim="pulse">
+            P
+          </div>
+        </div>
+
+        <span class="badge">animation: pulse (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="pulse" type="button">Stop</button>
+          <button class="btn secondary" data-restart="pulse" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>heartbeat</div>
+        <h3>하트비트</h3>
+        <p>두 번 “쿵-쿵” 뛰는 리듬을 반복합니다.</p>
+
+        <div class="stage">
+          <div
+            aria-label="heartbeat"
+            class="shape anim heartbeat"
+            data-anim="heartbeat"
+          >
+            H
+          </div>
+        </div>
+
+        <span class="badge">animation: heartbeat (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="heartbeat" type="button">
+            Stop
+          </button>
+          <button class="btn secondary" data-restart="heartbeat" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

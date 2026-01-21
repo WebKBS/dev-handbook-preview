@@ -1,0 +1,78 @@
+<div class="wrap">
+  <h2 class="title">고급 패턴: 폴리모픽(Morph) 애니메이션</h2>
+  <p class="sub">
+    하나의 <code>@keyframes morph</code>를 만들어두고, duration / direction /
+    delay만 바꿔 여러 컴포넌트에서 재사용하는 패턴입니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>blob-1</div>
+        <h3>기본</h3>
+        <p><code>8s</code> / normal</p>
+
+        <div class="stage">
+          <div aria-label="blob-1" class="blob blob-1" data-anim="blob-1">
+            8s
+          </div>
+        </div>
+
+        <span class="badge">animation: morph 8s infinite</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="blob-1" type="button">Stop</button>
+          <button class="btn secondary" data-restart="blob-1" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>blob-2</div>
+        <h3>리버스</h3>
+        <p><code>6s</code> / reverse</p>
+
+        <div class="stage">
+          <div aria-label="blob-2" class="blob blob-2" data-anim="blob-2">
+            6s
+          </div>
+        </div>
+
+        <span class="badge">animation: morph 6s reverse</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="blob-2" type="button">Stop</button>
+          <button class="btn secondary" data-restart="blob-2" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>blob-3</div>
+        <h3>지연 시작</h3>
+        <p><code>10s</code> / delay <code>2s</code></p>
+
+        <div class="stage">
+          <div aria-label="blob-3" class="blob blob-3" data-anim="blob-3">
+            10s
+          </div>
+        </div>
+
+        <span class="badge">animation: morph 10s (delay 2s)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="blob-3" type="button">Stop</button>
+          <button class="btn secondary" data-restart="blob-3" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
