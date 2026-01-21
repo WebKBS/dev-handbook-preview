@@ -1,0 +1,23 @@
+<div class="wrap">
+  <h2 class="title">will-change: 무한 스크롤(뷰포트 진입 직전 최적화)</h2>
+  <p class="sub">
+    <code>IntersectionObserver</code>로 아이템이 들어오기 직전에
+    <code>about-to-appear</code>를 붙여 <code>will-change</code>를 켠 뒤,
+    애니메이션 완료 후 <code>visible</code>에서 <code>auto</code>로 되돌립니다.
+  </p>
+
+  <div class="topbar">
+    <span class="pill"
+      ><span class="dot"></span>스크롤을 내려 새 아이템을 로드</span
+    >
+    <button class="btn" id="addBtn" type="button">아이템 15개 추가</button>
+  </div>
+
+  <div class="list" id="list"></div>
+  <div class="sentinel" id="sentinel"></div>
+
+  <div class="footer-note">
+    포인트: 모든 아이템에 상시 <code>will-change</code>를 걸지 않고, “곧 나타날
+    아이템”에만 짧게 적용합니다.
+  </div>
+</div>

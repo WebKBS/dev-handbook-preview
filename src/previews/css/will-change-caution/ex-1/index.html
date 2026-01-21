@@ -1,0 +1,32 @@
+<div class="demo">
+  <h2 class="title">will-change + hover transform 데모</h2>
+  <p class="sub">
+    카드에 마우스를 올리면 <code>will-change: transform</code>이 적용되며 살짝
+    위로 뜹니다. 마우스를 떼면 <code>will-change: auto</code>로 돌아갑니다.
+  </p>
+
+  <div class="grid">
+    <div class="card" tabindex="0">
+      <span class="badge"><span class="dot"></span>Hover me</span>
+      <h3>Card A</h3>
+      <p>호버 시 transform 애니메이션이 부드럽게 동작하도록 준비합니다.</p>
+      <div class="hint">Tip: 마우스를 올렸다가 떼보세요.</div>
+    </div>
+
+    <div class="card" tabindex="0">
+      <span class="badge"><span class="dot"></span>Hover me</span>
+      <h3>Card B</h3>
+      <p>여러 카드가 있어도 같은 패턴으로 적용됩니다.</p>
+      <div class="hint">
+        키보드: Tab → Enter 없이도 Hover는 안 되지만 포커스 스타일 확인 가능
+      </div>
+    </div>
+
+    <div class="card" tabindex="0">
+      <span class="badge"><span class="dot"></span>Hover me</span>
+      <h3>Card C</h3>
+      <p><code>will-change</code>는 “필요할 때만” 잠깐 켜는 게 핵심입니다.</p>
+      <div class="hint">Hover 종료 시 <code>auto</code>로 복귀</div>
+    </div>
+  </div>
+</div>
