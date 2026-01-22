@@ -1,0 +1,13 @@
+ .box {
+    width: 320px;
+    padding: 18px;
+    font-family: system-ui, sans-serif;
+    background: #f5f6f8;
+
+    border: 18px solid transparent;
+
+    /* SVG를 data URI로 넣은 border-image */
+    border-image-source: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='60'%20height='60'%20viewBox='0%200%2060%2060'%3E%3Crect%20x='0'%20y='0'%20width='60'%20height='60'%20fill='white'/%3E%3Cpath%20d='M0%2030%20H60'%20stroke='%233498db'%20stroke-width='8'/%3E%3Cpath%20d='M30%200%20V60'%20stroke='%23764ba2'%20stroke-width='8'/%3E%3Ccircle%20cx='30'%20cy='30'%20r='6'%20fill='%232c3e50'/%3E%3C/svg%3E");
+    border-image-slice: 20;   /* 잘라낼 영역 */
+    border-image-repeat: round; /* round / repeat / stretch */
+  }

@@ -1,0 +1,37 @@
+.image-card {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 16px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: system-ui, sans-serif;
+}
+
+.image-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  flex-shrink: 0;
+  display: block;
+}
+
+.image-card-content {
+  flex: 1;
+  padding: 14px;
+}
+
+.image-card-content h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.image-card-content p {
+  margin: 0;
+  font-weight: 700;
+  opacity: 0.85;
+  line-height: 1.35;
+}

@@ -1,0 +1,17 @@
+/* color의 초기값은 명세상 브라우저 의존 (보통 검정) */
+p {
+  color: magenta;
+}
+
+p.reset {
+  color: initial; /* 초기값으로 (검정) */
+}
+
+/* display의 초기값은 inline */
+div {
+  display: block; /* 기본값 */
+}
+
+div.reset {
+  display: initial; /* inline으로 변경 */
+}

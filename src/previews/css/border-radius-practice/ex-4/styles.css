@@ -1,0 +1,82 @@
+.ellipse-corner {
+  border-radius: 50px / 25px;
+}
+
+.complex-ellipse {
+  border-radius: 50px 30px 20px 40px / 25px 15px 30px 20px;
+}
+
+.speech-bubble {
+  position: relative;
+  background: #667eea;
+  border-radius: 12px;
+  padding: 16px;
+  color: white;
+}
+
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 20px;
+  width: 20px;
+  height: 20px;
+  background: #667eea;
+  border-radius: 0 0 0 100%;
+}
+
+.demo {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.box {
+  width: 220px;
+  height: 120px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: linear-gradient(135deg, #ffe4ef 0%, #ffd6f2 50%, #ffc7e8 100%);
+  box-shadow: 0 10px 22px rgba(236, 72, 153, 0.16);
+}
+
+.label {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(17, 24, 39, 0.75);
+  text-align: center;
+}
+
+.item {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.speech-bubble {
+  background: linear-gradient(135deg, #fb7185 0%, #f472b6 55%, #a78bfa 100%);
+  box-shadow: 0 14px 28px rgba(236, 72, 153, 0.22);
+}
+
+.speech-bubble::after {
+  background: #f472b6;
+}

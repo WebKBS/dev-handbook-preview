@@ -1,0 +1,16 @@
+.highlight {
+  position: relative;
+  display: inline;
+}
+
+.highlight::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  right: -4px;
+  height: 40%;
+  background-color: #ff8e93;
+  z-index: -1;
+  transform: skewX(-12deg);
+}

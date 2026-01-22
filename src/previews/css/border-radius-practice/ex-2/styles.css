@@ -1,0 +1,70 @@
+.rounded-2 {
+  border-radius: 10px 20px;
+}
+
+.rounded-3 {
+  border-radius: 10px 20px 30px;
+}
+
+.rounded-4 {
+  border-radius: 10px 20px 30px 40px;
+}
+
+.demo {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #ffffff;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.box {
+  width: 160px;
+  height: 100px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+}
+
+.box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 25% 20%,
+      rgba(255, 255, 255, 0.14),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 80% 70%,
+      rgba(99, 102, 241, 0.35),
+      transparent 60%
+    ),
+    linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(99, 102, 241, 0.22));
+}
+
+.label {
+  font:
+    800 12px ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  color: rgba(17, 24, 39, 0.75);
+  text-align: center;
+}

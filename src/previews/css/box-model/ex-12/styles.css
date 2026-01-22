@@ -1,0 +1,27 @@
+.button {
+  /* 내용에 맞게 너비 조절 (width 지정 안 함) */
+  display: inline-block;
+
+  /* 클릭 영역 확장 */
+  padding: 12px 24px;
+
+  /* 테두리 */
+  border: 2px solid #3498db;
+  border-radius: 4px;
+
+  /* 다른 요소와 간격 */
+  margin: 5px;
+
+  /* 스타일 */
+  background-color: #3498db;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  background-color: #2980b9;
+  border-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

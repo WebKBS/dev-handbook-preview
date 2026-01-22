@@ -1,0 +1,61 @@
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.custom-checkbox label {
+  position: relative;
+  padding-left: 32px;
+  cursor: pointer;
+}
+
+.custom-checkbox label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.custom-checkbox input:focus-visible + label::before {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.custom-checkbox input:checked + label::before {
+  background: #667eea;
+  border-color: #667eea;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 16px;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  color: rgba(17, 24, 39, 0.85);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.custom-checkbox {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}

@@ -1,0 +1,67 @@
+.neumorphic {
+  background: #e0e5ec;
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.15),
+    -6px -6px 12px rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+}
+
+.neumorphic-pressed {
+  background: #e0e5ec;
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+}
+
+.neumorphic-button {
+  background: #e0e5ec;
+  box-shadow:
+    6px 6px 12px rgba(0, 0, 0, 0.15),
+    -6px -6px 12px rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.neumorphic-button:active {
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.15),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.7);
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 16px;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+}
+
+.tile {
+  width: 170px;
+  height: 110px;
+}
+
+.neumorphic,
+.neumorphic-pressed {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.neumorphic-button {
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  padding: 12px 16px;
+  font-size: 13px;
+  font-weight: 900;
+  color: rgba(17, 24, 39, 0.75);
+  cursor: pointer;
+}

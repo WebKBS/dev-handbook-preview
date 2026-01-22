@@ -1,0 +1,18 @@
+.modal {
+  position: relative; /* ✓ 기준점 */
+  padding: 40px 20px 20px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
+}

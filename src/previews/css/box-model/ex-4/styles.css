@@ -1,0 +1,20 @@
+.empty {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  /* 내용이 없으면 위/아래 마진이 상쇄될 수 있음 */
+}
+
+.next {
+  background: #eee;
+}
+
+.parent.border {
+  margin-top: 20px;
+  border-top: 1px solid transparent; /* 상쇄 방지 */
+  background: #eee;
+}
+
+.parent.border .child {
+  margin-top: 30px;
+  background: #ddd;
+}

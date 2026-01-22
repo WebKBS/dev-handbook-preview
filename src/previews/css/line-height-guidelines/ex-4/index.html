@@ -1,0 +1,74 @@
+<section class="documentation">
+  <header class="doc-header">
+    <p class="badge">기술 문서</p>
+    <h1 class="doc-title">설치부터 배포까지: 한 번에 이해하기</h1>
+    <p class="doc-subtitle">
+      기술 문서는 설명과 코드가 섞여 있어요. 본문은 넉넉하게(1.7), 코드는 조금
+      타이트하게(1.5) 잡으면 줄 간격 차이가 자연스럽게 드러납니다.
+    </p>
+  </header>
+
+  <div class="toc">
+    <p class="toc-title">이 문서에서 다루는 내용</p>
+    <ol class="toc-list">
+      <li>프로젝트 설치</li>
+      <li>환경 변수 설정</li>
+      <li>로컬 실행</li>
+      <li>빌드 및 배포</li>
+    </ol>
+  </div>
+
+  <hr class="rule" />
+
+  <h2 class="section-title">1) 프로젝트 설치</h2>
+  <p>
+    패키지 매니저는 무엇이든 가능하지만, 예시는 <code>pnpm</code> 기준입니다.
+    아래 명령으로 의존성을 설치하세요.
+  </p>
+
+  <pre class="codeblock"><code># install dependencies
+pnpm i
+
+# run dev server
+pnpm dev</code></pre>
+
+  <h2 class="section-title">2) 환경 변수 설정</h2>
+  <p>
+    로컬 개발에서는 <code>.env</code> 파일을 사용합니다. API 주소를
+    <code>VITE_API_BASE_URL</code>로 관리한다면 다음처럼 작성할 수 있어요.
+  </p>
+
+  <pre class="codeblock"><code># .env
+VITE_API_BASE_URL=https://api.example.com
+VITE_APP_ENV=local
+
+# optional
+VITE_ENABLE_MOCK=true</code></pre>
+
+  <h2 class="section-title">3) 간단한 요청 예시</h2>
+  <p>
+    아래는 “동작 확인” 용도로 한 번쯤 넣는 예시입니다. 코드블럭은 줄 간격이 너무
+    넓으면 헐렁해 보여서 <code>line-height: 1.5</code>가 보통 더 깔끔합니다.
+  </p>
+
+  <pre class="codeblock"><code>curl -X GET "https://api.example.com/health" \
+  -H "Accept: application/json"
+
+# response example
+# { "ok": true }</code></pre>
+
+  <h2 class="section-title">4) 요약</h2>
+  <p>
+    본문은 <code>line-height: 1.7</code>로 여유를 주고, 코드/명령은
+    <code>line-height: 1.5</code>로 타이트하게 잡으면 “설명”과 “코드”의 리듬이
+    분리돼 읽기 편해집니다.
+  </p>
+
+  <footer class="doc-footer">
+    <p class="footer-title">요약</p>
+    <ul class="summary">
+      <li>본문: <b>16px / line-height 1.7</b> (설명 가독성 우선)</li>
+      <li>코드: <b>line-height 1.5</b> (라인 간격 과확장 방지)</li>
+    </ul>
+  </footer>
+</section>

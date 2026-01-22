@@ -1,0 +1,69 @@
+.ws-demo {
+  font-family: system-ui, sans-serif;
+}
+
+.ws-title {
+  margin: 0 0 10px;
+  font-weight: 900;
+}
+
+.ws-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 900px) {
+  .ws-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ws-card {
+  border-radius: 14px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  padding: 12px;
+  min-width: 0;
+}
+
+.ws-label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.ws-box {
+  margin: 0;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 650;
+  box-sizing: border-box;
+
+  /* pre/pre-wrap에서 기본 monospace 유지 */
+  font-family:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+
+  /* 넘침 차이 보이게 */
+  overflow: visible;
+}
+
+/* 타입별 톤만 살짝 다르게 */
+code.ws-box {
+  background: rgba(231, 76, 60, 0.1);
+}
+
+pre.ws-box {
+  background: rgba(52, 152, 219, 0.12);
+}
+
+p.ws-box {
+  background: rgba(46, 204, 113, 0.12);
+  font-family: system-ui, sans-serif;
+}

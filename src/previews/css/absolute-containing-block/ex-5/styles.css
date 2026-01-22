@@ -1,0 +1,20 @@
+.dropdown {
+  position: relative; /* ✓ 기준점 */
+  display: inline-block;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%; /* 버튼 바로 아래 */
+  left: 0;
+  min-width: 100%;
+  background-color: white;
+  border: 1px solid #ddd;
+  display: none;
+  z-index: 1000;
+  width: 180px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}

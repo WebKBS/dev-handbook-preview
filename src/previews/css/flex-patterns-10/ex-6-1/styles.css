@@ -1,0 +1,39 @@
+.media-centered {
+  width: 360px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  font-family: system-ui, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: #fff;
+  padding: 14px;
+}
+
+.media-image {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(118, 75, 162, 0.22);
+  border: 2px solid rgba(118, 75, 162, 0.5);
+}
+
+.media-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.media-content h4 {
+  margin: 0 0 6px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.desc {
+  margin: 0;
+  font-weight: 700;
+  opacity: 0.8;
+  line-height: 1.3;
+}

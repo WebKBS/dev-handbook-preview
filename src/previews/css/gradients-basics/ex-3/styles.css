@@ -1,0 +1,102 @@
+.pie-chart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #4285f4 0deg 120deg,
+    #ea4335 120deg 240deg,
+    #fbbc04 240deg 360deg
+  );
+}
+
+.color-wheel {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: conic-gradient(red, yellow, lime, cyan, blue, magenta, red);
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(transparent 0deg 270deg, #667eea 270deg 360deg);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.checkered {
+  background: conic-gradient(
+    from 90deg at 1px 1px,
+    #ddd 0deg 90deg,
+    white 90deg 180deg,
+    #ddd 180deg 270deg,
+    white 270deg 360deg
+  );
+  background-size: 20px 20px;
+}
+
+.demo {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #f3f4f6;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+}
+
+.row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.box {
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  padding: 14px;
+  display: grid;
+  place-items: center;
+  gap: 10px;
+}
+
+.label {
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(17, 24, 39, 0.75);
+}
+
+.ring {
+  position: relative;
+}
+
+.ring::after {
+  content: "";
+  position: absolute;
+  inset: 22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.checkered {
+  width: 200px;
+  height: 200px;
+  border-radius: 14px;
+}

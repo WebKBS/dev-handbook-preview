@@ -1,0 +1,36 @@
+ body {
+    margin: 0;
+    padding: 16px;
+    font-family: system-ui, sans-serif;
+    background: #f5f6f8;
+  }
+
+  .table-wrap {
+    width: 360px;
+    max-height: 220px; /* 여기서 스크롤 */
+    overflow: auto;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    background: white;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+    z-index: 10;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 900;
+  }
+
+  tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+  }

@@ -1,0 +1,23 @@
+/* ❌ 예상과 다를 수 있음 */
+.element {
+  color: red;
+  font-size: 20px;
+  margin: 20px;
+  display: block;
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+.element-reset {
+  all: initial; /* 모든 속성을 초기값으로 */
+  /* display도 초기값으로 리셋됨 → 대부분 inline */
+  /* margin/padding도 0으로 리셋됨 → 공간이 사라짐 */
+  /* font 관련도 초기값으로 리셋됨 → 상속이 끊겨 글꼴/크기 느낌이 달라질 수 있음 */
+  /* border/background도 초기값으로 → 테두리/배경이 사라짐 */
+}
+
+/* ✅ 보통은 display를 다시 지정해서 레이아웃이 무너지지 않게 함 */
+.element-reset.safe {
+  all: initial;
+  display: block; /* 최소한의 레이아웃 복구 */
+}

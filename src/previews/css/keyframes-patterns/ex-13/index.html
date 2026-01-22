@@ -1,0 +1,59 @@
+<div class="wrap">
+  <h2 class="title">Loading Indicators: 스켈레톤</h2>
+  <p class="sub">
+    쉬머(빛이 훑는 느낌)와 펄스(밝기 변화) 두 가지를 같은 레이아웃에 적용해
+    비교할 수 있게 구성했습니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>shimmer</div>
+        <h3>쉬머 스켈레톤</h3>
+        <p>표면을 빛이 지나가며 “로딩 중”임을 강조합니다.</p>
+
+        <div aria-label="Loading" class="stage" role="status">
+          <div class="skeletonCard">
+            <div class="row">
+              <div class="avatar shimmer"></div>
+              <div style="flex: 1; display: grid; gap: 10px">
+                <div class="line shimmer w-60"></div>
+                <div class="line shimmer w-45"></div>
+              </div>
+            </div>
+            <div class="line shimmer w-90"></div>
+            <div class="line shimmer w-80"></div>
+            <div class="line shimmer w-70"></div>
+          </div>
+        </div>
+
+        <span class="badge">animation: shimmer</span>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>skeleton-pulse</div>
+        <h3>펄스 스켈레톤</h3>
+        <p>전체가 은은하게 깜빡이며 로딩 상태를 표현합니다.</p>
+
+        <div aria-label="Loading" class="stage" role="status">
+          <div class="skeletonCard pulse">
+            <div class="row">
+              <div class="avatar sk"></div>
+              <div style="flex: 1; display: grid; gap: 10px">
+                <div class="line sk w-60"></div>
+                <div class="line sk w-45"></div>
+              </div>
+            </div>
+            <div class="line sk w-90"></div>
+            <div class="line sk w-80"></div>
+            <div class="line sk w-70"></div>
+          </div>
+        </div>
+
+        <span class="badge">animation: skeleton-pulse</span>
+      </div>
+    </section>
+  </div>
+</div>

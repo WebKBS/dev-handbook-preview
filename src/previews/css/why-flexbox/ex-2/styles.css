@@ -1,0 +1,70 @@
+.wrap {
+    width: 360px;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    gap: 14px;
+  }
+
+  .title {
+    font-weight: 900;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+
+  /* 공통 */
+  .nav {
+    padding: 12px;
+    margin: 0;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    background: #fff;
+  }
+
+  .nav li {
+    list-style: none;
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-weight: 800;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #f5f6f8;
+  }
+
+  /* =========================
+     Before
+  ========================== */
+  .nav.before {
+    list-style: none;
+    background: rgba(231, 76, 60, 0.06);
+  }
+
+  .nav.before li {
+    float: left;
+    margin-right: 20px;
+  }
+
+  .nav.before li:last-child {
+    float: right;
+    margin-right: 0;
+  }
+
+  /* float 영향 제거(컨테이너 높이 유지) */
+  .nav.before::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* =========================
+     After
+  ========================== */
+  .nav.after {
+    display: flex;
+    gap: 20px;
+    background: rgba(52, 152, 219, 0.06);
+  }
+
+  .nav.after li:last-child {
+    margin-left: auto; /* 자동으로 오른쪽 */
+  }

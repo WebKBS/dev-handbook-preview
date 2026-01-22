@@ -1,0 +1,43 @@
+.wrap {
+  font-family: system-ui, sans-serif;
+  padding: 16px;
+}
+
+.grid {
+  display: grid;
+
+  /* ✅ 핵심: auto-fit */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  gap: 20px;
+  width: 1200px;
+  padding: 14px;
+  box-sizing: border-box;
+  border: 1px dashed #ddd;
+  border-radius: 14px;
+  background: #fff;
+  overflow: auto;
+}
+
+.card {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  min-height: 84px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  background: rgba(231, 76, 60, 0.14);
+}
+
+.card:nth-child(2) {
+  background: rgba(52, 152, 219, 0.14);
+}
+
+.hint {
+  margin: 10px 0 0;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.45;
+}

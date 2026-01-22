@@ -1,0 +1,87 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  max-width: 500px;
+}
+
+.modal-content:focus {
+  outline: none;
+}
+
+.modal-content button:focus-visible,
+.modal-content a:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.modal-content {
+  width: 340px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  color: #111827;
+}
+
+.modal-content h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.modal-content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(17, 24, 39, 0.75);
+}
+
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.modal-content button {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  color: #111827;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.modal-content button.primary {
+  border: none;
+  background: #667eea;
+  color: #fff;
+}
+
+.modal-content a {
+  color: #667eea;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+}

@@ -1,0 +1,25 @@
+<section aria-label="focus 내부 스타일 / focus-within 예시" class="demo">
+  <button aria-label="parent focus demo" class="parent" type="button">
+    <svg aria-hidden="true" class="icon" viewBox="0 0 24 24">
+      <path
+        d="M12 2a7 7 0 0 1 7 7c0 2.4-1.2 4.5-3 5.7V17a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-2.3A6.98 6.98 0 0 1 5 9a7 7 0 0 1 7-7Zm-2 18h4v-2h-4v2Z"
+      />
+    </svg>
+    <span class="child">Tab으로 포커스</span>
+  </button>
+
+  <div aria-label="focus-within form group" class="form-group">
+    <label for="fg1">Email</label>
+    <input id="fg1" placeholder="포커스하면 그룹 배경이 바뀜" type="email" />
+  </div>
+
+  <nav aria-label="dropdown focus-within" class="nav">
+    <div class="nav-item">
+      <a href="#menu">Menu</a>
+      <div aria-label="dropdown menu" class="dropdown" role="menu">
+        <a href="#profile">Profile</a>
+        <a href="#settings">Settings</a>
+      </div>
+    </div>
+  </nav>
+</section>

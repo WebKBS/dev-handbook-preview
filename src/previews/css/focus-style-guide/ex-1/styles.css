@@ -1,0 +1,52 @@
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #667eea;
+  color: white;
+  cursor: pointer;
+  transition:
+    transform 0.08s,
+    filter 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 모바일: 터치 피드백 */
+.button:active {
+  transform: scale(0.98);
+  filter: brightness(0.95);
+}
+
+/* 키보드가 뜨는 환경(모바일 포함): 포커스가 생기면 링 표시 */
+.button:focus {
+  outline: 3px solid rgba(102, 126, 234, 0.55);
+  outline-offset: 3px;
+}
+
+/* 키보드(데스크톱/모바일 키보드)에서는 더 선명하게 */
+.button:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 3px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 16px;
+  flex-wrap: wrap;
+}
+
+.hint {
+  font:
+    700 12px ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  color: rgba(17, 24, 39, 0.7);
+}

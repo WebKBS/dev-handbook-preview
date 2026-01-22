@@ -1,0 +1,26 @@
+.notched-corner {
+  position: relative;
+  background: #667eea;
+  border-radius: 12px;
+}
+
+.notched-corner::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border-radius: 0 0 0 100%;
+}
+
+.notched-corner {
+  width: 220px;
+  height: 140px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.notched-corner::before {
+  background: rgba(255, 255, 255, 0.95);
+}

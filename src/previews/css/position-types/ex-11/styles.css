@@ -1,0 +1,44 @@
+ body {
+    margin: 0;
+    padding: 16px;
+    font-family: system-ui, sans-serif;
+  }
+
+  #toastToggle {
+    position: absolute;
+    left: -9999px;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 12px 14px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #f5f6f8;
+    font-weight: 800;
+    user-select: none;
+  }
+
+  .toast {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    max-width: 300px;
+    z-index: 9999;
+
+    padding: 12px 14px;
+    border-radius: 14px;
+    background: #2c3e50;
+    color: #fff;
+    font-weight: 800;
+
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: 0.2s;
+    pointer-events: none;
+  }
+
+  #toastToggle:checked ~ .toast {
+    opacity: 1;
+    transform: translateY(0);
+  }

@@ -1,0 +1,83 @@
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: system-ui, sans-serif;
+    margin: 0;
+  }
+  .wrap {
+    padding: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  h2 {
+    margin: 24px 0 12px;
+  }
+  .desc {
+    margin: 0 0 12px;
+    opacity: 0.8;
+  }
+
+  /* 1) 겹치기 */
+  .panel {
+    background: #f2f4f8;
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .banner {
+    height: 140px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  .card {
+    height: 110px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+
+  .overlap {
+    margin-top: -50px; /* 위로 당겨져 banner와 겹침 */
+  }
+
+  /* 2) 그리드 간격 상쇄 */
+  .grid-wrap {
+    padding: 20px; /* 이 padding이 있어도... */
+    background: #f2f4f8;
+    border-radius: 12px;
+  }
+
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: -10px; /* 바깥 여백 상쇄(가장자리까지 붙음) */
+    /* 즉, grid-wrap의 padding 20px 중 10px을 “상쇄”해 보이는 효과 */
+  }
+
+  .grid-item {
+    width: 33.333%;
+    padding: 10px; /* 아이템 간 간격(= gutter) 유지 */
+  }
+
+  .box {
+    height: 90px;
+    border-radius: 12px;
+    background: white;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+  }

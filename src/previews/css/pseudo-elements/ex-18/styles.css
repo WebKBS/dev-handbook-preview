@@ -1,0 +1,36 @@
+.card {
+  position: relative;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ribbon {
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+  font-size: 0.875rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* 또는 가상 요소로 */
+.featured::before {
+  content: "FEATURED";
+  position: absolute;
+  top: 10px;
+  right: -35px;
+  background-color: #f39c12;
+  color: white;
+  padding: 8px 40px;
+  transform: rotate(45deg);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,25 @@
+.wrap {
+  color: magenta;
+  font-family: system-ui, sans-serif;
+}
+
+/* 링크 색상을 부모 텍스트 색상과 동일하게 */
+a {
+  color: inherit; /* 기본 파란색 대신 부모 색상 */
+}
+
+/* 버튼 폰트를 페이지 폰트와 동일하게 */
+button,
+input,
+textarea {
+  font-family: inherit; /* 브라우저 기본 폰트 대신 */
+  color: inherit; /* 부모 텍스트 색상과 동일하게 */
+}
+
+/* 테두리를 부모의 텍스트 색상으로 */
+.card {
+  border: 1px solid;
+  border-color: inherit; /* currentColor와 유사 */
+  padding: 12px;
+  margin-top: 12px;
+}

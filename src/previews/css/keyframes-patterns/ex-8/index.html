@@ -1,0 +1,54 @@
+<div class="wrap">
+  <h2 class="title">Continuous Keyframes: 흔들림 (Shake / Wobble)</h2>
+  <p class="sub">
+    이전처럼 <code>Start/Stop</code> + <code>Restart</code>를 JS로 제어합니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>shake</div>
+        <h3>쉐이크</h3>
+        <p>좌우로 빠르게 흔들리는 느낌입니다.</p>
+
+        <div class="stage">
+          <div aria-label="shake" class="chip anim shake" data-anim="shake">
+            SHAKE
+          </div>
+        </div>
+
+        <span class="badge">animation: shake (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="shake" type="button">Stop</button>
+          <button class="btn secondary" data-restart="shake" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>wobble</div>
+        <h3>와블</h3>
+        <p>이동 + 회전이 섞여 더 “흔들흔들”한 느낌입니다.</p>
+
+        <div class="stage">
+          <div aria-label="wobble" class="chip anim wobble" data-anim="wobble">
+            WOBBLE
+          </div>
+        </div>
+
+        <span class="badge">animation: wobble (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="wobble" type="button">Stop</button>
+          <button class="btn secondary" data-restart="wobble" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

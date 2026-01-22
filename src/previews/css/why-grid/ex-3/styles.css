@@ -1,0 +1,117 @@
+.blog-layout {
+  width: 360px;
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 800px) 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header header header"
+    ". main sidebar"
+    "footer footer footer";
+  gap: 12px;
+  min-height: 520px;
+
+  font-family: system-ui, sans-serif;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  background: #fff;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.header {
+  grid-area: header;
+  display: flex; /* Flex: 헤더 내부 */
+  justify-content: space-between;
+  align-items: center;
+
+  height: 56px;
+  border-radius: 14px;
+  background: rgba(52, 152, 219, 0.12);
+  border: 1px solid rgba(52, 152, 219, 0.28);
+  padding: 0 12px;
+  font-weight: 900;
+}
+
+.main {
+  grid-area: main;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  display: flex; /* Flex: 사이드바 내부 */
+  flex-direction: column;
+  gap: 10px;
+
+  border-radius: 14px;
+  background: rgba(118, 75, 162, 0.1);
+  border: 1px solid rgba(118, 75, 162, 0.22);
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex; /* Flex: 푸터 내부 */
+  justify-content: center;
+  align-items: center;
+
+  height: 52px;
+  border-radius: 14px;
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  font-weight: 900;
+}
+
+.article-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.article-card {
+  display: flex;
+  gap: 12px;
+
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 10px;
+}
+
+.article-image {
+  flex-shrink: 0;
+  width: 90px;
+  border-radius: 12px;
+  background: rgba(231, 76, 60, 0.14);
+  border: 1px solid rgba(231, 76, 60, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}
+
+.article-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.t {
+  font-weight: 900;
+}
+
+.d {
+  font-weight: 700;
+  opacity: 0.75;
+}
+
+.widget {
+  height: 64px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+}

@@ -1,0 +1,64 @@
+.button {
+  background: #0066cc;
+  color: white;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-alpha:disabled {
+  background: rgba(0, 102, 204, 0.5);
+}
+
+.demo {
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  display: grid;
+  gap: 10px;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.button {
+  border: none;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 1;
+  box-shadow: 0 10px 22px rgba(17, 24, 39, 0.12);
+}
+
+.label {
+  font-size: 12px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.hint {
+  font-size: 12px;
+  color: #111827;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+}

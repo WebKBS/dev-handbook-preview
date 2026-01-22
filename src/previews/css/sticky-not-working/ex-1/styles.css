@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+  padding: 16px;
+  font-family: system-ui, sans-serif;
+  background: #f5f6f8;
+  display: grid;
+  gap: 16px;
+}
+
+.parent {
+  width: 360px;
+  height: 220px; /* 내부 스크롤이 생기게 */
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: white;
+}
+
+/* ❌ sticky가 “부모 스크롤 컨테이너” 기준으로 붙어버려서,
+     페이지(뷰포트) 스크롤에서는 안 붙는 것처럼 보임 */
+.parent.bad {
+  overflow: auto; /* hidden/scroll도 동일한 계열 */
+}
+
+/* ✅ 부모가 스크롤 컨테이너가 아니면 sticky는 뷰포트 스크롤 기준 */
+.parent.good {
+  overflow: visible;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #3498db;
+  color: white;
+  padding: 12px;
+  font-weight: 900;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.row {
+  padding: 14px 12px;
+  border-bottom: 1px solid #eee;
+  font-weight: 700;
+}

@@ -1,0 +1,10 @@
+::selection {
+  background-color: #b950ff;
+  color: white;
+}
+
+/* Firefox용 */
+::-moz-selection {
+  background-color: #b950ff;
+  color: white;
+}

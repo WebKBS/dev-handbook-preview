@@ -1,0 +1,86 @@
+.spotlight {
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 255, 255, 0.8) 0%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+.glow-button {
+  position: relative;
+  background: #667eea;
+}
+
+.glow-button::before {
+  content: "";
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(
+    circle,
+    rgba(102, 126, 234, 0.4) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.glow-button:hover::before {
+  opacity: 1;
+}
+
+.dot-pattern {
+  background: radial-gradient(circle, #ddd 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.demo {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  background: #f3f4f6;
+  border-radius: 14px;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+}
+
+.spotlight {
+  height: 180px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.glow-button {
+  border: none;
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  overflow: visible;
+}
+
+.glow-button::before {
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+.glow-button span {
+  position: relative;
+  z-index: 1;
+}
+
+.dot-pattern {
+  height: 160px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+}

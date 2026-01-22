@@ -1,0 +1,114 @@
+<section aria-label="transition 실전 예제" class="demo">
+  <!-- 1) 호버 효과 -->
+  <section aria-label="호버 효과" class="panel">
+    <div class="title">1) 호버 효과 (hover)</div>
+    <div class="row">
+      <button class="button" type="button">Hover me</button>
+      <button class="ghost" type="button">보조 버튼</button>
+    </div>
+  </section>
+
+  <!-- 2) 메뉴 슬라이드 -->
+  <section aria-label="메뉴 슬라이드" class="panel">
+    <div class="title">2) 메뉴 슬라이드 (toggle)</div>
+    <div class="row">
+      <button
+        aria-controls="menuPanel"
+        aria-expanded="false"
+        class="menu-toggle"
+        id="menuBtn"
+        type="button"
+      >
+        메뉴 열기
+      </button>
+    </div>
+    <nav aria-label="데모 메뉴" class="menu" id="menuPanel">
+      <ul>
+        <li><a href="#0">대시보드</a></li>
+        <li><a href="#0">리포트</a></li>
+        <li><a href="#0">설정</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- 3) 이미지 줌 -->
+  <section aria-label="이미지 줌" class="panel">
+    <div class="title">3) 이미지 줌 (hover)</div>
+    <figure aria-label="이미지 줌 컨테이너" class="image-container">
+      <img
+        alt="샘플 이미지"
+        src="https://webkbs.github.io/dev-handbook-preview/example/ex-2.jpg"
+      />
+    </figure>
+  </section>
+
+  <!-- 4) 탭 전환 -->
+  <section aria-label="탭 전환" class="panel">
+    <div class="title">4) 탭 전환 (fade + slide)</div>
+
+    <div class="tabs">
+      <div aria-label="데모 탭" class="tablist" role="tablist">
+        <button
+          aria-controls="p1"
+          aria-selected="true"
+          class="tab-btn"
+          id="t1"
+          role="tab"
+          type="button"
+        >
+          요약
+        </button>
+        <button
+          aria-controls="p2"
+          aria-selected="false"
+          class="tab-btn"
+          id="t2"
+          role="tab"
+          type="button"
+        >
+          상세
+        </button>
+        <button
+          aria-controls="p3"
+          aria-selected="false"
+          class="tab-btn"
+          id="t3"
+          role="tab"
+          type="button"
+        >
+          기록
+        </button>
+      </div>
+
+      <div class="tab-panels">
+        <div
+          aria-hidden="false"
+          aria-labelledby="t1"
+          class="tab-content active"
+          id="p1"
+          role="tabpanel"
+        >
+          <p>요약 콘텐츠: 핵심 포인트가 깔끔하게 보입니다.</p>
+        </div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="t2"
+          class="tab-content"
+          id="p2"
+          role="tabpanel"
+        >
+          <p>상세 콘텐츠: 추가 설명이 자연스럽게 나타납니다.</p>
+        </div>
+        <div
+          aria-hidden="true"
+          aria-labelledby="t3"
+          class="tab-content"
+          id="p3"
+          role="tabpanel"
+        >
+          <p>기록 콘텐츠: 최근 변경사항을 확인할 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

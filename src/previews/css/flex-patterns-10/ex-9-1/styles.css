@@ -1,0 +1,28 @@
+.icon-toolbar {
+  width: 360px;
+  display: flex;
+  gap: 4px;
+  padding: 8px;
+
+  background: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  font-family: system-ui, sans-serif;
+}
+
+.icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #fff;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.icon-button:active {
+  transform: translateY(1px);
+}

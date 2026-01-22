@@ -1,0 +1,29 @@
+<div class="ws-demo">
+  <p class="ws-title">white-space: pre / pre-wrap / pre-line</p>
+
+  <div class="ws-grid">
+    <div class="ws-card">
+      <div class="ws-label">pre (공백/줄바꿈 유지, 자동 줄바꿈 X)</div>
+      <code class="ws-box" style="width: 220px; white-space: pre">
+        1) 공백 유지 2) 줄바꿈 유지 3) 길게길게길게길게길게길게길게 (넘침)</code
+      >
+    </div>
+
+    <div class="ws-card">
+      <div class="ws-label">pre-wrap (공백/줄바꿈 유지 + 자동 줄바꿈)</div>
+      <pre class="ws-box" style="width: 220px; white-space: pre-wrap">
+1)    공백    유지
+2) 줄바꿈 유지
+3) 길게길게길게길게길게길게길게 (줄바꿈됨)</pre
+      >
+    </div>
+
+    <div class="ws-card">
+      <div class="ws-label">pre-line (줄바꿈만 유지, 공백 병합)</div>
+      <p class="ws-box" style="width: 220px; white-space: pre-line">
+        1) 공백 병합됨 2) 줄바꿈은 유지 3) 길게길게길게길게길게길게길게 (자동
+        줄바꿈)
+      </p>
+    </div>
+  </div>
+</div>

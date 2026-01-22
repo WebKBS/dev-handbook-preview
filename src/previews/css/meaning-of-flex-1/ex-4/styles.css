@@ -1,0 +1,42 @@
+ .wrap {
+    width: 360px;
+    font-family: system-ui, sans-serif;
+    display: grid;
+    gap: 12px;
+  }
+
+  .title {
+    font-weight: 900;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background: #fff;
+  }
+
+  .container {
+    display: flex;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 16px;
+    border: 1px dashed #c9cdd3;
+    background: #f5f6f8;
+  }
+
+  .item {
+    padding: 12px;
+    border-radius: 14px;
+    border: 1px solid #ddd;
+    background: #fff;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  /* flex: 1 */
+  .container.one .item {
+    flex: 1;
+  }
+
+  /* flex: auto */
+  .container.auto .item {
+    flex: auto;
+  }

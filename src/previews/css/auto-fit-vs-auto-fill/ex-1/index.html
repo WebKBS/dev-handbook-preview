@@ -1,0 +1,18 @@
+<section class="wrap">
+  <h3>아이템이 적을 때 (auto-fill)</h3>
+
+  <!-- ✅ width: 1200px 고정 + 아이템 2개 -->
+  <div class="grid grid-fill">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
+
+    <!-- ✅ auto-fill의 “빈 열”을 눈으로 보이게: 자리 표시용(설명용) -->
+    <div aria-hidden="true" class="ghost"></div>
+    <div aria-hidden="true" class="ghost"></div>
+  </div>
+
+  <p class="hint">
+    auto-fill은 “들어갈 수 있는 만큼 열 트랙을 생성”해서, 아이템이 부족하면
+    <b>빈 열(트랙)</b>이 남는 상황이 생길 수 있어요.
+  </p>
+</section>

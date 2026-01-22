@@ -1,0 +1,148 @@
+.file-item {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+}
+
+.file-name {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+
+.file-extension {
+  flex-shrink: 0;
+  margin-left: 8px;
+  color: #666;
+}
+
+/* design */
+.file-panel {
+  margin: 0 auto;
+  padding: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.08);
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+}
+
+.file-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 6px 4px 12px;
+}
+
+.file-head h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.file-head .muted {
+  font-size: 12px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.file-list {
+  border: 1px solid #eef2f7;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.file-item {
+  gap: 10px;
+  border-bottom: 1px solid #eef2f7;
+  transition: background 0.12s ease;
+}
+
+.file-item:last-child {
+  border-bottom: none;
+}
+
+.file-item:hover {
+  background: #f9fafb;
+}
+
+.file-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: linear-gradient(135deg, #e0f2fe 0%, #ede9fe 55%, #ffe4e6 100%);
+  flex: 0 0 auto;
+}
+
+.file-name {
+  font-weight: 700;
+  color: #111827;
+  font-size: 14px;
+}
+
+.file-extension {
+  font-size: 12px;
+}
+
+.file-size {
+  flex-shrink: 0;
+  font-size: 12px;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.file-actions {
+  display: inline-flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.12s ease,
+    background 0.12s ease;
+}
+
+.icon-btn:hover {
+  background: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.icon-btn:active {
+  transform: translateY(0);
+}
+
+.icon-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 420px) {
+  .file-size {
+    display: none;
+  }
+}

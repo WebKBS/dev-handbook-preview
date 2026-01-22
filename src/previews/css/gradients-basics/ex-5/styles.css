@@ -1,0 +1,46 @@
+.concentric-circles {
+  background: repeating-radial-gradient(
+    circle,
+    #667eea,
+    #667eea 10px,
+    #764ba2 10px,
+    #764ba2 20px
+  );
+}
+
+.radar {
+  background: repeating-radial-gradient(
+    circle,
+    transparent 0px,
+    transparent 40px,
+    rgba(102, 126, 234, 0.3) 40px,
+    rgba(102, 126, 234, 0.3) 42px
+  );
+}
+
+.demo {
+  display: grid;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 14px;
+  background: #f3f4f6;
+}
+
+.row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 220px;
+  height: 220px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.radar {
+  border-radius: 999px;
+}

@@ -1,0 +1,38 @@
+<header class="nav-wrap">
+  <div class="nav-bar">
+    <div class="brand">Brand</div>
+
+    <!-- ✅ 모바일: 토글 버튼 -->
+    <button
+      aria-controls="navMenu"
+      aria-expanded="false"
+      class="nav-toggle"
+      type="button"
+    >
+      <span aria-hidden="true">☰</span>
+      <span class="sr-only">메뉴 열기</span>
+    </button>
+
+    <!-- ✅ 메뉴 -->
+    <nav aria-label="Primary" class="nav-menu" id="navMenu">
+      <a class="nav-item" href="#">Home</a>
+      <a class="nav-item" href="#">Docs</a>
+
+      <!-- 드롭다운 (데스크톱 hover: hover에서만 호버로 열림) -->
+      <div class="nav-item has-dropdown" tabindex="-1">
+        <span class="nav-label">Products ▾</span>
+        <div aria-label="Products submenu" class="dropdown">
+          <a class="dropdown-item" href="#">Product A</a>
+          <a class="dropdown-item" href="#">Product B</a>
+          <a class="dropdown-item" href="#">Product C</a>
+        </div>
+      </div>
+
+      <a class="nav-item" href="#">Pricing</a>
+      <a class="nav-item" href="#">About</a>
+
+      <!-- ✅ 모바일에서만 보이는 닫기 -->
+      <button class="nav-close" type="button">닫기</button>
+    </nav>
+  </div>
+</header>

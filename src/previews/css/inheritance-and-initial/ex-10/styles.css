@@ -1,0 +1,17 @@
+@layer base, theme;
+
+@layer base {
+  p {
+    color: blue;
+  }
+}
+
+@layer theme {
+  p {
+    color: red;
+  }
+
+  p.back {
+    color: revert-layer; /* theme 레이어 값을 취소 → base의 blue */
+  }
+}

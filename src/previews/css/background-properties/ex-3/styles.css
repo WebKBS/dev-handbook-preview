@@ -1,0 +1,16 @@
+.pattern {
+  background:
+    url("https://webkbs.github.io/dev-handbook-preview/example/ex-3.jpg") repeat,
+    #f5f5f5;
+  background-size: 80px 80px;
+}
+
+.pattern {
+  height: 220px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  position: relative;
+  display: grid;
+  place-items: center;
+}

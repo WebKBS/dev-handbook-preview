@@ -1,0 +1,48 @@
+ body {
+    margin: 0;
+    padding: 16px;
+    font-family: system-ui, sans-serif;
+    background: #f5f6f8;
+  }
+
+  .level1 {
+    width: 360px;
+    padding: 12px;
+    border: 2px dashed #c9cdd3;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  .level2 {
+    position: relative; /* ✓ 기준점 */
+    height: 220px;
+    border: 2px solid #3498db;
+    border-radius: 14px;
+    background: rgba(52, 152, 219, 0.08);
+    padding: 12px;
+    font-weight: 900;
+  }
+
+  .level3 {
+    height: 140px;
+    margin-top: 10px;
+    border: 2px dashed #764ba2;
+    border-radius: 14px;
+    background: rgba(118, 75, 162, 0.06);
+  }
+
+  .level4 {
+    position: absolute; /* level2 기준으로 배치 */
+    top: 40px;
+    left: 50px;
+
+    width: 140px;
+    height: 60px;
+    border-radius: 14px;
+    background: #2c3e50;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }

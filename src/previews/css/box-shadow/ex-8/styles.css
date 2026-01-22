@@ -1,0 +1,77 @@
+.layered {
+  position: relative;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.layered::before,
+.layered::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: white;
+  z-index: -1;
+}
+
+.layered::before {
+  transform: rotate(1deg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.layered::after {
+  transform: rotate(-1deg);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.layered {
+  width: 280px;
+  height: 180px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.layered::before,
+.layered::after {
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.layered::marker {
+  content: "";
+}
+
+.layered .stamp {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 64px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(102, 126, 234, 0.14);
+  border: 1px solid rgba(102, 126, 234, 0.28);
+}
+
+.layered .lines {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  height: 64px;
+  display: grid;
+  gap: 8px;
+}
+
+.layered .lines span {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.layered .lines span:nth-child(2) {
+  width: 78%;
+}
+
+.layered .lines span:nth-child(3) {
+  width: 58%;
+}

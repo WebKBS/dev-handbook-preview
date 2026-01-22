@@ -1,0 +1,7 @@
+.box {
+  width: 140px;
+  height: 100px;
+  overflow: visible; /* 기본값 */
+  border: 1px solid #ddd;
+  white-space: nowrap;
+}

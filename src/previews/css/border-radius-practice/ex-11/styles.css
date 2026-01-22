@@ -1,0 +1,23 @@
+.overlapping-circles {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #667eea;
+  border-radius: 50%;
+}
+
+.overlapping-circles::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 100px;
+  height: 100px;
+  background: #764ba2;
+  border-radius: 50%;
+  opacity: 0.7;
+}
+
+.overlapping-circles {
+  box-shadow: 0 12px 26px rgba(17, 24, 39, 0.12);
+}

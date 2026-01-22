@@ -1,0 +1,19 @@
+/* 공통 스타일 */
+div {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  border: 5px solid #3498db;
+  background-color: #ecf0f1;
+  margin: 20px 0;
+}
+
+.content-box {
+  box-sizing: content-box;
+  /* 실제 크기: 250px × 150px */
+}
+
+.border-box {
+  box-sizing: border-box;
+  /* 실제 크기: 200px × 100px */
+}

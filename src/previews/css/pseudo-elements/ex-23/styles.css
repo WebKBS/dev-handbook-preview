@@ -1,0 +1,5 @@
+input::placeholder {
+  color: #ff07fc;
+  font-style: italic;
+  opacity: 0.7;
+}

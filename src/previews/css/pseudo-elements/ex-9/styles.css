@@ -1,0 +1,23 @@
+.btn-download::before {
+  content: "⬇ ";
+}
+
+.btn-delete::before {
+  content: "🗑️ ";
+}
+
+.btn-edit::before {
+  content: "✏️ ";
+}
+
+/* 또는 CSS로 아이콘 그리기 */
+.btn-check::before {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: rotate(-45deg);
+  margin-right: 8px;
+}

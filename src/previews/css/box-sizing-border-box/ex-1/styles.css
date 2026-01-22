@@ -1,0 +1,15 @@
+/* 문제: 예상과 다른 크기 */
+.container {
+  width: 300px;
+  border: 2px dashed #999;
+  display: flex;
+  flex-wrap: wrap; /* 안 들어가면 다음 줄로 */
+}
+
+.box {
+  box-sizing: content-box;
+  width: 100px;
+  padding: 20px;
+  border: 5px solid #3498db;
+  height: 60px;
+}

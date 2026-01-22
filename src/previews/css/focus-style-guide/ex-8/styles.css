@@ -1,0 +1,148 @@
+.parent:focus-visible .child {
+  color: #667eea;
+}
+
+.parent:focus-visible .icon {
+  fill: #667eea;
+}
+
+.form-group:focus-within {
+  background: #f9fafb;
+}
+
+.form-group:focus-within label {
+  color: #667eea;
+  font-weight: 500;
+}
+
+.nav-item:focus-within .dropdown {
+  display: block;
+}
+
+.demo {
+  display: grid;
+  gap: 14px;
+  padding: 16px;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  color: #111827;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  cursor: pointer;
+}
+
+.parent:focus-visible {
+  outline: 3px solid rgba(102, 126, 234, 0.45);
+  outline-offset: 3px;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  fill: rgba(17, 24, 39, 0.55);
+  flex-shrink: 0;
+}
+
+.child {
+  font-weight: 900;
+  color: rgba(17, 24, 39, 0.82);
+}
+
+.form-group {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(17, 24, 39, 0.72);
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 260px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.14);
+  font-size: 14px;
+  outline: none;
+}
+
+.nav {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  text-decoration: none;
+  color: rgba(17, 24, 39, 0.82);
+  font-weight: 900;
+}
+
+.nav-item > a:focus-visible {
+  outline: 3px solid rgba(102, 126, 234, 0.45);
+  outline-offset: 3px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  padding: 8px;
+  min-width: 180px;
+  box-shadow: 0 12px 26px rgba(17, 24, 39, 0.12);
+}
+
+.dropdown a {
+  display: block;
+  padding: 10px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgba(17, 24, 39, 0.78);
+  font-weight: 800;
+}
+
+.dropdown a:focus-visible {
+  outline: 2px solid #667eea;
+  outline-offset: 2px;
+}
+
+.dropdown a:hover {
+  background: rgba(102, 126, 234, 0.08);
+}

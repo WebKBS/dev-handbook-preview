@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px; /* 모바일에서 보기 좋게 */
+    height: 100vh;
+    overflow-y: auto;
+
+    background: #2c3e50;
+    color: #fff;
+    padding: 16px;
+  }
+
+  .title {
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+
+  .item {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  .main-content {
+    margin-left: 220px; /* 사이드바 너비만큼 */
+    padding: 16px;
+    display: grid;
+    gap: 12px;
+  }
+
+  .card {
+    height: 90px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    background: #f5f6f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+  }

@@ -1,0 +1,60 @@
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #667eea;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+  outline: 2px solid #fff;
+  outline-offset: -2px;
+}
+
+.frame {
+  position: relative;
+  padding: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  color: rgba(17, 24, 39, 0.8);
+  font-weight: 700;
+}
+
+.main {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px dashed rgba(0, 0, 0, 0.18);
+  margin-top: 26px;
+}
+
+.tab-btn {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  color: #111827;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 13px;
+  font-weight: 900;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.tab-btn:focus-visible {
+  outline: 3px solid #667eea;
+  outline-offset: 2px;
+}

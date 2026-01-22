@@ -1,0 +1,15 @@
+.card {
+  position: relative; /* ✓ 기준점 설정 */
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+.badge {
+  position: absolute;
+  top: 10px; /* card 기준 */
+  right: 10px; /* card 기준 */
+  background-color: #e74c3c;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+}

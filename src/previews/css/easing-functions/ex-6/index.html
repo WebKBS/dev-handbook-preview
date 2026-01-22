@@ -1,0 +1,100 @@
+<div class="wrap">
+  <h2 class="title">steps() 함수 예시 (이동 / 타이핑 / 스프라이트)</h2>
+  <p class="sub">
+    <code>steps(n)</code>은 진행을 n단계로 쪼개서 “뚝뚝 끊어” 보이게 합니다.
+    프레임 애니메이션, 타이핑 효과, 스프라이트 시트에 자주 씁니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>1) 계단식 이동</div>
+        <h3>steps(5) vs linear</h3>
+        <p>
+          같은 100px 이동을 1초 동안 수행하지만, steps는 “점프”처럼 보입니다.
+        </p>
+
+        <div class="stage">
+          <div class="rail">
+            <div class="mover steps-animation" data-anim="steps-mover"></div>
+          </div>
+          <div class="rail">
+            <div
+              class="mover smooth smooth-animation"
+              data-anim="smooth-mover"
+            ></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <button class="btn" data-replay="steps-mover" type="button">
+            Replay steps(5)
+          </button>
+          <button
+            class="btn secondary"
+            data-replay="smooth-mover"
+            type="button"
+          >
+            Replay linear
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>2) 타이핑 효과</div>
+        <h3>steps(40)로 “타닥타닥”</h3>
+        <p>너비 증가를 steps로 끊어서 글자가 한 글자씩 나오는 느낌을 냅니다.</p>
+
+        <div class="stage">
+          <div class="typingBox">
+            <div class="typingLine">
+              <span class="typing" data-anim="typing">
+                console.log("typing with steps(40)...");
+              </span>
+              <span aria-hidden="true" class="cursor"></span>
+            </div>
+          </div>
+
+          <div class="row">
+            <button class="btn" data-replay="typing" type="button">
+              Replay typing
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="grid-column: 1 / -1">
+      <div class="inner">
+        <div class="kicker">
+          <span class="dot"></span>3) 스프라이트 애니메이션
+        </div>
+        <h3>steps(10)으로 프레임 넘기기</h3>
+        <p>
+          실제 이미지 대신 “가짜 스프라이트 시트(100px×10)”로 원리를 보여줍니다.
+        </p>
+
+        <div class="stage">
+          <div class="spriteWrap">
+            <div class="spriteRow">
+              <div class="sprite spriteAnimated" data-sprite="sprite">
+                <div class="spriteSheet"></div>
+                <div class="spriteLabel">SPRITE</div>
+              </div>
+              <div class="badge">animation: sprite 1s steps(10) infinite</div>
+            </div>
+
+            <div class="row">
+              <button class="btn" id="toggleSprite" type="button">Stop</button>
+              <button class="btn secondary" id="restartSprite" type="button">
+                Restart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

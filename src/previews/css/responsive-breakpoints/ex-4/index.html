@@ -1,0 +1,30 @@
+<section class="wrap">
+  <h3>반응형 레이아웃 (모바일: 세로 → 태블릿+: 가로)</h3>
+  <p class="desc">
+    모바일에서는 <b>Sidebar</b>와 <b>Main</b>이 세로로 쌓이고, 768px 이상에서는
+    <b>가로 레이아웃</b>으로 전환됩니다.
+  </p>
+
+  <div class="layout">
+    <aside class="panel sidebar">
+      <div class="title">Sidebar</div>
+      <p class="meta">Mobile: width 100%<br />Tablet+: width 250px (fixed)</p>
+    </aside>
+
+    <main class="panel main">
+      <div class="title">Main</div>
+      <p class="meta">Mobile: width 100%<br />Tablet+: flex: 1 (expand)</p>
+
+      <div class="cards">
+        <div class="card">Card A</div>
+        <div class="card">Card B</div>
+        <div class="card">Card C</div>
+      </div>
+    </main>
+  </div>
+
+  <div aria-hidden="true" class="badge-row">
+    <span class="badge b1">Mobile: column</span>
+    <span class="badge b2">≥768px: row</span>
+  </div>
+</section>

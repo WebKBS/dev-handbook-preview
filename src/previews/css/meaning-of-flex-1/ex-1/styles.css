@@ -1,0 +1,15 @@
+ .container {
+    width: 360px;
+    display: flex;
+    gap: 12px;
+  }
+
+  .column {
+    flex: 1; /* 1:1:1로 동일 너비 */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 14px;
+    background: #f5f6f8;
+    font-weight: 800;
+    text-align: center;
+  }

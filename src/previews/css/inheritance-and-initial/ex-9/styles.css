@@ -1,0 +1,21 @@
+/* 브라우저 기본: 링크는 파란색, 밑줄 */
+a {
+  color: red;
+  text-decoration: none;
+}
+
+a.default {
+  color: revert; /* 브라우저 기본 파란색 */
+  text-decoration: revert; /* 브라우저 기본 밑줄 */
+}
+
+/* h1의 브라우저 기본 스타일 복원 */
+h1 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+h1.default {
+  font-size: revert; /* 2em */
+  font-weight: revert; /* bold */
+}

@@ -1,0 +1,123 @@
+.wrap {
+  font-family: system-ui, sans-serif;
+  padding: 16px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 16px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.brand {
+  font-weight: 900;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: rgba(52, 152, 219, 0.12);
+}
+
+/* ✅ 모바일: 햄버거 버튼 */
+.hamburger {
+  display: block;
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* ✅ 모바일: 햄버거 메뉴(오버레이) */
+.nav {
+  display: none; /* 기본 숨김 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  flex-direction: column;
+  padding: 20px;
+  gap: 12px;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.nav.active {
+  display: flex;
+}
+
+.link {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  padding: 14px 12px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 900;
+  background: #f5f6f8;
+}
+
+.link:hover {
+  background: rgba(52, 152, 219, 0.1);
+}
+
+.close {
+  margin-top: auto;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  padding: 14px 12px;
+  font-weight: 900;
+  background: rgba(231, 76, 60, 0.12);
+  cursor: pointer;
+}
+
+/* ✅ 태블릿 이상: 가로 메뉴 */
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    position: static;
+    height: auto;
+    flex-direction: row;
+    gap: 24px;
+    padding: 0;
+    background: transparent;
+    width: auto;
+    z-index: auto;
+  }
+
+  .link {
+    padding: 10px 12px;
+    background: #fff;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+/* 스크린리더 전용 텍스트 */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

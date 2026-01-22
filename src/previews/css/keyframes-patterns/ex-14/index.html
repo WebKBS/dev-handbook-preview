@@ -1,0 +1,77 @@
+<div class="wrap">
+  <h2 class="title">Attention Seekers: Jump / Blink / Tada</h2>
+  <p class="sub">
+    이전처럼 <code>Start/Stop</code> + <code>Restart</code>를 JS로 제어합니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>jump</div>
+        <h3>점프</h3>
+        <p>위로 튀었다가 내려오며 시선을 끕니다.</p>
+
+        <div class="stage">
+          <div aria-label="jump" class="chip anim jump" data-anim="jump">
+            JUMP
+          </div>
+        </div>
+
+        <span class="badge">animation: jump (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="jump" type="button">Stop</button>
+          <button class="btn secondary" data-restart="jump" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>blink</div>
+        <h3>깜빡임</h3>
+        <p>가시성(Opacity)을 빠르게 토글합니다.</p>
+
+        <div class="stage">
+          <div aria-label="blink" class="chip anim blink" data-anim="blink">
+            BLINK
+          </div>
+        </div>
+
+        <span class="badge">animation: blink (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="blink" type="button">Stop</button>
+          <button class="btn secondary" data-restart="blink" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>tada</div>
+        <h3>타다</h3>
+        <p>축소/확대 + 회전으로 “confetti 느낌”을 냅니다.</p>
+
+        <div class="stage">
+          <div aria-label="tada" class="chip anim tada" data-anim="tada">
+            TADA
+          </div>
+        </div>
+
+        <span class="badge">animation: tada (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="tada" type="button">Stop</button>
+          <button class="btn secondary" data-restart="tada" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

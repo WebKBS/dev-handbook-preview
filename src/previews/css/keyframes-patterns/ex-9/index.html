@@ -1,0 +1,64 @@
+<div class="wrap">
+  <h2 class="title">Continuous Keyframes: 바운스 (Bounce)</h2>
+  <p class="sub">
+    이전처럼 <code>Start/Stop</code> + <code>Restart</code>를 JS로 제어합니다.
+  </p>
+
+  <div class="grid">
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>bounce</div>
+        <h3>바운스</h3>
+        <p>점프하듯 통통 튀는 느낌입니다.</p>
+
+        <div class="stage">
+          <div aria-label="bounce" class="ball anim bounce" data-anim="bounce">
+            B
+          </div>
+        </div>
+
+        <span class="badge">animation: bounce (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="bounce" type="button">Stop</button>
+          <button class="btn secondary" data-restart="bounce" type="button">
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="inner">
+        <div class="kicker"><span class="dot"></span>bounce-gentle</div>
+        <h3>부드러운 바운스</h3>
+        <p>작은 높이로 일정하게 오르내립니다.</p>
+
+        <div class="stage">
+          <div
+            aria-label="bounce-gentle"
+            class="ball anim bounce-gentle"
+            data-anim="bounce-gentle"
+          >
+            G
+          </div>
+        </div>
+
+        <span class="badge">animation: bounce-gentle (infinite)</span>
+
+        <div class="row">
+          <button class="btn" data-toggle="bounce-gentle" type="button">
+            Stop
+          </button>
+          <button
+            class="btn secondary"
+            data-restart="bounce-gentle"
+            type="button"
+          >
+            Restart
+          </button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

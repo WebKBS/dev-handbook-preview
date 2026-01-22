@@ -1,0 +1,79 @@
+.wrap {
+  font-family: system-ui, sans-serif;
+  padding: 12px;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 16px;
+}
+
+.wrap h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.demo {
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background: #fff;
+  margin-bottom: 14px;
+}
+
+.demo h3 {
+  margin: 0 0 6px;
+  font-size: 16px;
+}
+
+.desc {
+  margin: 0 0 12px;
+  color: #555;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  padding: 14px;
+  border: 1px dashed #ddd;
+  border-radius: 14px;
+  background: #fafafa;
+}
+
+/* ✅ auto-fill / auto-fit 차이 핵심 */
+.grid-fill {
+  grid-template-columns: repeat(auto-fill, minmax(16px, 1fr));
+}
+
+.grid-fit {
+  grid-template-columns: repeat(auto-fit, minmax(16px, 1fr));
+}
+
+.item {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #f5f6f8;
+  min-height: 72px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+/* 아이템마다 은은하게 톤 차이 */
+.item:nth-child(5n + 1) {
+  background: rgba(52, 152, 219, 0.14);
+}
+.item:nth-child(5n + 2) {
+  background: rgba(231, 76, 60, 0.14);
+}
+.item:nth-child(5n + 3) {
+  background: rgba(118, 75, 162, 0.14);
+}
+.item:nth-child(5n + 4) {
+  background: rgba(46, 204, 113, 0.14);
+}
+.item:nth-child(5n) {
+  background: rgba(241, 196, 15, 0.16);
+}

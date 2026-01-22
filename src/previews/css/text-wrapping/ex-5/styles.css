@@ -1,0 +1,34 @@
+.ws-demo {
+  font-family: system-ui, sans-serif;
+}
+
+.ws-title {
+  margin: 0 0 10px;
+  font-weight: 900;
+}
+
+.ws-card {
+  border-radius: 14px;
+  border: 1px solid #eee;
+  background: #fafafa;
+  padding: 12px;
+  width: fit-content;
+}
+
+.ws-label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.ws-box {
+  margin: 0;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background: rgba(52, 152, 219, 0.12);
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 650;
+}

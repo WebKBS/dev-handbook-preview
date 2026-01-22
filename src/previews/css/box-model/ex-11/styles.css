@@ -1,0 +1,20 @@
+.card {
+  /* 콘텐츠 크기 */
+  width: 300px;
+
+  /* 내부 여백 - 콘텐츠와 테두리 사이 */
+  padding: 20px;
+
+  /* 테두리 */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  /* 외부 여백 - 다른 카드와의 간격 */
+  margin: 20px;
+
+  /* 배경 (padding 영역까지 적용) */
+  background-color: white;
+
+  /* 그림자 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

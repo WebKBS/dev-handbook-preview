@@ -1,0 +1,58 @@
+.layered {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://webkbs.github.io/dev-handbook-preview/example/ex-2.jpg");
+  background-size: cover;
+}
+
+.layered {
+  height: 190px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    Segoe UI,
+    Roboto,
+    Apple SD Gothic Neo,
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  display: grid;
+  align-content: end;
+}
+
+.content {
+  padding: 14px;
+  color: #fff;
+}
+
+.content b {
+  display: block;
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 6px;
+  letter-spacing: -0.2px;
+}
+
+.content p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  font-size: 12px;
+  font-weight: 800;
+}

@@ -1,0 +1,38 @@
+.grid {
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 16px;
+}
+
+.centered {
+  grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+}
+
+.cell {
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  background: #f5f6f8;
+  min-height: 72px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  padding: 14px;
+  text-align: center;
+}
+
+.content {
+  background: rgba(52, 152, 219, 0.14);
+}
+
+.gutter {
+  background: rgba(118, 75, 162, 0.12);
+  color: #444;
+  font-weight: 800;
+}

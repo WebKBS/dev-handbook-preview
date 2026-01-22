@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 16px;
+    font-family: system-ui, sans-serif;
+    background: #f5f6f8;
+  }
+
+  .header {
+    position: relative;
+    z-index: 100; /* 헤더를 앞으로 */
+    width: 360px;
+    height: 90px;
+    border-radius: 16px;
+    background: white;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .dropdown {
+    position: relative;
+  }
+
+  .btn {
+    width: 120px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background: #f5f6f8;
+    font-weight: 900;
+  }
+
+  .menu {
+    position: absolute;
+    z-index: 9999; /* 안 먹힘! header 안에 갇힘 */
+    top: 54px;
+    left: 0;
+
+    width: 160px;
+    padding: 8px;
+    margin: 0;
+    list-style: none;
+
+    border-radius: 14px;
+    background: rgba(52, 152, 219, 0.18);
+    border: 2px solid #3498db;
+    font-weight: 800;
+  }
+
+  .menu li {
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+  }
+
+  .menu li:last-child {
+    margin-bottom: 0;
+  }
+
+  .modal-backdrop {
+    position: fixed;
+    z-index: 1000; /* header보다 앞에 나옴 */
+    left: 16px;
+    top: 70px; /* 메뉴 위를 덮도록 */
+    width: 360px;
+    height: 160px;
+    border-radius: 16px;
+
+    background: rgba(0, 0, 0, 0.45);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+  }

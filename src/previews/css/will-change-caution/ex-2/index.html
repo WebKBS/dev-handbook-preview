@@ -1,0 +1,32 @@
+<div class="wrap">
+  <h2 class="title">will-change: 모달 열림 애니메이션</h2>
+  <p class="sub">
+    열릴 때 <code>opening</code>으로 <code>will-change</code>를 켠 뒤,
+    <code>open</code> 상태에서 해제합니다.
+  </p>
+
+  <div class="actions">
+    <button class="btn primary" id="openBtn" type="button">모달 열기</button>
+  </div>
+</div>
+
+<div aria-hidden="true" class="overlay" id="overlay">
+  <div
+    aria-labelledby="modalTitle"
+    aria-modal="true"
+    class="modal"
+    id="modal"
+    role="dialog"
+  >
+    <h3 id="modalTitle">모달 타이틀</h3>
+    <p>
+      scale + opacity 애니메이션을 사용합니다. <code>opening</code>에서
+      <code>will-change: opacity, transform</code>이 적용됩니다.
+    </p>
+
+    <div class="modal-actions">
+      <button class="btn" id="closeBtn" type="button">닫기</button>
+      <button class="btn danger" type="button">삭제</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+  .center {
+    width: 240px;
+    margin: 0 auto; /* 수평 중앙 */
+    padding: 12px;
+    border: 1px solid #ccc;
+  }
+
+  .right {
+    width: 200px;
+    margin-left: auto; /* 오른쪽 정렬 */
+    padding: 12px;
+    border: 1px solid #ccc;
+  }
+
+  .flex-container {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    border: 1px solid #ccc;
+  }
+
+  .item {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+  }
+
+  .push-right {
+    margin-left: auto; /* 남는 공간을 왼쪽 마진이 가져감 → 오른쪽으로 이동 */
+  }
