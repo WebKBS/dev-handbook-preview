@@ -47,12 +47,12 @@ export default function SandpackConsoleRunner({
         activeFile,
         visibleFiles,
 
-        // ✅ 핵심: 수정해도 자동 실행(리로드) 안 함
+        // // ✅ 핵심: 수정해도 자동 실행(리로드) 안 함
         autoReload: false,
 
         // (선택) 타이핑마다 번들러에 바로 반영되는 느낌이 싫으면 더 느리게
-        recompileMode: "delayed",
-        recompileDelay: 1000,
+        // recompileMode: "delayed",
+        // recompileDelay: 3000,
       }}
     >
       <SandpackLayout>
