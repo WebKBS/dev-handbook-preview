@@ -1,4 +1,3 @@
-// 사용자 데이터 로딩 시뮬레이션
 function loadUserData(userId, callback) {
   console.log(`사용자 ${userId} 데이터 로딩 중...`);
 
@@ -17,8 +16,8 @@ function loadUserData(userId, callback) {
 // 사용
 loadUserData(123, function (user) {
   console.log("로딩 완료!");
-  console.log("이름:", user.name);
-  console.log("이메일:", user.email);
+  console.log(`이름: ${user.name}`);
+  console.log(`이메일: ${user.email}`);
 });
 
 console.log("다른 작업 계속 진행 가능");

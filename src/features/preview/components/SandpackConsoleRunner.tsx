@@ -6,7 +6,7 @@ import {
   SandpackProvider,
 } from "@codesandbox/sandpack-react";
 import { githubLight } from "@codesandbox/sandpack-themes";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { ensureReactEntry, ensureVanillaEntry } from "../entry";
 import { loadFiles } from "../loader";
 import { inferTemplate } from "../template";
@@ -38,6 +38,12 @@ export default function SandpackConsoleRunner({
 
   const activeFile = visibleFiles[0] ?? Object.keys(files)[0];
 
+  // ✅ .html 파일 존재 여부로 Preview 표시 결정
+  const hasHtml = useMemo(
+    () => Object.keys(files).some((p) => p.toLowerCase().endsWith(".html")),
+    [files],
+  );
+
   return (
     <SandpackProvider
       template={template}
@@ -46,13 +52,7 @@ export default function SandpackConsoleRunner({
       options={{
         activeFile,
         visibleFiles,
-
-        // // ✅ 핵심: 수정해도 자동 실행(리로드) 안 함
         autoReload: false,
-
-        // (선택) 타이핑마다 번들러에 바로 반영되는 느낌이 싫으면 더 느리게
-        // recompileMode: "delayed",
-        // recompileDelay: 3000,
       }}
     >
       <SandpackLayout>
@@ -70,12 +70,29 @@ export default function SandpackConsoleRunner({
           {isAuto ? "간략히 보기" : "자세히 보기"}
         </button>
 
-        <SandpackConsole style={{ height: 360 }} />
+        {hasHtml ? (
+          <>
+            <SandpackPreview
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
+            />
+            <SandpackConsole style={{ height: 300 }} />
+          </>
+        ) : (
+          <>
+            {/* 런타임 로그 수집용: Preview는 "숨겨서" 마운트 유지 */}
+            <div
+              aria-hidden
+              style={{ display: "none", width: "100%", height: "100%" }}
+            >
+              <SandpackPreview />
+            </div>
 
-        {/* 런타임은 필요하니 마운트 유지 + 화면에서는 숨김 */}
-        <div aria-hidden style={{ display: "none" }}>
-          <SandpackPreview />
-        </div>
+            <SandpackConsole style={{ height: 300 }} />
+          </>
+        )}
       </SandpackLayout>
     </SandpackProvider>
   );
