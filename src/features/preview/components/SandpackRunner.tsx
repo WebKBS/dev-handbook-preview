@@ -167,10 +167,6 @@ const SandpackRunner = ({
               height: innerHeight,
               transform: previewMode === "default" ? "none" : `scale(${scale})`,
               transformOrigin: "top left",
-
-              // 모바일 사이즈 모드는 보기 좋게 “가운데 정렬 느낌”을 주고 싶으면 아래처럼:
-              // 다만 transformOrigin이 left라 중앙정렬은 translate가 필요해서,
-              // 일단 기본은 left 정렬로 두는 게 안정적이야.
             }}
           >
             <SandpackPreview
