@@ -1,12 +1,12 @@
 import {
   SandpackCodeEditor,
-  SandpackConsole,
   SandpackLayout,
   SandpackPreview,
   SandpackProvider,
 } from "@codesandbox/sandpack-react";
 import { githubLight } from "@codesandbox/sandpack-themes";
 import { useMemo, useState } from "react";
+import CustomSandpackConsole from "./CustomSandpackConsole";
 import { ensureReactEntry, ensureVanillaEntry } from "../entry";
 import { loadFiles } from "../loader";
 import { inferTemplate } from "../template";
@@ -78,7 +78,7 @@ export default function SandpackConsoleRunner({
                 height: "100%",
               }}
             />
-            <SandpackConsole style={{ height: 300 }} />
+            <CustomSandpackConsole height={300} />
           </>
         ) : (
           <>
@@ -90,7 +90,7 @@ export default function SandpackConsoleRunner({
               <SandpackPreview />
             </div>
 
-            <SandpackConsole style={{ height: 300 }} />
+            <CustomSandpackConsole height={300} />
           </>
         )}
       </SandpackLayout>

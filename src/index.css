@@ -12,3 +12,107 @@
 .sandpack-height-toggle .sp-layout > .sp-preset-column {
   height: var(--sandpack-preview-height, 360px) !important;
 }
+
+.sandpack-console {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.sandpack-console__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+  font-size: 12px;
+}
+
+.sandpack-console__title {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sandpack-console__clear {
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #111827;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sandpack-console__clear:hover {
+  background: #f3f4f6;
+}
+
+.sandpack-console__list {
+  overflow: auto;
+  padding: 8px 0;
+  flex: 1 1 auto;
+}
+
+.sandpack-console__empty {
+  color: #6b7280;
+  font-size: 12px;
+  padding: 8px 12px;
+}
+
+.sandpack-console__item {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 8px;
+  padding: 8px 12px;
+  border-top: 1px solid #f3f4f6;
+  align-items: start;
+  font-size: 12px;
+}
+
+.sandpack-console__item:first-child {
+  border-top: none;
+}
+
+.sandpack-console__icon {
+  color: #6b7280;
+  line-height: 1;
+}
+
+.sandpack-console__text {
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.sandpack-console__item[data-variant="warning"] {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.sandpack-console__item[data-variant="warning"] .sandpack-console__icon {
+  color: #b45309;
+}
+
+.sandpack-console__item[data-variant="error"] {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.sandpack-console__item[data-variant="error"] .sandpack-console__icon {
+  color: #b91c1c;
+}
+
+.sandpack-console__item[data-variant="clear"] {
+  background: #f9fafb;
+  color: #6b7280;
+  font-style: italic;
+}
