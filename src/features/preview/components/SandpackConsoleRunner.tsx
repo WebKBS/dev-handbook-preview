@@ -2,6 +2,7 @@ import {
   SandpackCodeEditor,
   SandpackConsole,
   SandpackLayout,
+  SandpackPreview,
   SandpackProvider,
 } from "@codesandbox/sandpack-react";
 import { githubLight } from "@codesandbox/sandpack-themes";
@@ -10,7 +11,7 @@ import { ensureReactEntry, ensureVanillaEntry } from "../entry";
 import { loadFiles } from "../loader";
 import { inferTemplate } from "../template";
 
-const SandpackConsoleRunner = ({
+export default function SandpackConsoleRunner({
   domain,
   slug,
   exampleId,
@@ -18,7 +19,7 @@ const SandpackConsoleRunner = ({
   domain: string;
   slug: string;
   exampleId: string;
-}) => {
+}) {
   const [isAuto, setIsAuto] = useState(false);
 
   const template = inferTemplate(domain);
@@ -45,15 +46,20 @@ const SandpackConsoleRunner = ({
       options={{
         activeFile,
         visibleFiles,
+
+        // ✅ 핵심: 수정해도 자동 실행(리로드) 안 함
+        autoReload: false,
+
+        // (선택) 타이핑마다 번들러에 바로 반영되는 느낌이 싫으면 더 느리게
+        recompileMode: "delayed",
+        recompileDelay: 1000,
       }}
     >
       <SandpackLayout>
         <SandpackCodeEditor
           showTabs
           showLineNumbers
-          style={{
-            height: isAuto ? "auto" : 300,
-          }}
+          style={{ height: isAuto ? "auto" : 300 }}
         />
 
         <button
@@ -63,20 +69,14 @@ const SandpackConsoleRunner = ({
         >
           {isAuto ? "간략히 보기" : "자세히 보기"}
         </button>
-        <SandpackConsole
-          style={{
-            height: 360,
-          }}
-        />
 
-        {/*<SandpackPreview*/}
-        {/*  style={{*/}
-        {/*    height: previewHeight,*/}
-        {/*  }}*/}
-        {/*/>*/}
+        <SandpackConsole style={{ height: 360 }} />
+
+        {/* 런타임은 필요하니 마운트 유지 + 화면에서는 숨김 */}
+        <div aria-hidden style={{ display: "none" }}>
+          <SandpackPreview />
+        </div>
       </SandpackLayout>
     </SandpackProvider>
   );
-};
-
-export default SandpackConsoleRunner;
+}
