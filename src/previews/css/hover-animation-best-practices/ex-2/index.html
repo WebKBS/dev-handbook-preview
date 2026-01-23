@@ -1,0 +1,41 @@
+<div class="wrap">
+  <section class="card">
+    <div class="inner">
+      <div class="kicker"><span class="dot"></span>버튼 hover 패턴</div>
+      <h2 class="title" style="margin: 0">배경 변화</h2>
+      <p class="sub" style="margin: 0">
+        <code>background</code> 또는 <code>opacity</code>를 이용해 “배경이
+        바뀌는 느낌”을 만듭니다. (그라데이션 자체를 직접 보간하기보다,
+        <code>opacity</code>로 안전하게 표현하는 방식)
+      </p>
+
+      <div class="stage">
+        <div class="demoGrid">
+          <div class="panel">
+            <p class="label">단색 배경 변화</p>
+            <p class="desc">hover 시 <code>#667eea → #5568d3</code></p>
+
+            <button class="btn button-bg" type="button">Hover me</button>
+
+            <div class="meta">
+              <span class="pill">transition: background 0.2s</span>
+              <span class="pill">ease-out</span>
+            </div>
+          </div>
+
+          <div class="panel">
+            <p class="label">그라데이션 “느낌” 변화</p>
+            <p class="desc">hover 시 <code>opacity: 0.9</code>로 미세한 변화</p>
+
+            <button class="btn button-gradient" type="button">Gradient</button>
+
+            <div class="meta">
+              <span class="pill">transition: opacity 0.2s</span>
+              <span class="pill">safe</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

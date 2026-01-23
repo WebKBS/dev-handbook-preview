@@ -13,7 +13,7 @@ import { inferTemplate } from "../template";
 
 type PreviewMode = "default" | "desktop" | "mobile";
 
-const SandpackRunner = ({
+const SandpackConsoleRunner = ({
   domain,
   slug,
   exampleId,
@@ -186,4 +186,4 @@ const SandpackRunner = ({
   );
 };
 
-export default SandpackRunner;
+export default SandpackConsoleRunner;

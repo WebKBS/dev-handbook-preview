@@ -1,0 +1,29 @@
+<div class="wrap">
+  <section class="card">
+    <div class="inner">
+      <div class="kicker"><span class="dot"></span>버튼 hover 패턴</div>
+      <h2 class="title" style="margin: 0">테두리 효과</h2>
+      <p class="sub" style="margin: 0">
+        테두리 버튼 위에 배경 레이어(<code>::before</code>)를 “왼쪽에서
+        슬라이드”로 깔고, 텍스트 색을 반전시킵니다.
+      </p>
+
+      <div class="stage">
+        <div class="panel">
+          <p class="label">Border → Fill (Slide)</p>
+          <p class="desc">
+            hover 시 배경이 왼쪽에서 들어오고, 글자 색이 흰색으로 전환됩니다.
+          </p>
+
+          <button class="btn button-border" type="button">Hover me</button>
+
+          <div class="meta">
+            <span class="pill">::before left -100% → 0</span>
+            <span class="pill">0.3s ease-out</span>
+            <span class="pill">overflow: hidden</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
