@@ -1,7 +1,7 @@
 import {
   SandpackCodeEditor,
+  SandpackConsole,
   SandpackLayout,
-  SandpackPreview,
   SandpackProvider,
 } from "@codesandbox/sandpack-react";
 import { githubLight } from "@codesandbox/sandpack-themes";
@@ -37,11 +37,6 @@ const SandpackConsoleRunner = ({
 
   const activeFile = visibleFiles[0] ?? Object.keys(files)[0];
 
-  // 미리보기 높이도 같이 토글
-  const previewHeight = isAuto ? 720 : 360;
-
-  // 래퍼 폭 측정
-
   return (
     <SandpackProvider
       template={template}
@@ -68,12 +63,17 @@ const SandpackConsoleRunner = ({
         >
           {isAuto ? "간략히 보기" : "자세히 보기"}
         </button>
-
-        <SandpackPreview
+        <SandpackConsole
           style={{
-            height: previewHeight,
+            height: 360,
           }}
         />
+
+        {/*<SandpackPreview*/}
+        {/*  style={{*/}
+        {/*    height: previewHeight,*/}
+        {/*  }}*/}
+        {/*/>*/}
       </SandpackLayout>
     </SandpackProvider>
   );
