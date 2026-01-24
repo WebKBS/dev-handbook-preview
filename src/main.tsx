@@ -1,4 +1,8 @@
-import { createRouter, RouterProvider } from "@tanstack/react-router";
+import {
+  createHashHistory,
+  createRouter,
+  RouterProvider,
+} from "@tanstack/react-router";
 import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
@@ -12,7 +16,11 @@ const basepath =
     ? "/"
     : import.meta.env.BASE_URL.replace(/\/$/, "");
 
-const router = createRouter({ routeTree, basepath });
+const router = createRouter({
+  routeTree,
+  basepath,
+  history: createHashHistory(),
+});
 
 // 유형 안전성을 위해 라우터 인스턴스 등록
 declare module "@tanstack/react-router" {
