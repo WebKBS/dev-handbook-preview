@@ -1,4 +1,4 @@
-name: Deploy Vite to GitHub Pages
+name: Deploy Vite (pnpm) to GitHub Pages
 
 on:
   push:
@@ -27,13 +27,16 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 22
-          cache: "pnpm"
+          node-version: 20
+          cache: pnpm
 
-      - name: Enable Corepack (pnpm)
-        run: corepack enable
+      # ✅ pnpm을 PATH에 확실히 설치/활성화
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+          run_install: false
 
-      # package.json의 packageManager(pnpm@x.y.z)가 있으면 그 버전 사용
       - name: Install
         run: pnpm install --frozen-lockfile
 
