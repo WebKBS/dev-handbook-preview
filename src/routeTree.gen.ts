@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PreviewsDomainSlugExampleIdRouteImport } from './routes/previews/$domain/$slug/$exampleId'
+import { Route as ConsolePreviewsDomainSlugExampleIdRouteImport } from './routes/console-previews/$domain/$slug/$exampleId'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,30 +24,50 @@ const PreviewsDomainSlugExampleIdRoute =
     path: '/previews/$domain/$slug/$exampleId',
     getParentRoute: () => rootRouteImport,
   } as any)
+const ConsolePreviewsDomainSlugExampleIdRoute =
+  ConsolePreviewsDomainSlugExampleIdRouteImport.update({
+    id: '/console-previews/$domain/$slug/$exampleId',
+    path: '/console-previews/$domain/$slug/$exampleId',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/console-previews/$domain/$slug/$exampleId': typeof ConsolePreviewsDomainSlugExampleIdRoute
   '/previews/$domain/$slug/$exampleId': typeof PreviewsDomainSlugExampleIdRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/console-previews/$domain/$slug/$exampleId': typeof ConsolePreviewsDomainSlugExampleIdRoute
   '/previews/$domain/$slug/$exampleId': typeof PreviewsDomainSlugExampleIdRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/console-previews/$domain/$slug/$exampleId': typeof ConsolePreviewsDomainSlugExampleIdRoute
   '/previews/$domain/$slug/$exampleId': typeof PreviewsDomainSlugExampleIdRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/previews/$domain/$slug/$exampleId'
+  fullPaths:
+    | '/'
+    | '/console-previews/$domain/$slug/$exampleId'
+    | '/previews/$domain/$slug/$exampleId'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/previews/$domain/$slug/$exampleId'
-  id: '__root__' | '/' | '/previews/$domain/$slug/$exampleId'
+  to:
+    | '/'
+    | '/console-previews/$domain/$slug/$exampleId'
+    | '/previews/$domain/$slug/$exampleId'
+  id:
+    | '__root__'
+    | '/'
+    | '/console-previews/$domain/$slug/$exampleId'
+    | '/previews/$domain/$slug/$exampleId'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ConsolePreviewsDomainSlugExampleIdRoute: typeof ConsolePreviewsDomainSlugExampleIdRoute
   PreviewsDomainSlugExampleIdRoute: typeof PreviewsDomainSlugExampleIdRoute
 }
 
@@ -66,11 +87,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PreviewsDomainSlugExampleIdRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/console-previews/$domain/$slug/$exampleId': {
+      id: '/console-previews/$domain/$slug/$exampleId'
+      path: '/console-previews/$domain/$slug/$exampleId'
+      fullPath: '/console-previews/$domain/$slug/$exampleId'
+      preLoaderRoute: typeof ConsolePreviewsDomainSlugExampleIdRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ConsolePreviewsDomainSlugExampleIdRoute:
+    ConsolePreviewsDomainSlugExampleIdRoute,
   PreviewsDomainSlugExampleIdRoute: PreviewsDomainSlugExampleIdRoute,
 }
 export const routeTree = rootRouteImport

@@ -1,3 +1,4 @@
+import { useElementWidth } from "@/hooks/useElementWidth.ts";
 import {
   SandpackCodeEditor,
   SandpackLayout,
@@ -5,31 +6,12 @@ import {
   SandpackProvider,
 } from "@codesandbox/sandpack-react";
 import { githubLight } from "@codesandbox/sandpack-themes";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import { ensureReactEntry, ensureVanillaEntry } from "../entry";
 import { loadFiles } from "../loader";
 import { inferTemplate } from "../template";
 
 type PreviewMode = "default" | "desktop" | "mobile";
-
-function useElementWidth<T extends HTMLElement>() {
-  const ref = useRef<T | null>(null);
-  const [width, setWidth] = useState(0);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-
-    const ro = new ResizeObserver((entries) => {
-      const w = entries[0]?.contentRect?.width ?? 0;
-      setWidth(w);
-    });
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
-
-  return { ref, width };
-}
 
 const SandpackRunner = ({
   domain,
@@ -185,10 +167,6 @@ const SandpackRunner = ({
               height: innerHeight,
               transform: previewMode === "default" ? "none" : `scale(${scale})`,
               transformOrigin: "top left",
-
-              // 모바일 사이즈 모드는 보기 좋게 “가운데 정렬 느낌”을 주고 싶으면 아래처럼:
-              // 다만 transformOrigin이 left라 중앙정렬은 translate가 필요해서,
-              // 일단 기본은 left 정렬로 두는 게 안정적이야.
             }}
           >
             <SandpackPreview
